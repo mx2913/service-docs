@@ -67,7 +67,7 @@
 
   ![](agc-cloudstorage/cs-configfile.png)
 
-- Cocos Creator v2.4.3 及以上版本，若 [发布到 HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md)，开发者可直接在 **构建发布** 面板中选取下载或更新后的配置文件，不需要手动拷贝。
+- Cocos Creator v2.4.3 及以上版本，若 [发布到 HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/zh/publish/publish-huawei-agc.html)，开发者可直接在 **构建发布** 面板中选取下载或更新后的配置文件，不需要手动拷贝。
 
   ![](agc-cloudstorage/cs-agcfile.png)
 
@@ -83,7 +83,7 @@
 
 - 参考 [上传文件](https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides/agc-cloudstorage-manage#h1-1591179694719) 文档，任意上传一个 [合法文件](#%E6%96%87%E4%BB%B6%E5%90%88%E6%B3%95%E6%80%A7)。
 
-- [发布到 Android 平台](../publish/publish-native.md)。请确保 **构建发布** 面板中的包名与华为后台设置的包名一致。
+- [发布到 Android 平台](https://docs.cocos.com/creator/manual/zh/publish/publish-native.html)。请确保 **构建发布** 面板中的包名与华为后台设置的包名一致。
 
 - 工程运行到手机后，若能在 Logcat 中看到上传文件的文件名，即为接入成功。
 
@@ -95,7 +95,7 @@
 
 - 点击云存储服务面板中的 **Sample 工程** 按钮，Clone 或下载 HUAWEI Sample 工程，并在 Cocos Creator 中打开。
 
-- 参照上文开通云存储服务并配置华为参数文件后，可通过 Creator 编辑器菜单栏的 **项目 -> 构建发布** 打开 **构建发布** 面板来构建编译工程。Creator v2.4.1 及以上版本，可 [发布到 HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md)。Creator v2.4.1 以下的版本可 [发布到 Android 平台](../publish/publish-native.md)。
+- 参照上文开通云存储服务并配置华为参数文件后，可通过 Creator 编辑器菜单栏的 **项目 -> 构建发布** 打开 **构建发布** 面板来构建编译工程。Creator v2.4.1 及以上版本，可 [发布到 HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/zh/publish/publish-huawei-agc.html)。Creator v2.4.1 以下的版本可 [发布到 Android 平台](https://docs.cocos.com/creator/manual/zh/publish/publish-native.html)。
 
 - Sample 工程运行到手机后，需要先点击 **Auth** 按钮，完成用户认证后，再返回首页点击 **Storage** 按钮，进入云存储功能界面进行测试。
 

@@ -71,7 +71,7 @@ After the service is activated, Cocos Service will automatically activate the Ag
     agora && agora.init(appid);
     ```
 
-- After the script is finished and saved, go back to the editor. Select the **Browser** and click the ![](./image/preview-button.jpg) [Preview](../getting-started/basics/preview-build.md) button. If you can see the initialization log in the browser console, which means the integrate is successful.
+- After the script is finished and saved, go back to the editor. Select the **Browser** and click the ![](./image/preview-button.jpg) [Preview](https://docs.cocos.com/creator/manual/en/getting-started/basics/preview-build.html) button. If you can see the initialization log in the browser console, which means the integrate is successful.
 
     ![](agora/agora-debugging.png)
 

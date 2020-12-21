@@ -64,7 +64,7 @@
 
   ![](agc-cloudfunc/cf-configfile.png)
 
-- Cocos Creator v2.4.3 及以上版本，若 [发布到 HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md)，开发者可直接在 **构建发布** 面板中选取下载或更新后的配置文件，不需要手动拷贝。
+- Cocos Creator v2.4.3 及以上版本，若 [发布到 HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/zh/publish/publish-huawei-agc.html)，开发者可直接在 **构建发布** 面板中选取下载或更新后的配置文件，不需要手动拷贝。
 
   ![](agc-cloudfunc/cf-agcfile.png)
 
@@ -83,7 +83,7 @@
     });
   ```
   
-- [发布到 Android 平台](../publish/publish-native.md)。请确保 **构建发布** 面板中的包名与华为后台设置的包名一致。
+- [发布到 Android 平台](https://docs.cocos.com/creator/manual/zh/publish/publish-native.html)。请确保 **构建发布** 面板中的包名与华为后台设置的包名一致。
 
 - 工程运行到手机后，若能在 Logcat 中看到数据输出，即为接入成功。
 
@@ -97,7 +97,7 @@
 
 - 参考 [创建函数](https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides/agc-cloudfunction-getstarted#h1-1577934210281) 文档，在后台创建函数。若有自定义的触发器标识名称，请替换 `assets/function/function.js` 中的 "func-$latest" 触发器标识名。
 
-- 参照上文开通云函数服务并配置华为参数文件后，可通过 Creator 编辑器菜单栏的 **项目 -> 构建发布** 打开 **构建发布** 面板来构建编译工程。Creator v2.4.1 及以上版本，可 [发布到 HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md)。Creator v2.4.1 以下的版本可 [发布到 Android 平台](../publish/publish-native.md)。
+- 参照上文开通云函数服务并配置华为参数文件后，可通过 Creator 编辑器菜单栏的 **项目 -> 构建发布** 打开 **构建发布** 面板来构建编译工程。Creator v2.4.1 及以上版本，可 [发布到 HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/zh/publish/publish-huawei-agc.html)。Creator v2.4.1 以下的版本可 [发布到 Android 平台](https://docs.cocos.com/creator/manual/zh/publish/publish-native.html)。
 
 - Sample 工程运行到手机后，点击首页的 **Function** 按钮，即可进入功能界面进行测试。
 

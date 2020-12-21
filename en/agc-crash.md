@@ -40,7 +40,7 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
   ![](agc-crash/crash-configfile.png)
 
-- For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
+- For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
 
   ![](agc-crash/crash-agcfile.png)
 
@@ -57,7 +57,7 @@ Generally, there is a low probability of an app crashing, so the Crash service S
   },5);
   ```
 
-- You can [publish to the Android platform](../publish/publish-native.md) after the code is added. Please make sure that the **Package Name** on the **Build** panel is consistent with the **Package Name** set in the AppGallery Connect console.
+- You can [publish to the Android platform](https://docs.cocos.com/creator/manual/en/publish/publish-native.html) after the code is added. Please make sure that the **Package Name** on the **Build** panel is consistent with the **Package Name** set in the AppGallery Connect console.
 
 - Run the project on a phone, then login the [AppGallery Connect](https://developer.huawei.com/consumer/en/service/josp/agc/index.html) console, open the project, go to **Quality -> Crash**. If you can see crash data (usually displayed within 5 minutes), which means the integrate is successful.
 
@@ -69,7 +69,7 @@ Developer can get a quick taste of the Crash service with the sample project.
 
 - Click on the **Sample** button in the Crash service panel, clone or download, and open the project in Cocos Creator.
 
-- After enabling the Crash service and configuring the HUAWEI configuration file as described above, you can open the **Build** panel to compile the project by clicking **Project -> Build** in the Creator editor menu bar. Cocos Creator v2.4.1 and above, you could [publish to HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md). Below Creator v2.4.1 could [publish to the Android platform](../publish/publish-native.md).
+- After enabling the Crash service and configuring the HUAWEI configuration file as described above, you can open the **Build** panel to compile the project by clicking **Project -> Build** in the Creator editor menu bar. Cocos Creator v2.4.1 and above, you could [publish to HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html). Below Creator v2.4.1 could [publish to the Android platform](https://docs.cocos.com/creator/manual/en/publish/publish-native.html).
 
 - Once the Sample project is running on the phone, click the **Crash** button on the homepage for testing.
 

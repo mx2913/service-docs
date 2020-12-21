@@ -147,7 +147,7 @@
 
 **注意**：
 
-- Cocos Creator v2.4.3 及以上版本，若 [发布到 HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md)，开发者可直接在 **构建发布** 面板中选取下载或更新后的配置文件，不需要手动拷贝。
+- Cocos Creator v2.4.3 及以上版本，若 [发布到 HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/zh/publish/publish-huawei-agc.html)，开发者可直接在 **构建发布** 面板中选取下载或更新后的配置文件，不需要手动拷贝。
 
   ![](agc-applinking/al-agcfile.png)
 
@@ -164,7 +164,7 @@
   }, this);
   ```
 
-- [发布到 Android 平台](../publish/publish-native.md)。请确保 **构建发布** 面板中的包名与华为后台设置的包名一致。
+- [发布到 Android 平台](https://docs.cocos.com/creator/manual/zh/publish/publish-native.html)。请确保 **构建发布** 面板中的包名与华为后台设置的包名一致。
 
 - 参考 [在 AGC 界面创建 App Linking](https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides/agc-applinking-createlinks-byagc) 文档，创建一个 App Linking，在 **设置安卓链接行为** 时，请选择 **在安卓应用中打开**，并在下方设置框中选择当前应用（若还未创建应用可点击后面的 **添加安卓应用** 按钮创建）。
 
@@ -182,7 +182,7 @@
 
 - 点击 App Linking 面板中的 **Sample 工程** 按钮，Clone 或下载 HUAWEI Sample 工程，并在 Cocos Creator 中打开。
 
-- 参照上文开通 App Linking 服务并配置华为参数文件后，可通过 Creator 编辑器菜单栏的 **项目 -> 构建发布** 打开 **构建发布** 面板来构建编译工程。Creator v2.4.1 及以上版本，可 [发布到 HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md)。Creator v2.4.1 以下的版本可 [发布到 Android 平台](../publish/publish-native.md)。
+- 参照上文开通 App Linking 服务并配置华为参数文件后，可通过 Creator 编辑器菜单栏的 **项目 -> 构建发布** 打开 **构建发布** 面板来构建编译工程。Creator v2.4.1 及以上版本，可 [发布到 HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/zh/publish/publish-huawei-agc.html)。Creator v2.4.1 以下的版本可 [发布到 Android 平台](https://docs.cocos.com/creator/manual/zh/publish/publish-native.html)。
 
 - Sample 工程运行到手机后，点击首页的 **AppLinking** 按钮，即可进入功能界面进行测试。
 

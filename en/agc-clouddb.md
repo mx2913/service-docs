@@ -69,7 +69,7 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
   ![](agc-clouddb/cdb-configfile.png)
 
-- For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
+- For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
 
   ![](agc-clouddb/cdb-agcfile.png)
 
@@ -91,7 +91,7 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
   ![](agc-clouddb/cdb-importdb.png)
 
-- [Publish to the Android platform](../publish/publish-native.md) after the code is added. Please make sure that the **Package Name** on the **Build** panel is consistent with the **Package Name** set in the AppGallery Connect console.
+- [Publish to the Android platform](https://docs.cocos.com/creator/manual/en/publish/publish-native.html) after the code is added. Please make sure that the **Package Name** on the **Build** panel is consistent with the **Package Name** set in the AppGallery Connect console.
 
 - Run the project on a phone, if you can see the data output in Logcat, which means the integrate is successful.
 
@@ -105,7 +105,7 @@ Developer can get a quick taste of the Cloud DB service with the Sample project.
 
 - Import the `attach/agcclouddb.json` file in the project into the AGC Cloud DB console, otherwise the Cloud DB database module in the Sample project will not run normally.
 
-- After importing, you can open the **Build** panel to compile the project by clicking **Project -> Build** in the Creator editor menu bar. Cocos Creator v2.4.1 and above, you could [publish to HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md). Below Creator v2.4.1 could [publish to the Android platform](../publish/publish-native.md).
+- After importing, you can open the **Build** panel to compile the project by clicking **Project -> Build** in the Creator editor menu bar. Cocos Creator v2.4.1 and above, you could [publish to HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html). Below Creator v2.4.1 could [publish to the Android platform](https://docs.cocos.com/creator/manual/en/publish/publish-native.html).
 
 - Once the Sample project is running on the phone, click the **DB** button on the homepage for testing.
 

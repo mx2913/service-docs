@@ -62,7 +62,7 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
   ![](agc-cloudfunc/cf-configfile.png)
 
-- For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
+- For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
 
   ![](agc-cloudfunc/cf-agcfile.png)
 
@@ -81,7 +81,7 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
   });
   ```
   
-- [Publish to the Android platform](../publish/publish-native.md) after the code is added. Please make sure that the **Package Name** on the **Build** panel is consistent with the **Package Name** set in the AppGallery Connect console.
+- [Publish to the Android platform](https://docs.cocos.com/creator/manual/en/publish/publish-native.html) after the code is added. Please make sure that the **Package Name** on the **Build** panel is consistent with the **Package Name** set in the AppGallery Connect console.
 
 - Run the project on a phone, if you can see the log output in Logcat, which means the integrate is successful.
 
@@ -95,7 +95,7 @@ Developer can get a quick taste of the Cloud Functions service with the sample p
 
 - Please refer to [Creating a Function](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-cloudfunction-getstarted#h1-1592364963757) document, create a function in the AGC console. If there is a custom name of trigger identifier, please replace the "func-$latest" to the cumstom name in `assets/function/function.js`.
 
-- After enabling the Cloud Function service and configuring the HUAWEI configuration file as described above, you can open the **Build** panel to compile the project by clicking **Project -> Build** in the Creator editor menu bar. Cocos Creator v2.4.1 and above, you could [publish to HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md). Below Creator v2.4.1 could [publish to the Android platform](../publish/publish-native.md).
+- After enabling the Cloud Function service and configuring the HUAWEI configuration file as described above, you can open the **Build** panel to compile the project by clicking **Project -> Build** in the Creator editor menu bar. Cocos Creator v2.4.1 and above, you could [publish to HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html). Below Creator v2.4.1 could [publish to the Android platform](https://docs.cocos.com/creator/manual/en/publish/publish-native.html).
 
 - Once the Sample project is running on the phone, click the **Functions** button on the homepage for testing.
 

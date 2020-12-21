@@ -145,7 +145,7 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
   ![](agc-applinking/al-configfile.png)
 
-- For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
+- For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
 
   ![](agc-applinking/al-agcfile.png)
 
@@ -162,7 +162,7 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
   }, this);
   ```
 
-- [Publish to the Android platform](../publish/publish-native.md) after the code is added. Please make sure that the **Package Name** on the **Build** panel is consistent with the **Package Name** set in the AppGallery Connect console.
+- [Publish to the Android platform](https://docs.cocos.com/creator/manual/en/publish/publish-native.html) after the code is added. Please make sure that the **Package Name** on the **Build** panel is consistent with the **Package Name** set in the AppGallery Connect console.
 
 - Refer to [Creating a Link in AppGallery Connect](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-applinking-createlinks-byagc) documentation to create an App Linking. When setting the Android Linking behavior, select **Open in your Android app** and select the current app in the settings box below (if you have not created an application, you can click the **Add Android app** button to create).
 
@@ -180,7 +180,7 @@ Developer can get a quick taste of the App Linking service with the sample proje
 
 - Click on the **Sample** button in the App Linking service panel, clone or download, and open the project in Cocos Creator.
 
-- After enabling the App linking service and configuring the HUAWEI configuration file as described above, you can open the **Build** panel to compile the project by clicking **Project -> Build** in the Creator editor menu bar. Cocos Creator v2.4.1 and above, you could [publish to HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md). Below Creator v2.4.1 could [publish to the Android platform](../publish/publish-native.md).
+- After enabling the App linking service and configuring the HUAWEI configuration file as described above, you can open the **Build** panel to compile the project by clicking **Project -> Build** in the Creator editor menu bar. Cocos Creator v2.4.1 and above, you could [publish to HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html). Below Creator v2.4.1 could [publish to the Android platform](https://docs.cocos.com/creator/manual/en/publish/publish-native.html).
 
 - Once the Sample project is running on the phone, click the **AppLinking** button on the homepage for testing.
 

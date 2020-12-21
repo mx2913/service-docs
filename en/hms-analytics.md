@@ -56,13 +56,13 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
   ![](hms-analytics/ana-configfile.png)
 
-- For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
+- For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
 
   ![](hms-analytics/ana-agcfile.png)
 
 ### Verify whether the service is integrated successfully
 
-- Once the Analytics Kit service is integrated, you can [publish to the Android platform](../publish/publish-native.md) without changing your code. Please make sure that the **Package Name** on the **Build** panel is consistent with the **Package Name** set in the AppGallery Connect console.
+- Once the Analytics Kit service is integrated, you can [publish to the Android platform](https://docs.cocos.com/creator/manual/en/publish/publish-native.html) without changing your code. Please make sure that the **Package Name** on the **Build** panel is consistent with the **Package Name** set in the AppGallery Connect console.
 
 - Login the [AppGallery Connect](https://developer.huawei.com/consumer/en/service/josp/agc/index.html) console, open the project, go to **HUAWEI Analytics -> User Analysis -> New Users**. If you can see new user information (usually displayed within 10 minutes), which means the integrate is successful.
 
@@ -72,7 +72,7 @@ Developer can get a quick taste of the Analytics Kit with the sample project.
 
 - Click on the **Sample** button in the Analytics Kit service panel, clone or download, and open the project in Cocos Creator.
 
-- After enabling the Analytics Kit service and configuring the HUAWEI configuration file as described above, you can open the **Build** panel to compile the project by clicking **Project -> Build** in the Creator editor menu bar. Cocos Creator v2.4.1 and above, you could [publish to HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md). Below Creator v2.4.1 could [publish to the Android platform](../publish/publish-native.md).
+- After enabling the Analytics Kit service and configuring the HUAWEI configuration file as described above, you can open the **Build** panel to compile the project by clicking **Project -> Build** in the Creator editor menu bar. Cocos Creator v2.4.1 and above, you could [publish to HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html). Below Creator v2.4.1 could [publish to the Android platform](https://docs.cocos.com/creator/manual/en/publish/publish-native.html).
 
 - Need to test on Huawei or Honor brand phones with HMS Core service installed.
 

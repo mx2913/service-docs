@@ -82,7 +82,7 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
     ![](sdkhub-hms/globle-keystore.png)
 
-3. For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](../../publish/publish-huawei-agc.md), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
+3. For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
 
     ![](sdkhub-hms/hms-agcfile.png)
 
@@ -90,7 +90,7 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 - Use Cocos Creator to open the project that needs to be connected to Cocos SDKHub.
 
-- Click **Panel -> Service** in the menu bar to open the **Service** panel. After setting Cocos AppID, select Cocos SDKHub to enter the Cocos SDKHub service panel. Then click the **Enable** button on the upper right to activate the Cocos SDKHub service. For details, please refer to the [Cocos Service Operation Guide](../../cocos-service/index.md) documentation.
+- Click **Panel -> Service** in the menu bar to open the **Service** panel. After setting Cocos AppID, select Cocos SDKHub to enter the Cocos SDKHub service panel. Then click the **Enable** button on the upper right to activate the Cocos SDKHub service. For details, please refer to the [Cocos Service Operation Guide](../index.md) documentation.
 
   ![](sdkhub-hms/hms-provisioning.png)
 
@@ -124,7 +124,7 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
       - If your application needs to be set to only support certain specific languages, fill in the format as **"en", "zh-rCN", "other languages ​​to be supported"**.
       - For the list of languages ​​supported by HMS Core SDK, please refer to the [Language Supported by HMS SDK](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/hmssdk_supported_language).
 
-- After the configuration is completed and the relevant interface is connected, you can use the **Project -> Build...** in the menu bar of the Creator editor to open the **Build** panel to build the project. For Creator 2.4.1 and above, please refer to the [Publish to HUAWEI AppGallery Connect](../../publish/publish-huawei-agc.md) document. Users of older versions can build and publish to the Android platform.
+- After the configuration is completed and the relevant interface is connected, you can use the **Project -> Build...** in the menu bar of the Creator editor to open the **Build** panel to build the project. For Creator 2.4.1 and above, please refer to the [Publish to HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html) document. Users of older versions can build and publish to the Android platform.
 
 - If you need to modify the project parameter configuration or JS code layer, after the modification is completed, just rebuild it in the build panel.
 

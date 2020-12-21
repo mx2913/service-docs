@@ -37,7 +37,7 @@ Once the service is turned on, the Cocos Service will automatically integrate th
     },2);
     ```
 
-- After the script is finished and saved, go back to the editor. Cocos SDKHub debug, you need [publish to Android platform](../publish/publish-native.md). If you can see the login window in debug mode on your device, you can verify that the Cocos SDKHub is integrated.
+- After the script is finished and saved, go back to the editor. Cocos SDKHub debug, you need [publish to Android platform](https://docs.cocos.com/creator/manual/en/publish/publish-native.html). If you can see the login window in debug mode on your device, you can verify that the Cocos SDKHub is integrated.
 
     ![](sdkhub/sdkhub-debugging.jpg)
     
