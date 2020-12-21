@@ -1,0 +1,36 @@
+image: richarvey/nginx-php-fpm:1.5.0
+
+
+
+stages:
+  - deploy
+
+before_script:
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+  - mkdir -p ~/.ssh
+  - eval $(ssh-agent -s)
+  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  - echo "Upload to server...\n"
+  - echo "${DOCS_PRIVATE_KEY}" > ~/.ssh/private_rsa.key
+  - echo "${DOCS_PRIVATE_KEY}"
+  - chmod 600 ~/.ssh/private_rsa.key
+  - ssh-add ~/.ssh/private_rsa.key
+
+
+docs_service_deploy:
+  stage: deploy
+  only:
+    - release@G_CocosOpen/G_Client/manualdocs
+  when: manual
+  script:
+    - bash ./gitlab_runner_deploy.sh  pro
+
+
+
+test_docs_service_deploy:
+  stage: deploy
+  only:
+    - master@G_CocosOpen/G_Client/manualdocs
+  when: manual
+  script:
+    - bash ./gitlab_runner_deploy.sh  testing
