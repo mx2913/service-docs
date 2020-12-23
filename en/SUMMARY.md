@@ -1,8 +1,7 @@
 # Summary
 
-- [Introduction](README.md)
-
-- [Access to Third Party Services](index.md)
+- [Introduction](index.md)
+- [List of Services]()
     - [Agora RTC](agora.md)
     - [Location Kit (HMS Core)](hms-location.md)
     - [Analytics Kit (HMS Core)](hms-analytics.md)

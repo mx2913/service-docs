@@ -1,4 +1,4 @@
-# Access to Third Party Services
+# Cocos Services Introduction
 
 Cocos Creator provides a **Service** panel in the **Menu bar -> Panel**, and developers can quickly integrate services through the **Service** panel for the game.
 

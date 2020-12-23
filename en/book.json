@@ -1,0 +1,33 @@
+{
+    "structure": {
+        "summary": "SUMMARY.md",
+        "readme": "index.md"
+    },
+    "variables": {
+        "themeFexa":{
+            "showHome": true,
+            "showNavigator": true,
+            "nav":[
+                {
+                    "url":"https://service.cocos.com/document/zh/",
+                    "target":"_blank",
+                    "name": "中文"
+                },
+                {
+                    "url":"https://account.cocos.com/",
+                    "target":"_blank",
+                    "name": "Console",
+                    "border": "nav-border",
+                    "type": "console"
+                }
+            ]
+        }
+    },
+    "pluginsConfig": {
+        "theme-fexa":{
+            "search-placeholder":"Type to search",
+            "logo":"./_assets/logo.png",
+            "favicon": "./_assets/favicon.ico"
+        }
+    }
+}

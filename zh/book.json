@@ -1,0 +1,30 @@
+{
+    "language" : "zh-hans",
+    "variables": {
+        "themeFexa":{
+            "showHome": false,
+            "showNavigator": true,
+            "nav":[
+                {
+                    "url":"https://service.cocos.com/document/en/",
+                    "target":"_blank",
+                    "name": "English"
+                },
+                {
+                    "url":"https://account.cocos.com/",
+                    "target":"_blank",
+                    "name": "控制台",
+                    "border": "nav-border",
+                    "type": "console"
+                }
+            ]
+        }
+    },
+    "pluginsConfig": {
+        "theme-fexa":{
+            "search-placeholder":"输入关键字搜索",
+            "logo":"./_assets/logo.png",
+            "favicon": "./_assets/favicon.ico"
+        }
+    }
+}
