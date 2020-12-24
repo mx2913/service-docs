@@ -50,7 +50,7 @@ Agora Live Interactive Audio Streaming boasts a flexible combination of function
 
 - Click on **Panel -> Service** in the menu bar to open the Service panel, select **Agora RTC** service to go to the service detail page, and then click on the **Enable** button in the top right to enable the service. For details, please refer to the Cocos Service [Operation Guide](./index.md#usage) documentation.
 
-    ![](agora/agora-panel.png)
+    ![](agora/agora-panel.jpg)
 
     **Charge**: Agora RTC services use the **prepaid** model. When your service usage exceeds the free portion of the service provider and the account balance is insufficient, the service will be stopped. At that time, you need to **pre-charge** in the Cocos Developer Console. 
 
@@ -60,9 +60,9 @@ After the service is activated, Cocos Service will automatically activate the Ag
 
 - Once the Agora RTC service is integrated, we can verify the success of the Agora RTC service integration by adding simple code to the script.
 
-- Click **Dashboard** button in the Agora RTC service panel, jump to [Agora Console](https://console.agora.io/). Then click ![](agora/agora-projecticon.png) icon in the left navigation menu to enter the Project Management page and obtain the **App ID** of the corresponding game.
+- Click **Dashboard** button in the Agora RTC service panel, jump to [Agora Console](https://console.agora.io/). Then click ![](agora/agora-projecticon.jpg) icon in the left navigation menu to enter the Project Management page and obtain the **App ID** of the corresponding game.
 
-    ![](agora/agora-param.png)
+    ![](agora/agora-param.jpg)
 
 - Call the initialize method in the script and fill in the **App ID** obtained from the Agora console:
 
@@ -73,7 +73,7 @@ After the service is activated, Cocos Service will automatically activate the Ag
 
 - After the script is finished and saved, go back to the editor. Select the **Browser** and click the ![](./image/preview-button.jpg) [Preview](https://docs.cocos.com/creator/manual/en/getting-started/basics/preview-build.html) button. If you can see the initialization log in the browser console, which means the integrate is successful.
 
-    ![](agora/agora-debugging.png)
+    ![](agora/agora-debugging.jpg)
 
 ## Sample Project
 

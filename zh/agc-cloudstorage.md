@@ -51,11 +51,11 @@
 
 - 点击菜单栏的 **面板 -> 服务**，打开 **服务** 面板，选择 **云存储**，进入服务详情页。然后点击右上方的 **启用** 按钮即可开通服务。详情可参考 [服务面板操作指南](./user-guide.md)。
 
-  ![](agc-cloudstorage/cs-panel.png)
+  ![](agc-cloudstorage/cs-panel.jpg)
 
 - 请参考 [开通云存储服务](https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides/agc-cloudstorage-getstarted#h1-1585569414384) 文档，设置存储实例名称，开通服务，并将默认使用的存储实例名称填写到云存储服务面板下方 **默认实例** 选项中。
 
-  ![](agc-cloudstorage/cs-panelparam.png)
+  ![](agc-cloudstorage/cs-panelparam.jpg)
 
 ### 配置华为参数文件
 
@@ -65,11 +65,11 @@
 
 - 在 **项目设置** 页面的 **应用** 区域，点击 `agconnect-services.json` 下载配置文件。`agconnect-services.json` 文件在下载或者更新完成后，**必须手动拷贝** 到工程目录的 `settings` 目录下。
 
-  ![](agc-cloudstorage/cs-configfile.png)
+  ![](./image/globle-configfile.jpg)
 
 - Cocos Creator v2.4.3 及以上版本，若 [发布到 HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/zh/publish/publish-huawei-agc.html)，开发者可直接在 **构建发布** 面板中选取下载或更新后的配置文件，不需要手动拷贝。
 
-  ![](agc-cloudstorage/cs-agcfile.png)
+  ![](./image/globle-agcfile.jpg)
 
 ### 验证服务是否接入成功
 

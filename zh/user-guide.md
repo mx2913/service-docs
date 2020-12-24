@@ -8,7 +8,7 @@ Cocos AppID 是游戏的唯一标识。大多数服务在使用时都会产生�
 
 - 在 Cocos Creator **菜单栏 -> 面板 -> 服务** 打开服务面板，进入服务面板主界面，点击 **AppID** 后的 ![](image/panel-button.jpg) 按钮进行设定：
 
-    ![](image/panel-setting-appid.png)
+    ![](image/panel-setting-appid.jpg)
 
 - 如果开发者是首次使用 Cocos 还没有 AppID，开发者可以前往 Cocos 账户中心注册开发者账号以及创建游戏：
 
@@ -25,7 +25,7 @@ Cocos AppID 是游戏的唯一标识。大多数服务在使用时都会产生�
 - 在 **服务** 面板中，选择 **Cocos Analytics** 项，进入 Cocos Analytics 服务面板。
 - 点击右上角的 **启用** 按钮以启用统计服务。首次开通会弹出是否开通服务的提示框，点击 **确认开通** 即可开通服务。
 
-  ![](image/panel-confirm.png)
+  ![](image/panel-confirm.jpg)
 
 - 开通服务后，接下来开发者即可直接在游戏中调用服务所提供的各项功能了。详细的使用可点击服务详情页上方的“使用指南”按钮了具体了解。
 
@@ -38,12 +38,12 @@ Cocos AppID 是游戏的唯一标识。大多数服务在使用时都会产生�
 ![](image/panel-main.jpg)
 
 * 主面板列举了所有可用服务，并且可以一目了然地查看当前游戏开通了哪些服务。
-* ![](image/panel-new-version.png) 图标显示当前服务有更新，开发者可以进入该服务的详情页进行升级。
+* ![](image/panel-new-version.jpg) 图标显示当前服务有更新，开发者可以进入该服务的详情页进行升级。
 
 
 ### 服务详情页
 
-![](image/panel-analytics-info.png)
+![](image/panel-analytics-info.jpg)
 
 服务详情页通常由 **基本信息**、**通用说明** 和 **插件扩展** 三部分组成。以 Cocos Analytics 服务为例：
 
@@ -54,7 +54,7 @@ Cocos AppID 是游戏的唯一标识。大多数服务在使用时都会产生�
 - Sample 工程：基本上每个服务我们都会提供 Sample 工程，开发者可以直接打开 Sample 工程来快速体验服务所提供的功能。
 - 版本管理：点击 **版本号** 即可打开版本管理面板，查看该版本说明。点击 **请选择版本** 可在下拉框中切换 **其他历史版本**。
 
-    ![](image/panel-analytics-version.png)
+    ![](image/panel-analytics-version.jpg)
 
 #### 通用说明
 

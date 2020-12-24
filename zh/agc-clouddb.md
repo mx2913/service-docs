@@ -24,7 +24,11 @@
 
 ### 版本更新说明
 
-- 当前版本：0.5.4_1.2.3.301
+- 当前版本：0.5.5_1.2.3.301
+
+    - 修复因 JSON 解析库使用方法导致的数据库插入失败问题。
+
+- v0.5.4_1.2.3.301
 
     - 修复生成器未适配新版 FORMAT-VERSION 的索引导致的崩溃问题。
     - 修复 Query 查询器类型转换问题导致的崩溃。
@@ -55,11 +59,11 @@
 
 - 点击菜单栏的 **面板 -> 服务**，打开 **服务** 面板，选择 **云数据库**，进入服务详情页。然后点击右上方的 **启用** 按钮即可开通服务。详情可参考 [服务面板操作指南](./user-guide.md)。
 
-  ![](agc-clouddb/cdb-panel.png)
+  ![](agc-clouddb/cdb-panel.jpg)
 
 - 参考 [管理对象类型](https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides/agc-clouddb-agcconsole-objecttypes) 文档，导出 **JSON** 格式的对象类型文件，将其导入云数据库服务面板下方 **云数据库配置文件** 选项中，然后从 AGC 云数据库后台获取版本号，填入 **云数据库对象版本** 选项中。
 
-  ![](agc-clouddb/cdb-jsonconfig.png)
+  ![](agc-clouddb/cdb-jsonconfig.jpg)
 
 ### 配置华为参数文件
 
@@ -69,11 +73,11 @@
 
 - 在 **项目设置** 页面的 **应用** 区域，点击 `agconnect-services.json` 下载配置文件。`agconnect-services.json` 文件在下载或者更新完成后，**必须手动拷贝** 到工程目录的 `settings` 目录下。
 
-  ![](agc-clouddb/cdb-configfile.png)
+  ![](agc-clouddb/cdb-configfile.jpg)
 
-- Cocos Creator v2.4.3 及以上版本，若 [发布到 HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/zh/publish/publish-huawei-agc.html)，开发者可直接在 **构建发布** 面板中选取下载或更新后的配置文件，不需要手动拷贝。
+- Cocos Creator v2.4.3 及以上版本，若 [发布到 HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md)，开发者可直接在 **构建发布** 面板中选取下载或更新后的配置文件，不需要手动拷贝。
 
-  ![](agc-clouddb/cdb-agcfile.png)
+  ![](agc-clouddb/cdb-agcfile.jpg)
 
 ### 验证服务是否接入成功
 
@@ -82,22 +86,22 @@
   ```js
   // "test" 需替换为配置的对象类型名
   let db = huawei.agc.db;
-  let config = db.AGCCloudDBZoneConfig.createConfig("test", db.SyncProperty.CLOUDDBZONE_CLOUD_CACHE);
-  let query = db.AGCCloudDBZoneQuery.where("test", "queryTest");
+  let config = db.AGCCloudDBZoneConfig.createConfig("Types", db.SyncProperty.CLOUDDBZONE_CLOUD_CACHE);
+  let query = db.AGCCloudDBZoneQuery.where("Types", "queryTest");
   let zone = db.dbService.openCloudDBZone(config, true);
   let result = zone.querySync(query, huawei.agc.db.QueryPolicy.POLICY_QUERY_FROM_CLOUD_PRIOR);
   console.log('Cloud DB', 'query : ' + JSON.stringify(result));
   ```
 
-- 下载测试用的 <a href="agc-clouddb/cdb-test.json.zip" target="_blank">数据库文件</a>，解压后将其导入 AGC 后台。
+- 下载测试用的 <a href="agc-clouddb/cdb-agccloudedb.json.zip" target="_blank">数据库文件</a>，解压后将其导入 AGC 后台。
 
-  ![](agc-clouddb/cdb-importdb.png)
+  ![](agc-clouddb/cdb-importdb.jpg)
 
-- [发布到 Android 平台](https://docs.cocos.com/creator/manual/zh/publish/publish-native.html)。请确保 **构建发布** 面板中的包名与华为后台设置的包名一致。
+- [发布到 Android 平台](../publish/publish-native.md)。请确保 **构建发布** 面板中的包名与华为后台设置的包名一致。
 
 - 工程运行到手机后，若能在 Logcat 中看到数据输出，即为接入成功。
 
-  ![](agc-clouddb/cdb-console.png)
+  ![](agc-clouddb/cdb-console.jpg)
 
 ## Sample 工程
 
@@ -107,7 +111,7 @@
 
 - 将工程中的 `attach/agcclouddb.json` 文件导入到 AGC 云数据库后台，否则会导致 Sample 工程中的云数据库模块无法正常运行。
 
-- 导入完成后，可通过 Creator 编辑器菜单栏的 **项目 -> 构建发布** 打开 **构建发布** 面板来构建编译工程。Creator v2.4.1 及以上版本，可 [发布到 HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/zh/publish/publish-huawei-agc.html)。Creator v2.4.1 以下的版本可 [发布到 Android 平台](https://docs.cocos.com/creator/manual/zh/publish/publish-native.html)。
+- 导入完成后，可通过 Creator 编辑器菜单栏的 **项目 -> 构建发布** 打开 **构建发布** 面板来构建编译工程。Creator v2.4.1 及以上版本，可 [发布到 HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md)。Creator v2.4.1 以下的版本可 [发布到 Android 平台](../publish/publish-native.md)。
 
 - Sample 工程运行到手机后，点击首页的 **DB** 按钮，即可进入功能界面进行测试。
 
@@ -152,7 +156,7 @@ huawei.agc.db.dbService.on("subscribe", data => console.log("Cloud DB", `subscri
 | :--- | :--- |  
 | zoneId | Cloud DB zone 名称，表示一个唯一的数据存储区域 |
 | typeName | 对象类型名称 |
-| queryId | 自定义查询 ID，用于查询接口。构造查询条件时，当前仅支持等值订阅，也就是只支持使用 [equalTo()](https://docs.cocos.com/service/api/classes/huawei.agc.db.agcclouddbzonequery.html#equalto) 方法，且查询条件中最少包含一个字段，最多包含 5 个字段，多个查询条件之间采用 **与** 运算。 |
+| queryId | 自定义查询 ID，用于查询接口。构造查询条件时，当前仅支持等值订阅，也就是只支持使用 [equalTo()](https://service.cocos.com/document/api/classes/huawei.agc.db.agcclouddbzonequery.html#equalto) 方法，且查询条件中最少包含一个字段，最多包含 5 个字段，多个查询条件之间采用 **与** 运算。 |
 | subscribeId | 订阅器的 ID |
 | result | 返回信息 |
 
@@ -221,7 +225,7 @@ let result = this._zone.querySync(query, huawei.agc.db.QueryPolicy.POLICY_QUERY_
 console.log('Cloud DB', 'query : ' + JSON.stringify(result));
 ```
 
-也可以添加查询条件，支持方法可参考 [API 文档 - AGCCloudDBZoneQuery](https://docs.cocos.com/service/api/classes/huawei.agc.db.agcclouddbzonequery.html)。
+也可以添加查询条件，支持方法可参考 [API 文档 - AGCCloudDBZoneQuery](https://service.cocos.com/document/api/classes/huawei.agc.db.agcclouddbzonequery.html)。
 
 **示例**：
 
@@ -256,5 +260,5 @@ console.log('Cloud DB', 'delete count : ' + count);
 
 ## API 文档
 
-详细的功能接口和 API 说明，请参考 [云数据库 - API 文档](https://docs.cocos.com/service/api/modules/huawei.agc.db.html)。
+详细的功能接口和 API 说明，请参考 [云数据库 - API 文档](https://service.cocos.com/document/api/modules/huawei.agc.db.html)。
 

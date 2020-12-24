@@ -47,17 +47,17 @@
 
 - 点击菜单栏的 **面板 -> 服务**，打开 **服务** 面板，选择 **远程配置**，进入服务详情页。然后点击右上方的 **启用** 按钮即可开通服务。详情可参考 [服务面板操作指南](./user-guide.md)。
 
-  ![](agc-remote/remote-panel.png)
+  ![](agc-remote/remote-panel.jpg)
 
     - 服务面板中的 **参数配置**，请参考 [设置应用内默认值](#%E8%AE%BE%E7%BD%AE%E5%BA%94%E7%94%A8%E5%86%85%E9%BB%98%E8%AE%A4%E5%80%BC)。
 
 - 登录 AppGallery Connect，点击 **我的项目**，在项目的应用列表中选择需要启动远程配置服务的应用，然后点击 **增长 -> 远程配置**，若首次使用请点击页面右上方的 **立即开通** 按钮来开通服务。
 
-  ![](agc-remote/remote-open.png)
+  ![](agc-remote/remote-open.jpg)
 
 - 在开通远程配置服务时，系统会默认自动开通远程配置 API。如果需要手动控制是否开启远程配置 API，可参考文档 [开通服务](https://developer.huawei.com/consumer/cn/doc/distribution/app/agc-enable_service)。
 
-  ![](agc-remote/remote-console.png)
+  ![](agc-remote/remote-console.jpg)
 
 ### 配置华为参数文件
 
@@ -67,11 +67,11 @@
 
 - 在 **项目设置** 页面的 **应用** 区域，点击 `agconnect-services.json` 下载配置文件。`agconnect-services.json` 文件在下载或者更新完成后，**必须手动拷贝** 到工程目录的 `settings` 目录下。
 
-  ![](agc-remote/remote-configfile.png)
+  ![](./image/globle-configfile.jpg)
 
 - Cocos Creator v2.4.3 及以上版本，若 [发布到 HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/zh/publish/publish-huawei-agc.html)，开发者可直接在 **构建发布** 面板中选取下载或更新后的配置文件，不需要手动拷贝。
 
-  ![](agc-remote/remote-agcfile.png)
+  ![](./image/globle-agcfile.jpg)
 
 ### 验证服务是否接入成功
 
@@ -86,7 +86,7 @@
 
 - 工程运行到手机后，若能在 Logcat 中看到输出的值为 **testValue**，即为接入成功。
 
-  ![](agc-remote/remote-logcat.png)
+  ![](agc-remote/remote-logcat.jpg)
 
 ## Sample 工程
 
@@ -100,7 +100,7 @@
 
 - Sample 工程运行到手机后，点击首页的 **Remote** 按钮，即可进入功能界面进行测试。
 
-  ![](agc-remote/remote-sample.png)
+  ![](agc-remote/remote-sample.jpg)
 
 ## 开发指南
 
@@ -112,7 +112,7 @@
 
 开发者可以在远程配置对象中设置 [应用程序内的默认值](https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides/agc-remoteconfig-dev-guide#h1-1591760650143)，以便应用程序在连接到远程配置服务之前按照预期运行。如果云端未设置参数值，可以使用本地默认值，本地默认值在服务面板的 **参数配置** 中设置。
 
-![](agc-remote/remote-param.png)
+![](agc-remote/remote-param.jpg)
 
 ### 获取和更新云端参数值到本地
 

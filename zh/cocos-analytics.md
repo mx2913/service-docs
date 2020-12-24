@@ -10,7 +10,7 @@
 
 - 点击菜单栏的 **面板 -> 服务**，打开 **服务** 面板，选择 **Cocos Analytics**，进入服务详情页。然后点击右上方的 **启用** 按钮即可开通服务。详情可参考 [服务面板操作指南](./user-guide.md)。
 
-    ![](cocos-analytics/analytics-panel.png)
+    ![](cocos-analytics/analytics-panel.jpg)
 
 - 开通服务后，在 Cocos Analytics 服务面板可以看到新增了 **参数配置** 项，包括 **AppID** 和 **store** 两个参数，以及 **重新加载预览插件** 按钮：
 
@@ -38,7 +38,7 @@ Cocos Analytics 服务接入完成后，我们可以通过在脚本中添加简�
 
 - 脚本修改完成并保存后，回到编辑器。在编辑器上方选择 **浏览器**，然后点击 ![](./image/preview-button.jpg) [预览](https://docs.cocos.com/creator/manual/zh/getting-started/basics/preview-build.html) 按钮，若能在控制台中看到初始化和登录日志，即为接入成功。
 
-    ![](cocos-analytics/analytics-debugging.png)
+    ![](cocos-analytics/analytics-debugging.jpg)
 
 
 ## Sample 工程
@@ -51,13 +51,13 @@ Cocos Analytics 服务接入完成后，我们可以通过在脚本中添加简�
 
 - 接入完成后，点击编辑器窗口正上方的 ![](./image/preview-button.jpg) [预览](https://docs.cocos.com/creator/manual/zh/getting-started/basics/preview-build.html) 按钮，即可在浏览器中调试该工程。
 
-  ![](cocos-analytics/analytics-sample.png)
+  ![](cocos-analytics/analytics-sample.jpg)
 
 - 可将 Sample 工程中的所有按钮点击一遍，然后在 Cocos Analytics 服务面板点击 **前往控制台** 按钮前往 **调试游戏** 页面，刷新页面直至更新数据，数据刷新周期约为 **10** 分钟。请注意检查 **调试游戏** 页面中的 AppID 是否与 **服务** 面板中的一致。
 
   若在调试状态下，所有数据接口调试完成，可点击右上方的 **完成调试** 按钮，转为正式模式。**注意**：转为正式模式后无法再回到 **调试游戏** 页面。
 
-  ![](cocos-analytics/analytics-console.png)
+  ![](cocos-analytics/analytics-console.jpg)
 
   游戏加载后，Cocos Analytics SDK 会在项目构建后的 `main.js` 文件中初始化，并且传入上面设置的参数。如果有批量发布的需要，也可以手动在 `main.js` 中修改这些参数。初始化后便可以直接调用 Cocos Analytics SDK，发送各种数据给服务器。
 

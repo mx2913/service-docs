@@ -10,15 +10,15 @@ Currently, App Messaging supports **pop-up**, **image**, and **banner** messages
 
 - A pop-up message can have a title and body and contain an image and up to two buttons. It is a better choice for you to send rich information to your users.
 
-  ![](agc-appmessaging/mtype-popup.png)
+  ![](agc-appmessaging/mtype-popup.jpg)
 
 - A banner message is displayed on the top of the screen, containing a thumbnail and the message title and body. A user can tap the banner to access the specified page.
 
-  ![](agc-appmessaging/mtype-banner.png)
+  ![](agc-appmessaging/mtype-banner.jpg)
 
 - An image message only contains an image. For example, an image message can be a poster well designed to promote an activity. A user can tap the image to access the activity details page.
 
-  ![](agc-appmessaging/mtype-image.png)
+  ![](agc-appmessaging/mtype-image.jpg)
 
 ### Working Principles
 
@@ -44,11 +44,11 @@ A user can tap an in-app message to access the destination specified during mess
 
 - Click on **Panel -> Service** in the menu bar to open the Service panel, select **App Messaging** service to go to the service detail page, and then click on the **Enable** button in the top right to enable the service. For details, please refer to the Cocos Service [Operation Guide](./index.md#usage) documentation.
 
-  ![](agc-appmessaging/am-panel.png)
+  ![](agc-appmessaging/am-panel.jpg)
 
 - Find your project from the project list and click the app for which you need to enable App Messaging service on the project card. Go to **Growing -> App Messaging**, if it is the first time that you use App Messaging service, click **Enable now** in the upper right corner.  
 
-  ![](agc-appmessaging/am-open.png)
+  ![](agc-appmessaging/am-open.jpg)
 
 ### Configs HUAWEI Config File
 
@@ -58,11 +58,11 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 - On the **Project Setting** page, click the configuration file **agconnect-services.json** to download it. The `agconnect-services.json` file **must be copied manually** to the `settings` directory of the project directory after downloading or updating.
 
-  ![](agc-appmessaging/am-configfile.png)
+  ![](./image/globle-configfile.jpg)
 
 - For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
 
-  ![](agc-appmessaging/am-agcfile.png)
+  ![](./image/globle-agcfile.jpg)
 
 ### Verify whether the service is integrated successfully
 
@@ -77,7 +77,7 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 - Run the project on a phone, get the **AAID** from **LogCat**.
 
-  ![](agc-appmessaging/am-logcat.png)
+  ![](agc-appmessaging/am-logcat.jpg)
 
 - Creating an In-App Message in the AppGallery Connect console, please refer to [Creating an In-App Message](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-appmessage-create) documentation for details.
 

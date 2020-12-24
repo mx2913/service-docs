@@ -61,7 +61,7 @@ Cocos SDKHub 框架和插件基本不涉及当前状态处理和服务端接口�
 
 - 参考 [AppGallery Connect 配置](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/account-preparation#h1-1573697333903) 文档，在 [华为开发者联盟后台](https://developer.huawei.com/consumer/cn/console) 注册开发者账号，创建游戏应用和 **生成/配置签名证书指纹**。在该游戏应用的 **我的项目 -> 项目设置 -> API 管理** 页面中开通 **Account Kit**、**In-App Purchases**、**Game Service**、**Push Kit** 服务。华为文档中的集成 HMS Core SDK 部分，Cocos SDKHub 会在构建时 **自动完成**，无需开发者手动操作。
 
-    ![](sdkhub-hms/hms-config.png) 
+    ![](sdkhub-hms/hms-config.jpg) 
 
 - 若需要使用支付服务，请提前准备好注册开发者本人的银行卡，填写相关收款信息。提交后审核可能需要 1~2 个工作日。开通 **In-App Purchases** 服务后到后台 [配置商品信息](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/config-product-0000001050033076)。支付服务支持 [沙盒测试](https://developer.huawei.com/consumer/cn/doc/HMSCore-Guides-V5/sandbox-testing-0000001050035039-V5)。请注意配置后的商品是否为 **有效** 状态。
     
@@ -77,7 +77,7 @@ Cocos SDKHub 框架和插件基本不涉及当前状态处理和服务端接口�
 
 - 在 **项目设置** 页面的 **应用** 区域，点击 `agconnect-services.json` 下载配置文件。`agconnect-services.json` 文件在下载或者更新完成后，**必须手动拷贝** 到工程目录的 `settings` 目录下。
 
-  ![](sdkhub-hms/hms-configfile.png)
+  ![](./../image/globle-configfile.jpg)
 
 **注意**：
 
@@ -85,11 +85,11 @@ Cocos SDKHub 框架和插件基本不涉及当前状态处理和服务端接口�
 
 2. 在构建时若勾选了 **调试模式**，开发者需要在 Android Studio 的 `app/build.gradle` 文件中，自行配置 Keystore 签名文件。
 
-    ![](sdkhub-hms/globle-keystore.png)
+    ![](./../image/globle-keystore.jpg)
 
 3. Cocos Creator v2.4.3 及以上版本，若 [发布到 HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/zh/publish/publish-huawei-agc.html)，开发者可直接在 **构建发布** 面板中选取下载或更新后的配置文件，不需要手动拷贝。
 
-    ![](sdkhub-hms/hms-agcfile.png)
+    ![](./../image/globle-agcfile.jpg)
 
 ## Sample 工程
 
@@ -99,23 +99,23 @@ Cocos SDKHub 框架和插件基本不涉及当前状态处理和服务端接口�
 
 - 点击菜单栏的 **面板 -> 服务**，打开 **服务** 面板，选择 **Cocos SDKHub**，进入服务详情页。然后点击右上方的 **启用** 按钮即可开通服务。详情可参考 [服务面板操作指南](../user-guide.md)。
 
-  ![](sdkhub-hms/hms-provisioning.png) 
+  ![](sdkhub-hms/hms-provisioning.jpg) 
 
 - 在 Cocos SDKHub 服务面板上添加一个新配置集
     
-  ![](sdkhub-hms/hms-config-group1.jpeg)
+  ![](sdkhub-hms/hms-config-group1.jpg)
 
   进入 **添加配置集** 页面，填写相关参数，填写完成后点击 **确定** 即可
 
-  ![](sdkhub-hms/hms-config-group2.png)
+  ![](sdkhub-hms/hms-config-group2.jpg)
 
 - 添加完成后点击 **配置插件** 按钮，勾选所需的 **HUAWEI HMS Core** 相关服务插件。
  
-  ![](sdkhub-hms/hms-config-group3.png)
+  ![](sdkhub-hms/hms-config-group3.jpg)
 
 - 点击 **插件** 行对应的编辑参数按钮。
 
-  ![](sdkhub-hms/hms-config-group4.jpeg)
+  ![](sdkhub-hms/hms-config-group4.jpg)
 
   进入 **参数配置** 页面，配置所需的参数。
 
@@ -134,7 +134,7 @@ Cocos SDKHub 框架和插件基本不涉及当前状态处理和服务端接口�
 
 - 配置完成并接入相关 API 接口后，即可通过 Creator 编辑器菜单栏的 **项目 -> 构建发布** 打开 **构建发布** 面板来构建编译工程。Creator 2.4.1 及以上版本，可参考 [发布到 HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/zh/publish/publish-huawei-agc.html)。旧版本用户可构建发布到 Android 平台。
 
-    ![](sdkhub-hms/hms-build.png)
+    ![](sdkhub-hms/hms-build.jpg)
     
     ![](sdkhub-hms/hms-sample.jpg)
 
@@ -154,7 +154,7 @@ Cocos SDKHub 的 Log 关键字为 `HUB_LOG`，仅在 **构建发布** 面板中�
 
 接入 HMS Core SDK 后，在统一回调中需要判断返回的 msg 格式是否为 JSON 对象，JSON 对象中是否有 **retCode** 信息。该值为华为返回的错误码，可以通过该值到华为文档中查询错误信息。
 
-![](sdkhub-hms/hms-errorcode.png)
+![](sdkhub-hms/hms-errorcode.jpg)
 
 ### 账号与游戏插件
 

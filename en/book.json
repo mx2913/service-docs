@@ -5,7 +5,7 @@
     },
     "variables": {
         "themeFexa":{
-            "showHome": true,
+            "showHome": false,
             "showNavigator": true,
             "nav":[
                 {

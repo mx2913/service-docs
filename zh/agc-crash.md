@@ -30,7 +30,7 @@
 
 - 点击菜单栏的 **面板 -> 服务**，打开 **服务** 面板，选择 **崩溃服务**，进入服务详情页。然后点击右上方的 **启用** 按钮即可开通服务。详情可参考 [服务面板操作指南](./user-guide.md)。
 
-  ![](agc-crash/crash-panel.png)
+  ![](agc-crash/crash-panel.jpg)
 
 ### 配置华为参数文件
 
@@ -40,11 +40,11 @@
 
 - 在 **项目设置** 页面的 **应用** 区域，点击 `agconnect-services.json` 下载配置文件。`agconnect-services.json` 文件在下载或者更新完成后，**必须手动拷贝** 到工程目录的 `settings` 目录下。
 
-  ![](agc-crash/crash-configfile.png)
+  ![](./image/globle-configfile.jpg)
 
 - Cocos Creator v2.4.3 及以上版本，若 [发布到 HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/zh/publish/publish-huawei-agc.html)，开发者可直接在 **构建发布** 面板中选取下载或更新后的配置文件，不需要手动拷贝。
 
-  ![](agc-crash/crash-agcfile.png)
+  ![](./image/globle-agcfile.jpg)
 
 ### 验证服务是否接入成功
 
@@ -75,7 +75,7 @@
 
 - Sample 工程运行到手机后，点击首页的 **Crash** 按钮，即可进入功能界面进行测试。
 
-  ![](agc-crash/crash-sample.png)
+  ![](agc-crash/crash-sample.jpg)
 
 ## 开发指南
 

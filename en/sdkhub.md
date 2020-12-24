@@ -17,13 +17,13 @@ The Cocos SDKHub is divided into two main parts: the framework layer and the plu
 
 At the game play layer, developers only need to call the methods in the SDKHub and handle the encapsulated callbacks, greatly simplifying the workload of developers accessing native SDKs.
 
-![](sdkhub/sdkhub-intro.png)
+![](sdkhub/sdkhub-intro.jpg)
 
 ## Enable Cocos SDKHub Service
 
 Use Cocos Creator to open the project that needs to be connected to Cocos SDKHub. Click on **Panel -> Service** on the menu bar to open the **Service** panel, go to the Cocos SDKHub service detail panel, and click on the **Enable** button at the top right. Refer to [Cocos Service Operation Guide](index.md).
 
-![](sdkhub/sdkhub-provisioning.png)
+![](sdkhub/sdkhub-provisioning.jpg)
 
 Once the service is turned on, the Cocos Service will automatically integrate the Cocos SDKHub framework into the game project.
 
@@ -45,7 +45,7 @@ Once the service is turned on, the Cocos Service will automatically integrate th
 
 The aforementioned operation only integrates the Cocos SDKHub's abstraction layer framework into the game, but does not substantially integrate what we call third-party SDKs. Which platforms the game needs to be released to and which SDKs need to be integrated that need to be added via the **Build Config** on the Cocos SDKHub service details page, which we will detail next.
 
-![](sdkhub/sdkhub-panel1.png)
+![](sdkhub/sdkhub-panel1.jpg)
 
 The specific filling rules for the relevant parameter configuration are as follows:
 
@@ -57,11 +57,11 @@ The specific filling rules for the relevant parameter configuration are as follo
 
   1. Click **New Config Set** as shown below.
 
-      ![](sdkhub/sdkhub-panel2.png)
+      ![](sdkhub/sdkhub-panel2.jpg)
 
   2. Enter the **Add Config Set** panel to configure the required parameters, and then click **OK**.
 
-      ![](sdkhub/sdkhub-panel5.png)
+      ![](sdkhub/sdkhub-panel5.jpg)
 
     - **Config Set Name**: Usually the platform name can be used directly, you can also use a name that’s more recognizable.
 
@@ -73,13 +73,13 @@ The specific filling rules for the relevant parameter configuration are as follo
 
   After creating a configuration set, users need to select and configure the SDK (plug-in) that needs to be integrated under the set, and fill in the parameters required for the native platform SDK in order to use the features of the platform SDK in the built project. If you don't configure the plugins, the built project will not do much of anything and will automatically switch to debug mode when the Cocos SDKHub framework interface is called.
 
-  ![](sdkhub/sdkhub-panel3.png)
+  ![](sdkhub/sdkhub-panel3.jpg)
 
   - **Config Plugin**: Add plugins with the required functions, currently supports **Account & Game**, **IAP**, **Advertising** and **Push**.
   - **Update All**: If you have a downloaded plug-in with an online update version, click here to update all of them.
   - **Edit parameters button**: fill in the parameters required for the platform SDK. If you don't fill in all the parameters, it can't be built normally.
 
-    ![](sdkhub/sdkhub-panel4.png)
+    ![](sdkhub/sdkhub-panel4.jpg)
 
   - **Delete parameter button**: Delete the currently filled parameter configuration.
 
@@ -89,7 +89,7 @@ After creating the config set and configuring the plugins and parameters for the
 
 Open **Project -> Build...** in the top menu of Cocos Creator, when you select **Android**, **iOS**, **HUAWEI AppGallery Connect** (currently Cocos SDKHub only supports these native platforms), it will show **Cocos SDKHub Configuration** item and list the config set you created in the Service panel (Cocos Creator 2.4.1 and above only, older versions before 2.4.1 will use the config set selected by the Cocos SDKHub panel in the Service panel by default), just select the corresponding config set.
 
-![](sdkhub/sdkhub-build1.png)
+![](sdkhub/sdkhub-build1.jpg)
 
 Tips: If you are having problems with your builds, probably due to your Creator native compilation environment being incorrectly configured, try compiling the project directly in **Android Studio** or **Xcode** to get more debugging information.
 
@@ -103,7 +103,7 @@ You can get a quick taste of the Cocos SDKHub with the sample project.
 
   - Have registered a developer account with [Huawei Developer Center](https://developer.huawei.com/consumer/en/console) and created a game app with **Account Kit**, **In-App Purchases**, **Game Service** and **Push Kit** service enabled in the **API Management** page.
       
-    ![](sdkhub/sdkhub-hms-config.png)
+    ![](sdkhub/sdkhub-hms-config.jpg)
 
   - Configure the package name, generate and configure the SHA256 certificate fingerprint, and get the configuration file `agconnect-services.json` in the **My Project** page. Refer to the [AppGallery Connect Configuration](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/account-preparation) documentation for details.
       
@@ -111,23 +111,23 @@ You can get a quick taste of the Cocos SDKHub with the sample project.
 
 - Enable the Cocos SDKHub service in the **Service** panel, and add a new config set to the Cocos SDKHub services panel.
 
-  ![](sdkhub/sdkhub-panel2.png)
+  ![](sdkhub/sdkhub-panel2.jpg)
 
 - Enter the **Add Config Set** panel to configure the required parameters, and then click **OK**.
 
-  ![](sdkhub/sdkhub-panel5.png)
+  ![](sdkhub/sdkhub-panel5.jpg)
     
 - After the config set is added, click the **Config Plugin** button and check the **HUAWEI HMS Core** related services plugin.
 
-  ![](sdkhub/sdkhub-config-group3.png)
+  ![](sdkhub/sdkhub-config-group3.jpg)
     
 - Click the **Edit Parameters** button under the **Params** list.
 
-  ![](sdkhub/sdkhub-config-group4.png)
+  ![](sdkhub/sdkhub-config-group4.jpg)
 
   Enter the **Parameter Config** panel to configure the required parameters, and then click **OK**.
 
-  ![](sdkhub/sdkhub-config-group5.png)
+  ![](sdkhub/sdkhub-config-group5.jpg)
     
 - Once the configuration is complete, you can build to the **HUAWEI AppGallery Connect** platform and select the config set you just created in the **Build** panel, then build and compile the project for testing.
 

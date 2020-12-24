@@ -10,19 +10,19 @@ To identity the source of a user, you can set tracing parameters when creating a
 
 You can create a user waking-up activity under **Operate -> Promotion -> Manage promotions -> Activities** and then create a link of App Linking to direct users to the activity through social media, email, SMS message, or push message. If a user finds the activity attractive and taps the link, your app will be launched and the user will be redirected to the activity page and instructed to complete certain actions required by the activity, for example, sharing or making a payment. In this way, user activity is improved and the view count of the page increases.
 
-![](agc-applinking/al-cases1.png)
+![](agc-applinking/al-cases1.jpg)
 
 #### Converting Mobile Website Users into Native App Users
 
 When a mobile website user opens a common shared link (not a link of App Linking) on a page, the user needs to install the app first, go back to the page, and open the link again. App Linking can greatly improve user experience in this process by directly redirecting a user to the target in-app content after the user installs your app.
 
-![](agc-applinking/al-cases2.png)
+![](agc-applinking/al-cases2.jpg)
 
 #### Tracing Traffic Sources in Daily Marketing to Identity the Most Effective Marketing Platform
 
 You can set tracing parameters for a marketing link of App Linking to be placed on multiple marketing platforms so that you can identity which platform can achieve the best marketing result based on statistics collected for each platform and check whether users on this platform fit the user profile that you have defined at the beginning.
 
-![](agc-applinking/al-cases3.png)
+![](agc-applinking/al-cases3.jpg)
 
 #### Encouraging Users to Share Links
 
@@ -113,7 +113,7 @@ A link can be opened either in a **browser** or in your **app**, which is specif
 
 - Click on **Panel -> Service** in the menu bar to open the Service panel, select **App Linking** service to go to the service detail page, and then click on the **Enable** button in the top right to enable the service. For details, please refer to the Cocos Service [Operation Guide](./index.md#usage) documentation.
 
-  ![](agc-applinking/al-panel.png)
+  ![](agc-applinking/al-panel.jpg)
 
 - Fill in the **android intent filter** in the **Params Config** of the App Linking service panel with the address of the App Linking **original** website. Then set the **intent link type** option. The service plug-in will add the required configuration to the `AndroidManifest.xml` file when building. Please refer to the [Adding an Intent Filter](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-applinking-receivelinks#h1-1585311152686) for details.
 
@@ -127,13 +127,13 @@ A link can be opened either in a **browser** or in your **app**, which is specif
     - **Available**: App Linking SDK reads content on the clipboard each time when the app is launched.
     - **Unavailable**: App Linking SDK does not read content on the clipboard.
 
-  ![](agc-applinking/al-filter.png)
+  ![](agc-applinking/al-filter.jpg)
 
 - Developer need to prefix the free domain name (for example, `drcn.agconnect.link`) provided by AppGallery Connect with a string to uniquely identify the URL prefix. Please refer to [Adding a URL Prefix](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-applinking-createlinks-byagc#h1-1585299576869).
 
 - Find your project from the project list and click the app for which you need to enable App Linking service on the project card. Go to **Growing -> App Linking**, if it is the first time that you use App Linking service, click **Enable now** in the upper right corner.  
 
-  ![](agc-applinking/al-open.png)
+  ![](agc-applinking/al-open.jpg)
 
 ### Configs HUAWEI Config File
 
@@ -143,11 +143,11 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 - On the **Project Setting** page, click the configuration file **agconnect-services.json** to download it. The `agconnect-services.json` file **must be copied manually** to the `settings` directory of the project directory after downloading or updating.
 
-  ![](agc-applinking/al-configfile.png)
+  ![](./image/globle-configfile.jpg)
 
 - For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
 
-  ![](agc-applinking/al-agcfile.png)
+  ![](./image/globle-agcfile.jpg)
 
 ### Verify whether the service is integrated successfully
 
@@ -166,11 +166,11 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 - Refer to [Creating a Link in AppGallery Connect](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-applinking-createlinks-byagc) documentation to create an App Linking. When setting the Android Linking behavior, select **Open in your Android app** and select the current app in the settings box below (if you have not created an application, you can click the **Add Android app** button to create).
 
-  ![](agc-applinking/al-console-behavior.png)
+  ![](agc-applinking/al-console-behavior.jpg)
 
 - Get the App Linking address, open it in browser of test device, you can see the App Linking's interface as below. Click **Open** button and jump to the App.
 
-  ![](agc-applinking/al-browser.png)
+  ![](agc-applinking/al-browser.jpg)
 
 - After jumping to the App, if you can see the **deepLink** address in **LogCat**, which means the integrate is successful.
 
@@ -184,7 +184,7 @@ Developer can get a quick taste of the App Linking service with the sample proje
 
 - Once the Sample project is running on the phone, click the **AppLinking** button on the homepage for testing.
 
-  ![](agc-applinking/al-sample.png)
+  ![](agc-applinking/al-sample.jpg)
 
 ## Developer Guide
 
