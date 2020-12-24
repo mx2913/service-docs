@@ -6,6 +6,7 @@
     },
     "variables": {
         "themeFexa":{
+            "lang": "zh",
             "showHome": false,
             "showNavigator": true,
             "nav":[
@@ -13,13 +14,6 @@
                     "url":"https://service.cocos.com/document/en/",
                     "target":"_blank",
                     "name": "English"
-                },
-                {
-                    "url":"https://account.cocos.com/",
-                    "target":"_blank",
-                    "name": "控制台",
-                    "border": "nav-border",
-                    "type": "console"
                 }
             ]
         }
