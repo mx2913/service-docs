@@ -1,7 +1,7 @@
 {
     "structure": {
         "summary": "SUMMARY.md",
-        "readme": "index.md"
+        "readme": "about-cocos-service.md"
     },
     "variables": {
         "themeFexa":{

@@ -2,7 +2,6 @@
 
 ## 文档仓库与分支
 
-* forked from https://github.com/cocos-creator/creator-docs
 * Cocos Service 文档部分始终基于 master 分支进行编写，当需要发布时，提交 PR 到 Creator 文档的指定分支
 
 ## 编辑与预览
@@ -28,7 +27,7 @@ gitbook serve
 * `gitbook build [编译目录] [输出目录]` 编译书籍
 
     ```
-    gitbook build /Projects/creator-docs/zh/cocos-service /Projects/creator-docs/zh/cocos-service/output
+    gitbook build /Projects/creator-docs/ /Projects/creator-docs/output
     ```
 
 ## 上线新服务

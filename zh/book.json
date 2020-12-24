@@ -1,5 +1,9 @@
 {
     "language" : "zh-hans",
+    "structure": {
+        "summary": "SUMMARY.md",
+        "readme": "about-cocos-service.md"
+    },
     "variables": {
         "themeFexa":{
             "showHome": false,

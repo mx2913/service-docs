@@ -1,6 +1,5 @@
 # Summary
 
-- [Introduction](index.md)
 - [List of Services]()
     - [Agora RTC](agora.md)
     - [Location Kit (HMS Core)](hms-location.md)
@@ -16,3 +15,4 @@
     - [Cloud Functions (AGC)](agc-cloudfunc.md)
     - [Cocos SDKHub](sdkhub.md)
         - [HUAWEI HMS Core](sdkhub-plugins/sdkhub-hms.md)
+
