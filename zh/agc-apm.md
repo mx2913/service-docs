@@ -28,11 +28,11 @@
 
 - 点击菜单栏的 **面板 -> 服务**，打开 **服务** 面板，选择 **性能管理**，进入服务详情页。然后点击右上方的 **启用** 按钮即可开通服务。详情可参考 [服务面板操作指南](./user-guide.md)。
 
-  ![](agc-apm/apm-panel.png)
+  ![](agc-apm/apm-panel.jpg)
 
 - 如果华为后台的 **性能管理** 服务尚未开通，需登录 [AppGallery Connect](https://developer.huawei.com/consumer/cn/service/josp/agc/index.html) 后台，选择 **我的项目**，进入 **质量 -> 性能管理** 页面，点击 **立即开通** 按钮开通服务。
 
-  ![](agc-apm/apm-open.png)
+  ![](agc-apm/apm-open.jpg)
 
 ### 配置华为参数文件
 
@@ -42,11 +42,11 @@
 
 - 在 **项目设置** 页面的 **应用** 区域，点击 `agconnect-services.json` 下载配置文件。`agconnect-services.json` 文件在下载或者更新完成后，**必须手动拷贝** 到工程目录的 `settings` 目录下。
 
-  ![](agc-apm/apm-configfile.png)
+  ![](./image/globle-configfile.jpg)
 
 - Cocos Creator v2.4.3 及以上版本，若 [发布到 HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/zh/publish/publish-huawei-agc.html)，开发者可直接在 **构建发布** 面板中选取下载或更新后的配置文件，不需要手动拷贝。
 
-  ![](agc-apm/apm-agcfile.png)
+  ![](./image/globle-agcfile.jpg)
 
 ### 验证服务是否接入成功
 
@@ -66,7 +66,7 @@
 
 - Sample 工程运行到手机后，点击首页的 **APMS** 按钮，即可进入功能界面进行测试。
 
-  ![](agc-apm/apm-sample.png)
+  ![](agc-apm/apm-sample.jpg)
 
 ## 开发指南
 

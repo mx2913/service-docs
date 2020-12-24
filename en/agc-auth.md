@@ -65,19 +65,19 @@ By using the AppGallery Auth Service SDK, you can integrate one or more of the f
 
 - Click on **Panel -> Service** in the menu bar to open the Service panel, select Auth Service to go to the service detail page, and then click on the **Enable** button in the top right to enable the service. For details, please refer to the Cocos Service [Operation Guide](./index.md#usage) documentation.
 
-  ![](agc-auth/auth-panel.png)
+  ![](agc-auth/auth-panel.jpg)
 
 - Login the [AppGallery Connect](https://developer.huawei.com/consumer/en/service/josp/agc/index.html) console, open the project. Go to **Build -> Auth Service**, if it is the first time that you use Auth Service, click **Enable now** in the upper right corner. For details, you can refer to the AGC Auth Service documentation - [Enabling Auth Service](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-auth-android-getstarted-0000001053053922#EN-US_TOPIC_0000001053053922__section916641174412).
 
-  ![](agc-auth/auth-open.png)
+  ![](agc-auth/auth-open.jpg)
 
 - Select the required authentication method, click the **Enable** button on the right. 
 
-  ![](agc-auth/auth-console1.png)
+  ![](agc-auth/auth-console1.jpg)
 
 - In the dialog box that is displayed, configure app information. Required information can be obtained refer to [Enabling Auth Service](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-auth-android-getstarted-0000001053053922#EN-US_TOPIC_0000001053053922__section916641174412) documentation for details.
 
-  ![](agc-auth/auth-console2.png)
+  ![](agc-auth/auth-console2.jpg)
 
 - After console setting, return to the Creator Service panel, check the required authentication method to be enabled, and configure app information for client.
 
@@ -93,11 +93,11 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 - On the **Project Setting** page, click the configuration file **agconnect-services.json** to download it. The `agconnect-services.json` file **must be copied manually** to the `settings` directory of the project directory after downloading or updating.
 
-  ![](agc-auth/auth-configfile.png)
+  ![](./image/globle-configfile.jpg)
 
 - For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
 
-  ![](agc-auth/auth-agcfile.png)
+  ![](./image/globle-agcfile.jpg)
 
 ### Verify whether the service is integrated successfully
 
@@ -116,7 +116,7 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 - Run the project on a phone, if the HUAWEI account login interface appears, which means the integrate is successful.
 
-  ![](agc-auth/auth-verify.png)
+  ![](agc-auth/auth-verify.jpg)
 
 ## Sample Project
 
@@ -130,7 +130,7 @@ Developer can get a quick taste of the Auth Service with the sample project.
 
 - Once the Sample project is running on the phone, click the **Auth** button on the homepage for testing.
 
-  ![](agc-auth/auth-sample.png)
+  ![](agc-auth/auth-sample.jpg)
 
 ## Developer Guide
 

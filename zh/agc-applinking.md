@@ -8,19 +8,19 @@
 
 结合运营 -> 活动管理 -> 用户召回功能，策划用户唤醒活动并以此为内容创建链接，通过社交、邮件、短信或 push 等方式，将此链接发送给用户。用户因活动内容吸引点击链接时，可拉起 APP 并直达此内容页面，引导用户完成转发或付费等，促活的同时增加了此页面的访问量。
 
-![](agc-applinking/al-cases1.png)
+![](agc-applinking/al-cases1.jpg)
 
 #### 将移动网页用户转化成原生应用用户
 
 在不使用 App Linking 链接的情况下，当移动网页用户通过分享打开链接时，必须先安装应用，再导航回其原先位置打开链接内容。但使用 App Linking 链接，用户就可在安装应用后，直接打开应用内对应的页面，提高应用安装率及用户体验。
 
-![](agc-applinking/al-cases2.png)
+![](agc-applinking/al-cases2.jpg)
 
 #### 用于日常营销场景，跟踪用户来源，查看营销平台的有效性
 
 用公司日常促销活动创建 App Linking，在多个渠道进行投放，通过设置参数跟踪各个渠道的点击浏览数据，来查看哪些渠道的引流效果好，以测试这个渠道的用户是否贴近应用的用户画像。
 
-![](agc-applinking/al-cases3.png)
+![](agc-applinking/al-cases3.jpg)
 
 #### 鼓励用户分享
 
@@ -113,7 +113,7 @@
 
 - 点击菜单栏的 **面板 -> 服务**，打开 **服务** 面板，选择 **App Linking**，进入服务详情页。然后点击右上方的 **启用** 按钮即可开通服务。详情可参考 [服务面板操作指南](./user-guide.md)。
 
-  ![](agc-applinking/al-panel.png)
+  ![](agc-applinking/al-panel.jpg)
 
 - 在 App Linking 服务面板的 **参数配置** 中填写 **android intent filter**，需要填入 App Linking **转换前** 的网站地址，然后设置 **intent link type** 选项。构建时插件会将所需的配置添加到 `AndroidManifest.xml` 文件中。具体内容可参考 [添加 Intent 过滤器](https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides/agc-applinking-receivelinks#h1-1579335100846)。
 
@@ -127,13 +127,13 @@
     - **Available**：应用每次启动时，都会读取剪切板。
     - **Unavailable**：不读取剪切板。
 
-  ![](agc-applinking/al-filter.png)
+  ![](agc-applinking/al-filter.jpg)
 
 - 开发者需要在 AGC 提供的免费域名（例如 `drcn.agconnect.link`）前设置一个前缀字符串，作为开发者域名地址的唯一标识。详情请参考 [添加链接前缀](https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides/agc-applinking-createlinks-byagc#h1-1579332231584)。
   
 - 登录 AppGallery Connect，点击 **我的项目**，在项目的应用列表中选择需要启动 App Linking 服务的应用，然后点击 **增长 -> App Linking**，若首次使用请点击页面右上方的 **立即开通** 按钮来开通服务。
 
-  ![](agc-applinking/al-open.png)
+  ![](agc-applinking/al-open.jpg)
 
 ### 配置华为参数文件
 
@@ -143,13 +143,13 @@
 
 - 在 **项目设置** 页面的 **应用** 区域，点击 `agconnect-services.json` 下载配置文件。`agconnect-services.json` 文件在下载或者更新完成后，**必须手动拷贝** 到工程目录的 `settings` 目录下。
 
-  ![](agc-applinking/al-configfile.png)
+  ![](./image/globle-configfile.jpg)
 
 **注意**：
 
 - Cocos Creator v2.4.3 及以上版本，若 [发布到 HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/zh/publish/publish-huawei-agc.html)，开发者可直接在 **构建发布** 面板中选取下载或更新后的配置文件，不需要手动拷贝。
 
-  ![](agc-applinking/al-agcfile.png)
+  ![](agc-applinking/al-agcfile.jpg)
 
 ### 验证服务是否接入成功
 
@@ -168,11 +168,11 @@
 
 - 参考 [在 AGC 界面创建 App Linking](https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides/agc-applinking-createlinks-byagc) 文档，创建一个 App Linking，在 **设置安卓链接行为** 时，请选择 **在安卓应用中打开**，并在下方设置框中选择当前应用（若还未创建应用可点击后面的 **添加安卓应用** 按钮创建）。
 
-  ![](agc-applinking/al-console-behavior.png)
+  ![](agc-applinking/al-console-behavior.jpg)
 
 - 获取该 App Linking 的地址，在测试设备的浏览器中打开该地址，可以看到 App Linking 提供的界面（如下所示），点击 **打开**，跳转到 App。
 
-  ![](agc-applinking/al-browser.png)
+  ![](agc-applinking/al-browser.jpg)
 
 - 跳转到 App 后，能在 **LogCat** 中打印出 deepLink 地址，即为接入成功。
 
@@ -186,7 +186,7 @@
 
 - Sample 工程运行到手机后，点击首页的 **AppLinking** 按钮，即可进入功能界面进行测试。
 
-  ![](agc-applinking/al-sample.png)
+  ![](agc-applinking/al-sample.jpg)
 
 ## 开发指南
 

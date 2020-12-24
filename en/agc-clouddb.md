@@ -24,7 +24,11 @@ When using Cloud DB service, if the free resource quota cannot meet the develope
 
 ### Version Update Description
 
-- Latest Version: 0.5.4_1.2.3.301
+- Latest Version: 0.5.5_1.2.3.301
+
+    - Fix the problem of database insertion failure caused by the usage of JSON parsing library.
+
+- v0.5.4_1.2.3.301
 
     - Fix the crash caused by the generator not adapting to the index of the new version of FORMAT-VERSION.
     - Fix the crash caused by a Query type conversion problem.
@@ -53,11 +57,11 @@ When using Cloud DB service, if the free resource quota cannot meet the develope
 
 - Click on **Panel -> Service** in the menu bar to open the Service panel, select **Cloud DB** service to go to the service detail page, and then click on the **Enable** button in the top right to enable the service. For details, please refer to the Cocos Service [Operation Guide](./index.md#usage) documentation.
 
-  ![](agc-clouddb/cdb-panel.png)
+  ![](agc-clouddb/cdb-panel.jpg)
 
 - Please refer to [Managing Object Types](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-clouddb-agcconsole-objecttypes) document, export object types file in **JSON** format, import into the **Cloud DB Config File** parameter at the bottom of the Cloud DB service panel, then get the version number from the AGC Cloud DB console, and fill it in the **Cloud DB Object Version** option.
 
-  ![](agc-clouddb/cdb-jsonconfig.png)
+  ![](agc-clouddb/cdb-jsonconfig.jpg)
 
 ### Configs HUAWEI Config File
 
@@ -67,11 +71,11 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 - On the **Project Setting** page, click the configuration file **agconnect-services.json** to download it. The `agconnect-services.json` file **must be copied manually** to the `settings` directory of the project directory after downloading or updating.
 
-  ![](agc-clouddb/cdb-configfile.png)
+  ![](agc-clouddb/cdb-configfile.jpg)
 
-- For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
+- For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
 
-  ![](agc-clouddb/cdb-agcfile.png)
+  ![](agc-clouddb/cdb-agcfile.jpg)
 
 ### Verify whether the service is integrated successfully
 
@@ -80,22 +84,22 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
   ```js
   // "test" should to be replaced with the name of Storage instance
   let db = huawei.agc.db;
-  let config = db.AGCCloudDBZoneConfig.createConfig("test", db.SyncProperty.CLOUDDBZONE_CLOUD_CACHE);
-  let query = db.AGCCloudDBZoneQuery.where("test", "queryTest");
+  let config = db.AGCCloudDBZoneConfig.createConfig("Types", db.SyncProperty.CLOUDDBZONE_CLOUD_CACHE);
+  let query = db.AGCCloudDBZoneQuery.where("Types", "queryTest");
   let zone = db.dbService.openCloudDBZone(config, true);
   let result = zone.querySync(query, huawei.agc.db.QueryPolicy.POLICY_QUERY_FROM_CLOUD_PRIOR);
   console.log('Cloud DB', 'query : ' + JSON.stringify(result));
   ```
 
-- Download <a href="agc-clouddb/cdb-test.json.zip" target="_blank">database file</a> for test, import it into the AGC console after decompression.
+- Download <a href="agc-clouddb/cdb-agccloudedb.json.zip" target="_blank">database file</a> for test, import it into the AGC console after decompression.
 
-  ![](agc-clouddb/cdb-importdb.png)
+  ![](agc-clouddb/cdb-importdb.jpg)
 
-- [Publish to the Android platform](https://docs.cocos.com/creator/manual/en/publish/publish-native.html) after the code is added. Please make sure that the **Package Name** on the **Build** panel is consistent with the **Package Name** set in the AppGallery Connect console.
+- [Publish to the Android platform](../publish/publish-native.md) after the code is added. Please make sure that the **Package Name** on the **Build** panel is consistent with the **Package Name** set in the AppGallery Connect console.
 
 - Run the project on a phone, if you can see the data output in Logcat, which means the integrate is successful.
 
-  ![](agc-clouddb/cdb-console.png)
+  ![](agc-clouddb/cdb-console.jpg)
 
 ## Sample Project
 
@@ -105,7 +109,7 @@ Developer can get a quick taste of the Cloud DB service with the Sample project.
 
 - Import the `attach/agcclouddb.json` file in the project into the AGC Cloud DB console, otherwise the Cloud DB database module in the Sample project will not run normally.
 
-- After importing, you can open the **Build** panel to compile the project by clicking **Project -> Build** in the Creator editor menu bar. Cocos Creator v2.4.1 and above, you could [publish to HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html). Below Creator v2.4.1 could [publish to the Android platform](https://docs.cocos.com/creator/manual/en/publish/publish-native.html).
+- After importing, you can open the **Build** panel to compile the project by clicking **Project -> Build** in the Creator editor menu bar. Cocos Creator v2.4.1 and above, you could [publish to HUAWEI AppGallery Connect](../publish/publish-huawei-agc.md). Below Creator v2.4.1 could [publish to the Android platform](../publish/publish-native.md).
 
 - Once the Sample project is running on the phone, click the **DB** button on the homepage for testing.
 
@@ -150,7 +154,7 @@ huawei.agc.db.dbService.on("subscribe", data => console.log("Cloud DB", `subscri
 | :--- | :--- |  
 | zoneId | Name of Cloud DB zone, represents a unique data storage zone. |
 | typeName | Name of Storage instance. |
-| queryId | Custom query ID, for query interface. Only the equal-value subscription, that is, the [equalTo()](https://docs.cocos.com/service/api/classes/huawei.agc.db.agcclouddbzonequery.html#equalto) method can be used to construct query conditions. The query conditions must contain at least one field and at most five fields. The **AND** operation is used between multiple query conditions. |
+| queryId | Custom query ID, for query interface. Only the equal-value subscription, that is, the [equalTo()](https://service.cocos.com/document/api/classes/huawei.agc.db.agcclouddbzonequery.html#equalto) method can be used to construct query conditions. The query conditions must contain at least one field and at most five fields. The **AND** operation is used between multiple query conditions. |
 | subscribeId | Subscribe listener id |
 | result | Return message |
 
@@ -219,7 +223,7 @@ let result = this._zone.querySync(query, huawei.agc.db.QueryPolicy.POLICY_QUERY_
 console.log('Cloud DB', 'query : ' + JSON.stringify(result));
 ```
 
-It supports adding query conditions, supported methods can refer to [API document - AGCCloudDBZoneQuery](https://docs.cocos.com/service/api/classes/huawei.agc.db.agcclouddbzonequery.html).
+It supports adding query conditions, supported methods can refer to [API document - AGCCloudDBZoneQuery](https://service.cocos.com/document/api/classes/huawei.agc.db.agcclouddbzonequery.html).
 
 **Example**:
 
@@ -254,5 +258,5 @@ console.log('Cloud DB', 'delete count : ' + count);
 
 ## API Reference
 
-Please refer to the [Cloud DB - API Reference](https://docs.cocos.com/service/api/modules/huawei.agc.db.html).
+Please refer to the [Cloud DB - API Reference](https://service.cocos.com/document/api/modules/huawei.agc.db.html).
 

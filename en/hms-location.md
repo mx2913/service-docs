@@ -40,7 +40,7 @@ You can also create a geofence by dragging to select an area on the map and sett
 
 - Click on **Panel -> Service** in the menu bar to open the Service panel, select Location Kit service to go to the service detail page, and then click on the **Enable** button in the top right to enable the service. For details, please refer to the Cocos Service [Operation Guide](./index.md#usage) documentation.
 
-  ![](hms-location/loc-provisioning.jpeg)
+  ![](hms-location/loc-provisioning.jpg)
 
 - Refer to [HUAWEI Location Kit Development Preparation](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/location-preparation) document to complete developer registration, app creation, **generation and configuring the Signing Certificate Fingerprint**.
 
@@ -54,7 +54,7 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 - On the **Project Setting** page, click the configuration file **agconnect-services.json** to download it. The `agconnect-services.json` file **must be copied manually** to the `settings` directory of the project directory after downloading or updating.
 
-  ![](hms-location/loc-configfile.png)
+  ![](./image/globle-configfile.jpg)
 
 **Note**:
 
@@ -62,11 +62,11 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 2. If the **Debug Mode** is checked in the **Build** panel, the developer needs to configure the Keystore signature file in the `app/build.gradle` file of Android Studio.
 
-    ![](hms-location/globle-keystore.png)
+    ![](./image/globle-keystore.jpg)
 
 3. For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
 
-    ![](hms-location/loc-agcfile.png)
+    ![](./image/globle-agcfile.jpg)
 
 ### Verify whether the service is integrated successfully
 
@@ -89,7 +89,7 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 - The first time you run the project on a phone, the dialog box for applying for location permission will pop up (see the figure below), which means the integrate is successful.
 
-  ![](hms-location/loc-debugging.png)
+  ![](hms-location/loc-debugging.jpg)
 
 - If you have already applied for permission, you can view the log in Logcat.
 

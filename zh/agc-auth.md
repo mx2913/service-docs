@@ -77,19 +77,19 @@
 
 - 点击菜单栏的 **面板 -> 服务**，打开 **服务** 面板，选择 **认证服务**，进入服务详情页。然后点击右上方的 **启用** 按钮即可开通服务。详情可参考 [服务面板操作指南](./user-guide.md)。
 
-  ![](agc-auth/auth-panel.png)
+  ![](agc-auth/auth-panel.jpg)
 
 - 登录 AppGallery Connect，点击 **我的项目**，在项目的应用列表中选择需要启动认证服务的应用，然后点击 **构建 -> 认证服务**，若首次使用请点击页面右上方的 **立即开通** 按钮来开通服务。具体内容可参考 [启用服务](https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides/agc-auth-android-getstarted-0000001053053922#ZH-CN_TOPIC_0000001053053922__section916641174412) 文档。
 
-  ![](agc-auth/auth-open.png)
+  ![](agc-auth/auth-open.jpg)
 
 - 选择所需的认证方式，点击右侧的 **启用** 按钮。
 
-  ![](agc-auth/auth-console1.png)
+  ![](agc-auth/auth-console1.jpg)
 
 - 填写所需参数。各认证方式的参数申请，可参考 [启用服务](https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides/agc-auth-android-getstarted-0000001053053922#ZH-CN_TOPIC_0000001053053922__section916641174412) 文档。
 
-  ![](agc-auth/auth-console2.png)
+  ![](agc-auth/auth-console2.jpg)
 
 - 设置完成后回到 Creator 服务面板，勾选所需的认证方式，填入该认证方式客户端所需的参数。
 
@@ -105,11 +105,11 @@
 
 - 在 **项目设置** 页面的 **应用** 区域，点击 `agconnect-services.json` 下载配置文件。`agconnect-services.json` 文件在下载或者更新完成后，**必须手动拷贝** 到工程目录的 `settings` 目录下。
 
-  ![](agc-auth/auth-configfile.png)
+  ![](./image/globle-configfile.jpg)
 
 - Cocos Creator v2.4.3 及以上版本，若 [发布到 HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/zh/publish/publish-huawei-agc.html)，开发者可直接在 **构建发布** 面板中选取下载或更新后的配置文件，不需要手动拷贝。
 
-  ![](agc-auth/auth-agcfile.png)
+  ![](./image/globle-agcfile.jpg)
 
 ### 验证服务是否接入成功
 
@@ -128,7 +128,7 @@
 
 - 工程运行到手机后，若能看到登录界面，即为接入成功。
 
-  ![](agc-auth/auth-verify.png)
+  ![](agc-auth/auth-verify.jpg)
 
 ## Sample 工程
 
@@ -142,7 +142,7 @@
 
 - Sample 工程运行到手机后，点击首页的 **Auth** 按钮，即可进入功能界面进行测试。
 
-  ![](agc-auth/auth-sample.png)
+  ![](agc-auth/auth-sample.jpg)
 
 ## 开发指南
 

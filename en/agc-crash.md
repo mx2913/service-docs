@@ -28,7 +28,7 @@
 
 - Click on **Panel -> Service** in the menu bar to open the Service panel, select Crash service to go to the service detail page, and then click on the **Enable** button in the top right to enable the service. For details, please refer to the Cocos Service [Operation Guide](./index.md#usage) documentation.
 
-  ![](agc-crash/crash-panel.png)
+  ![](agc-crash/crash-panel.jpg)
 
 ### Configs HUAWEI Config File
 
@@ -38,11 +38,11 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 - On the **Project Setting** page, click the configuration file **agconnect-services.json** to download it. The `agconnect-services.json` file **must be copied manually** to the `settings` directory of the project directory after downloading or updating.
 
-  ![](agc-crash/crash-configfile.png)
+  ![](./image/globle-configfile.jpg)
 
 - For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
 
-  ![](agc-crash/crash-agcfile.png)
+  ![](./image/globle-agcfile.jpg)
 
 ### Verify whether the service is integrated successfully
 
@@ -73,7 +73,7 @@ Developer can get a quick taste of the Crash service with the sample project.
 
 - Once the Sample project is running on the phone, click the **Crash** button on the homepage for testing.
 
-  ![](agc-crash/crash-sample.png)
+  ![](agc-crash/crash-sample.jpg)
 
 ## Developer Guide
 

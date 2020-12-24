@@ -72,7 +72,7 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 - On the **Project Setting** page, click the configuration file **agconnect-services.json** to download it. The `agconnect-services.json` file **must be copied manually** to the `settings` directory of the project directory after downloading or updating. 
 
-  ![](sdkhub-hms/hms-configfile.png)
+  ![](./../image/globle-configfile.jpg)
 
 **Note**:
 
@@ -80,11 +80,11 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 2. If the **Debug Mode** is checked in the **Build** panel, the developer needs to configure the Keystore signature file in the `app/build.gradle` file of Android Studio.
 
-    ![](sdkhub-hms/globle-keystore.png)
+    ![](./../image/globle-keystore.jpg)
 
 3. For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
 
-    ![](sdkhub-hms/hms-agcfile.png)
+    ![](./../image/globle-agcfile.jpg)
 
 ## Enable Cocos SDKHub
 
@@ -92,31 +92,31 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 - Click **Panel -> Service** in the menu bar to open the **Service** panel. After setting Cocos AppID, select Cocos SDKHub to enter the Cocos SDKHub service panel. Then click the **Enable** button on the upper right to activate the Cocos SDKHub service. For details, please refer to the [Cocos Service Operation Guide](../index.md) documentation.
 
-  ![](sdkhub-hms/hms-provisioning.png)
+  ![](sdkhub-hms/hms-provisioning.jpg)
 
 - Add a new config set on the Cocos SDKHub service panel
     
-  ![](sdkhub-hms/hms-config-group1.png)
+  ![](sdkhub-hms/hms-config-group1.jpg)
 
   Enter the **Add Config Set** page, fill in the relevant parameters, and then click **OK**.
 
-  ![](sdkhub-hms/hms-config-group2.png)
+  ![](sdkhub-hms/hms-config-group2.jpg)
 
 - After adding, click the **Config Plugin** button and check **HUAWEI HMS Core** related service plugins.
  
-  ![](sdkhub-hms/hms-config-group3.png)
+  ![](sdkhub-hms/hms-config-group3.jpg)
 
 - Click the **Edit Parameters** button under the **Params** list.
 
-  ![](sdkhub-hms/hms-config-group4.png)
+  ![](sdkhub-hms/hms-config-group4.jpg)
 
   Enter the **Parameter Config** panel to configure the required parameters.
 
-  ![](sdkhub-hms/hms-params.png)
+  ![](sdkhub-hms/hms-params.jpg)
     
   - [Payment public key](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/appgallery_querypaymentinfo), which is required when checking IAP service.
 
-    ![](sdkhub-hms/hms-paykey.png)
+    ![](sdkhub-hms/hms-paykey.jpg)
     
   - [Support Languages](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/game-preparation-v4)
 

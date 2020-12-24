@@ -45,17 +45,17 @@ Releasing new functions to all users at the same time may be risky. Remote Confi
 
 - Click on **Panel -> Service** in the menu bar to open the Service panel, select Remote Configuration service to go to the service detail page, and then click on the **Enable** button in the top right to enable the service. For details, please refer to the Cocos Service [Operation Guide](./index.md#usage) documentation.
 
-  ![](agc-remote/remote-panel.png)
+  ![](agc-remote/remote-panel.jpg)
 
   - The **Params Config** item in Service panel, please refer to [Setting Default In-app Parameter Values](#setting-default-in-app-parameter-values).
 
 - Find your project from the project list and click the app for which you need to enable Remote Configuration service on the project card. Go to **Growing -> Remote Configuration**, if it is the first time that you use Remote Configuration service, click **Enable now** in the upper right corner. 
 
-  ![](agc-remote/remote-open.png)
+  ![](agc-remote/remote-open.jpg)
 
 - By default, the Remote Configuration API is automatically enabled when you enable the Remote Configuration service. If you need to manually control whether the Remote Configuration API is enabled or not, refer to the documentation [Enabling Services](https://developer.huawei.com/consumer/en/doc/distribution/app/agc-enable_service).
 
-  ![](agc-remote/remote-console.png)
+  ![](agc-remote/remote-console.jpg)
 
 ### Configs HUAWEI Config File
 
@@ -65,11 +65,11 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 - On the **Project Setting** page, click the configuration file **agconnect-services.json** to download it. The `agconnect-services.json` file **must be copied manually** to the `settings` directory of the project directory after downloading or updating.
 
-  ![](agc-remote/remote-configfile.png)
+  ![](./image/globle-configfile.jpg)
 
 - For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
 
-  ![](agc-remote/remote-agcfile.png)
+  ![](./image/globle-agcfile.jpg)
 
 ### Verify whether the service is integrated successfully
 
@@ -84,7 +84,7 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 - Run the project on a phone, if you can see the output value is **testValue** in LogCat, which means the integrate is successful.
 
-  ![](agc-remote/remote-logcat.png)
+  ![](agc-remote/remote-logcat.jpg)
 
 ## Sample Project
 
@@ -98,7 +98,7 @@ Developer can get a quick taste of the Remote Configuration with the sample proj
 
 - Once the Sample project is running on the phone, click the **Remote** button on the homepage for testing.
 
-  ![](agc-remote/remote-sample.png)
+  ![](agc-remote/remote-sample.jpg)
 
 ## Developer Guide
 
@@ -110,7 +110,7 @@ Since the `apply` method of the Java SDK returns a parameter object, it cannot b
 
 You can set [in-app default parameter values](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-remoteconfig-dev-guide#h1-1592307026459) in the Remote Configuration object so that your app can run properly before being connected to Remote Configuration, and in-app default values are used if parameter values are not set on the console, the default values is set in **Params Config** item in the Service panel.
 
-![](agc-remote/remote-param.png)
+![](agc-remote/remote-param.jpg)
 
 ### Fetching Parameter Values from Remote Configuration
 

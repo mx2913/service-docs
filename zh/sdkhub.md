@@ -17,7 +17,7 @@ Cocos SDKHub 主要分为 **框架层** 和 **插件层** 两大部分，由 Coc
 
 开发者在游戏层，仅需调用 Cocos SDKHub 中的方法以及处理统一封装的回调，极大的简化了开发者接入原生平台 SDK 的工作量。
 
-![](sdkhub/sdkhub-intro.png)
+![](sdkhub/sdkhub-intro.jpg)
 
 ## 一键接入 Cocos SDKHub 服务
 
@@ -27,7 +27,7 @@ Cocos SDKHub 主要分为 **框架层** 和 **插件层** 两大部分，由 Coc
 
 - 点击菜单栏的 **面板 -> 服务**，打开 **服务** 面板，选择 **Cocos SDKHub**，进入服务详情页。然后点击右上方的 **启用** 按钮即可开通服务。详情可参考 [服务面板操作指南](./user-guide.md)。
 
-  ![](sdkhub/sdkhub-provisioning.png)
+  ![](sdkhub/sdkhub-provisioning.jpg)
 
 开通服务后，Cocos Service 将自动集成 Cocos SDKHub 框架到游戏工程中。
 
@@ -51,7 +51,7 @@ Cocos SDKHub 服务接入完成后，我们可以通过在脚本中添加简单�
 
 上述操作只是将 Cocos SDKHub 的抽象层框架集成到游戏中，但并没有实质地集成我们所说的第三方 SDK。游戏需要发布到哪家渠道，需要集成哪些 SDK，都需要我们通过 Cocos SDKHub 服务详情页中的 **构建配置** 进行添加。
 
-![](sdkhub/sdkhub-panel1.jpeg)
+![](sdkhub/sdkhub-panel1.jpg)
 
 相关参数具体的配置规则如下：
 
@@ -63,7 +63,7 @@ Cocos SDKHub 服务接入完成后，我们可以通过在脚本中添加简单�
 
   - 如下图所示点击 **新建配置集**
 
-      ![](sdkhub/sdkhub-panel2.jpeg)
+      ![](sdkhub/sdkhub-panel2.jpg)
 
   - 进入 **添加配置集** 页面，填写相关参数，填写完成后点击 **确定** 即可
 
@@ -77,7 +77,7 @@ Cocos SDKHub 服务接入完成后，我们可以通过在脚本中添加简单�
 
   开发者在创建完配置集后，需要选择并配置该配置集中所需集成的 SDK（插件），并填写原生平台 SDK 所需的参数，才能在构建发布后的工程中使用该平台 SDK 的功能。若不配置插件，则构建出的工程并没有太大实质意义，在调用 Cocos SDKHub 框架相关接口时将自动切换到 Debug 模式。
 
-  ![](sdkhub/sdkhub-panel3.jpeg)
+  ![](sdkhub/sdkhub-panel3.jpg)
 
   - 配置插件：添加所需功能的插件，目前支持 **账号 & 游戏**、**支付** 、**广告** 和 **推送** 等类型插件。
   - 更新所有插件：若已下载的插件有线上更新版本，点此全部更新。
@@ -93,7 +93,7 @@ Cocos SDKHub 服务接入完成后，我们可以通过在脚本中添加简单�
 
 打开 Cocos Creator 顶部菜单的 **项目 -> 构建发布**，当选择 **Android**、**iOS**、**HUAWEI AppGallery Connect** 等平台时（目前 Cocos SDKHub 暂时只支持这些原生平台），会显示 **Cocos SDKHub 配置** 项，并列出开发者在服务面板中创建的配置集（Creator v2.4.1 新增，之前的旧版本会默认使用 **服务** 面板中 Cocos SDKHub 面板选择的配置集），然后选择对应的配置集即可。
 
-![](sdkhub/sdkhub-build.png)
+![](sdkhub/sdkhub-build.jpg)
 
 如果在编译时出现问题，可能是由于 Creator 原生编译环境配置不正确，可尝试在 **Android Studio** 或 **Xcode** 中直接编译工程，以便获得更多的调试信息。
 
@@ -699,11 +699,11 @@ sdkhub.getPushPlugin().delTags(params)
 
 Cocos SDKHub 的 Log 关键字为 `HUB_LOG`，仅在 **构建发布** 面板中的 **调试模式** 选项 **打开** 的情况下才会输出。若需要查看一些相关调试信息，可以在 **Logcat** 或者 **Xcode** 中筛选。
 
-![](sdkhub/sdkhub-debugmode.png)
+![](sdkhub/sdkhub-debugmode.jpg)
 
 调试模式下可能会打印一些参数信息，产品上线时需关闭面板中的 **调试模式** 选项，以免一些参数信息泄露。
 
-![](sdkhub/sdkhub-debuginfo.png)
+![](sdkhub/sdkhub-debuginfo.jpg)
 
 ## API 文档
 

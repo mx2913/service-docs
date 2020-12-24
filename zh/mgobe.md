@@ -29,6 +29,16 @@
 
   ![](mgobe/mgobe-statussync.svg)
 
+### 计费
+
+- 游戏联机对战引擎服务使用 **预付费** 模式，当你的服务使用超过服务商的免费部分，且账户余额不足时，会停止服务。这时候你需要在 Cocos 开发者账户中心进行 **预充值**。具体内容可参考 [计费与充值](./billing-and-charge.md)。
+
+- 若需购买资源包套餐，请参考 [腾讯云套餐购买方式](billing-and-charge.md#%E8%85%BE%E8%AE%AF%E4%BA%91%E5%A5%97%E9%A4%90%E8%B4%AD%E4%B9%B0%E6%96%B9%E5%BC%8F)。
+
+- Cocos 用户开通服务，并通过 Cocos 账户预付充值，即可享受优惠政策。可联系客服询问获取 **折扣券**，折扣券与官方优惠叠加，优惠相当于折上折。详情可扫描下方二维码，添加客服微信咨询。
+
+    ![](./image/bd-code.jpg)
+
 ## 一键接入游戏联机对战引擎服务
 
 ### 开通服务
@@ -38,10 +48,6 @@
 - 点击菜单栏的 **面板 -> 服务**，打开 **服务** 面板，选择 **游戏联机对战引擎**，进入服务详情页。然后点击右上方的 **启用** 按钮即可开通服务。详情可参考 [服务面板操作指南](./user-guide.md)。
 
     ![](mgobe/mgobe-provisioning.jpg)
-
-    **计费**：游戏联机对战引擎服务使用 **预付费** 模式，当你的服务使用超过服务商的免费部分，且账户余额不足时，会停止服务。这时候你需要在 Cocos 开发者账户中心进行 **预充值**。具体内容可参考 [计费与充值](billing-and-charge.md)。
-
-    若需购买资源包套餐，请参考 [腾讯云套餐购买方式](billing-and-charge.md#%E8%85%BE%E8%AE%AF%E4%BA%91%E5%A5%97%E9%A4%90%E8%B4%AD%E4%B9%B0%E6%96%B9%E5%BC%8F)。
 
     开通服务后，Cocos Service 将自动开通游戏联机对战引擎服务、联通腾讯云账号，并集成游戏联机对战引擎 SDK 到游戏工程中。
     
@@ -128,14 +134,31 @@
   ![](mgobe/mgobe-realtime-upload.jpg)
     
 ## 视频教程
-    
+
 {% raw %}
 
-<iframe src="https://player.bilibili.com/player.html?aid=328250967&bvid=BV1VA411q7Ms&cid=193808588&page=1" scrolling="no" border="0" frameborder="no" width="100%" height="480" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=928115838&bvid=BV1WT4y1M7gH&cid=263906304&page=1" scrolling="no" border="0" frameborder="no" width="100%" height="480" framespacing="0" allowfullscreen="true"> </iframe>
 
 {% endraw %}
 
-https://www.bilibili.com/video/BV1VA411q7Ms
+**01 游戏联机对战引擎简介**
+https://www.bilibili.com/video/BV1WT4y1M7gH?p=1
+
+{% raw %}
+
+<iframe src="//player.bilibili.com/player.html?aid=928115838&bvid=BV1WT4y1M7gH&cid=263906304&page=2" scrolling="no" border="0" frameborder="no" width="100%" height="480" framespacing="0" allowfullscreen="true"> </iframe>
+
+{% endraw %}
+
+**02 服务开通与使用**
+https://www.bilibili.com/video/BV1WT4y1M7gH?p=2
+
+## FAQ
+
+- [什么是腾讯云子账号？我可以绑定自己腾讯云账号吗？](https://forum.cocos.org/t/topic/102363)
+- [为什么我登录腾讯云控制台想查看一下费用中心时，会提示没有权限？](https://forum.cocos.org/t/topic/102365)
+- [如何购买腾讯云套餐包？](https://forum.cocos.org/t/topic/102428)
+- [用腾讯云子账号登录游戏联机对战控制台后，提示没有访问权限？](https://forum.cocos.org/t/topic/102629)
 
 ## 文档链接
 

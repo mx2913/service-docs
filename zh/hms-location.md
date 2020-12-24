@@ -42,7 +42,7 @@
 
 - 点击菜单栏的 **面板 -> 服务**，打开 **服务** 面板，选择 **定位服务**，进入服务详情页。然后点击右上方的 **启用** 按钮即可开通服务。详情可参考 [服务面板操作指南](./user-guide.md)。
 
-  ![](hms-location/loc-provisioning.jpeg)
+  ![](hms-location/loc-provisioning.jpg)
 
 - 参考 [华为定位服务开发准备](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/location-preparation) 文档，完成开发者注册、创建应用、**生成/配置签名证书指纹以及打开相关服务**。
 
@@ -56,7 +56,7 @@
 
 - 在 **项目设置** 页面的 **应用** 区域，点击 `agconnect-services.json` 下载配置文件。`agconnect-services.json` 文件在下载或者更新完成后，**必须手动拷贝** 到工程目录的 `settings` 目录下。
 
-  ![](hms-location/loc-configfile.png)
+  ![](./image/globle-configfile.jpg)
 
 **注意**：
 
@@ -64,11 +64,11 @@
 
 2. 在构建时若勾选了 **调试模式**，开发者需要在 Android Studio 的 `app/build.gradle` 文件中，自行配置 Keystore 签名文件。
 
-    ![](hms-location/globle-keystore.png)
+    ![](./image/globle-keystore.jpg)
 
 3. Cocos Creator v2.4.3 及以上版本，若 [发布到 HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/zh/publish/publish-huawei-agc.html)，开发者可直接在 **构建发布** 面板中选取下载或更新后的配置文件，不需要手动拷贝。
 
-    ![](hms-location/loc-agcfile.png)
+    ![](./image/globle-agcfile.jpg)
 
 ### 验证服务是否接入成功
 
@@ -91,7 +91,7 @@
 
 - 工程第一次运行到手机后，若弹出申请位置权限的对话框（见下图），即表示接入成功。
 
-  ![](hms-location/loc-debugging.png)
+  ![](hms-location/loc-debugging.jpg)
 
 - 若已经申请过权限可在 Logcat 中查看日志。
 

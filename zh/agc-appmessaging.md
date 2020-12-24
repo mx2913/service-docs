@@ -10,15 +10,15 @@
 
 - 弹框消息类似于系统的弹框，包括图片、主题、正文和按钮（最多两个按钮）。如果开发者需要展示较多的消息内容，弹框消息无疑是一个很好的选择。
 
-  ![](agc-appmessaging/mtype-popup.png)
+  ![](agc-appmessaging/mtype-popup.jpg)
 
 - Banner 消息类似于消息通知，显示在手机的顶部，包括 Banner 缩略图、正文和标题，点击 Banner 弹框可以跳转到指定地址的页面。
 
-  ![](agc-appmessaging/mtype-banner.png)
+  ![](agc-appmessaging/mtype-banner.jpg)
 
 - 图片消息只是在界面上显示一张图片，比如开发者可以制作一个精美的活动海报作为图片，用户点击图片的时候跳转到相应的活动详情界面。
 
-  ![](agc-appmessaging/mtype-image.png)
+  ![](agc-appmessaging/mtype-image.jpg)
 
 ### 工作原理
 
@@ -46,11 +46,11 @@
 
 - 点击菜单栏的 **面板 -> 服务**，打开 **服务** 面板，选择 **应用内消息**，进入服务详情页。然后点击右上方的 **启用** 按钮即可开通服务。详情可参考 [服务面板操作指南](./user-guide.md)。
 
-  ![](agc-appmessaging/am-panel.png)
+  ![](agc-appmessaging/am-panel.jpg)
 
 - 登录 AppGallery Connect，点击 **我的项目**，在项目的应用列表中选择需要启动应用内消息服务的应用，然后点击 **增长 -> 应用内消息**，若首次使用请点击页面右上方的 **立即开通** 按钮来开通服务。 
 
-  ![](agc-appmessaging/am-open.png)
+  ![](agc-appmessaging/am-open.jpg)
 
 ### 配置华为参数文件
 
@@ -60,11 +60,11 @@
 
 - 在 **项目设置** 页面的 **应用** 区域，点击 `agconnect-services.json` 下载配置文件。`agconnect-services.json` 文件在下载或者更新完成后，**必须手动拷贝** 到工程目录的 `settings` 目录下。
 
-  ![](agc-appmessaging/am-configfile.png)
+  ![](./image/globle-configfile.jpg)
 
 - Cocos Creator v2.4.3 及以上版本，若 [发布到 HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/zh/publish/publish-huawei-agc.html)，开发者可直接在 **构建发布** 面板中选取下载或更新后的配置文件，不需要手动拷贝。
 
-  ![](agc-appmessaging/am-agcfile.png)
+  ![](./image/globle-agcfile.jpg)
 
 ### 验证服务是否接入成功
 
@@ -79,7 +79,7 @@
 
 - 工程运行到手机后，在 **LogCat** 中获取 **AAID**。
 
-  ![](agc-appmessaging/am-logcat.png)
+  ![](agc-appmessaging/am-logcat.jpg)
 
 - 参考 [创建应用内消息](https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides/agc-appmessage-create) 文档，创建一组应用内消息。
 

@@ -49,11 +49,11 @@ Cloud Storage is in beta testing and uses a **limited free** usage policy. That 
 
 - Click on **Panel -> Service** in the menu bar to open the Service panel, select **Cloud Storage** service to go to the service detail page, and then click on the **Enable** button in the top right to enable the service. For details, please refer to the Cocos Service [Operation Guide](./index.md#usage) documentation.
 
-  ![](agc-cloudstorage/cs-panel.png)
+  ![](agc-cloudstorage/cs-panel.jpg)
 
 - Please refer to [Enabling Cloud Storage](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-cloudstorage-getstarted#h1-1585569414384) document, set **Storage instance** and enabling cloud storage. Then fill in the name of the storage instance used by default into the **Default Instance** parameter at the bottom of the Cloud Storage service panel.
 
-  ![](agc-cloudstorage/cs-panelparam.png)
+  ![](agc-cloudstorage/cs-panelparam.jpg)
 
 ### Configs HUAWEI Config File
 
@@ -63,11 +63,11 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
 - On the **Project Setting** page, click the configuration file **agconnect-services.json** to download it. The `agconnect-services.json` file **must be copied manually** to the `settings` directory of the project directory after downloading or updating.
 
-  ![](agc-cloudstorage/cs-configfile.png)
+  ![](./image/globle-configfile.jpg)
 
 - For Creator v2.4.3 and above, if you want to publish to the [HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html), you can select the downloaded or updated configuration file directly in the **Build** panel, no need to copy it manually.
 
-  ![](agc-cloudstorage/cs-agcfile.png)
+  ![](./image/globle-agcfile.jpg)
 
 ### Verify whether the service is integrated successfully
 
