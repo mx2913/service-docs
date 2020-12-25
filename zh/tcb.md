@@ -136,7 +136,7 @@ https://www.bilibili.com/video/BV1CC4y1p7r7
 
 ## FAQ
 
-- [01 什么是腾讯云子账号？我可以绑定自己腾讯云账号吗？](https://forum.cocos.org/t/topic/102363)
+- [什么是腾讯云子账号？我可以绑定自己腾讯云账号吗？](https://forum.cocos.org/t/topic/102363)
 - [为什么我登录腾讯云控制台想查看一下费用中心时，会提示没有权限？](https://forum.cocos.org/t/topic/102365)
 - [如何购买腾讯云套餐包？](https://forum.cocos.org/t/topic/102428)
 - [使用了云开发，发布到微信小游戏，为什么域名信息已经配置了，但是还是显示不在合法域名列表中？](https://forum.cocos.org/t/topic/102625)
