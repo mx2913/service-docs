@@ -3,7 +3,7 @@
 - [使用说明]()
     - [服务面板操作指南](user-guide.md)
     - [计费和充值](billing-and-charge.md)
-- [服务列表]()
+- [服务列表](service-inex.md)
     - [Cocos Analytics](cocos-analytics.md)
     - [声网（Agora RTC）](agora.md)
     - [云开发（腾讯云）](tcb.md)
