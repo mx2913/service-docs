@@ -376,6 +376,10 @@ huawei.hms.analytics.AnalyticsTools.enableLog();
 huawei.hms.analytics.AnalyticsTools.enableLog(huawei.hms.LOG_LEVEL.debug);
 ```
 
+## Personal Data Processing
+
+How to get the end user control personal data, please refer to [Personal Data Processing](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-personal-data-0000001050705120) documention.
+
 ## API Reference
 
 Please refer to the [Analytics Kit - API Reference](https://service.cocos.com/document/api/modules/huawei.hms.analytics.html).
