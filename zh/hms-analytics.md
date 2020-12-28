@@ -172,7 +172,7 @@ huawei.hms.analytics.analyticsService.setUserId("a123456");
 | 参数 | 说明 |  
 | :---------- | :---------- |  
 | name | 用户属性的标识符。非空，长度不超过 256 字符，不支持空格和不可见字符。| 
-| value | 属性值。非空，长度不超过 256 字符。| 
+| value | 属性值。长度不超过 256 字符，传递 `null` 或者 `undefined` 可删除对应用户属性 | 
 
 **示例**：
 
@@ -380,4 +380,4 @@ huawei.hms.analytics.AnalyticsTools.enableLog(huawei.hms.LOG_LEVEL.debug);
 
 ## API 文档
 
-详细的功能接口和 API 说明，请参考 [分析服务 - API 文档](https://docs.cocos.com/service/api/modules/huawei.hms.analytics.html)。
+详细的功能接口和 API 说明，请参考 [分析服务 - API 文档](https://service.cocos.com/document/api/modules/huawei.hms.analytics.html)。

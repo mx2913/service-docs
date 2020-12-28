@@ -884,7 +884,7 @@ var isAuto = sdkhub.getPushPlugin().callBoolFuncWithParam("isAutoInitEnabled");
 console.log("isAutoInitEnabled", isAuto);
 ```
 
-### setAutoInitEnabled
+#### setAutoInitEnabled
 
 Sets whether to enable automatic initialization. If this parameter is set to **true**, the SDK automatically generates an AAID and applies for a token. The token is returned through the `sdkhub.PushResultCode.kPushExtension + 100` callback method. please refer to the [setAutoInitEnabled](https://developer.huawei.com/consumer/en/doc/HMSCore-References-V5/hmsmessaging-0000001050255650-V5#EN-US_TOPIC_0000001050255650__section19198183125511) document.
 

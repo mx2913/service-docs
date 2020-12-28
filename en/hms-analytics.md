@@ -170,7 +170,7 @@ Sets user attributes. The values of user attributes remain unchanged throughout 
 | Parameter | Description | 
 | :---------- | :---------- |  
 | name | Name of the user attribute, a string containing a maximum of 256 characters excluding spaces and invisible characters. The value cannot be empty. | 
-| value | Value of the user attribute, a string containing a maximum of 256 characters. The value cannot be empty.| 
+| value | Value of the user attribute, a string containing a maximum of 256 characters, pass `null` or `undefined` to delete the corresponding user attribute. | 
 
 **Example**:
 
@@ -376,4 +376,4 @@ huawei.hms.analytics.AnalyticsTools.enableLog(huawei.hms.LOG_LEVEL.debug);
 
 ## API Reference
 
-Please refer to the [Analytics Kit - API Reference](https://docs.cocos.com/service/api/modules/huawei.hms.analytics.html).
+Please refer to the [Analytics Kit - API Reference](https://service.cocos.com/document/api/modules/huawei.hms.analytics.html).
