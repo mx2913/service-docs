@@ -84,7 +84,7 @@
 
 ## 开发指南
 
-分析服务预设了一些 [自动采集事件](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/android-automatic-event-collection-0000001051757143)，无需开发者埋点或主动调用，即可实现此类事件的自动采集。
+分析服务预设了一些 [自动采集事件](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides-V5/android-automatic-event-collection-0000001051757143-V5)，无需开发者埋点或主动调用，即可实现此类事件的自动采集。
 
 分析服务插件启动时，已调用 SDK 的初始化，开发者无需再做调用。
 
@@ -102,7 +102,7 @@
 
 | 参数 | 说明 |  
 | :---------- | :---------- |
-| eventId | 事件标识符。自定义非空，由数字、字母、下划线组成，不能以数字开头，不能包含空格，长度不超过 256 字符，不能使用 [自动采集事件 ID](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/android-automatic-event-collection-0000001051757143)，建议优先使用 [预置事件 ID](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/ios-predefined-events-0000001051997159)。| 
+| eventId | 事件标识符。自定义非空，由数字、字母、下划线组成，不能以数字开头，不能包含空格，长度不超过 256 字符，不能使用 [自动采集事件 ID](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides-V5/android-automatic-event-collection-0000001051757143-V5)，建议优先使用 [预置事件 ID](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides-V5/android-predefined-events-0000001051997159-V5)。| 
 | params | 	事件携带的信息。传入参数键值对个数不超过 2048，同时大小不超过 200KB。传入参数 key 值由数字、字母、下划线组成，不能以数字开头。| 
 
 **示例**：
@@ -166,6 +166,8 @@ huawei.hms.analytics.analyticsService.setUserId("a123456");
 `setUserProfile(name: string, value: string): void`
 
 用户属性值将在整个应用程序的生命周期和会话期间保持不变。最多支持 25 个用户属性名称，如果后面设置属性有重复的 name，则刷新。
+
+分析服务自动采集了一些 [用户属性](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides-V5/android-user-attribute-0000001050705118-V5)，开发者无需埋点即可使用。
 
 **参数说明**：
 
