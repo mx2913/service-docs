@@ -170,7 +170,7 @@ Sets user attributes. The values of user attributes remain unchanged throughout 
 | Parameter | Description | 
 | :---------- | :---------- |  
 | name | Name of the user attribute, a string containing a maximum of 256 characters excluding spaces and invisible characters. The value cannot be empty. | 
-| value | Value of the user attribute, a string containing a maximum of 256 characters. The value cannot be empty.| 
+| value | Value of the user attribute, a string containing a maximum of 256 characters, pass `null` or `undefined` to delete the corresponding user attribute. | 
 
 **Example**:
 
