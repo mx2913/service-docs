@@ -82,7 +82,7 @@ Developer can get a quick taste of the Analytics Kit with the sample project.
 
 ## Developer Guide
 
-Analytics kit provide some [Automatically Collected Events](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-automatic-event-collection-0000001051757143). Such events can be automatically collected without extra coding, and the only requirement is that the function of collecting system events is enabled. (The function is automatically enabled during initiation.)
+Analytics kit provide some [Automatically Collected Events](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/android-automatic-event-collection-0000001051757143-V5). Such events can be automatically collected without extra coding, and the only requirement is that the function of collecting system events is enabled. (The function is automatically enabled during initiation.)
 
 When the analysis service plug-in is started, the initialization of the SDK has been called, and the developer does not need to call it again.
 
@@ -100,7 +100,7 @@ For example, you can add custom event `begin_examination` to indicate the event 
 
 | Parameter | Description | 
 | :---------- | :---------- |
-| eventId | Event ID. It is consisting of numbers, letters and underscores, cannot start with a number, cannot contain spaces, cannot exceed 256 characters in length, cannot use [Automatically Collected Events](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-automatic-event-collection-0000001051757143). It is recommended to use [Predefined Events](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/ios-predefined-events-0000001051997159) first. | 
+| eventId | Event ID. It is consisting of numbers, letters and underscores, cannot start with a number, cannot contain spaces, cannot exceed 256 characters in length, cannot use [Automatically Collected Events](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/android-automatic-event-collection-0000001051757143-V5). It is recommended to use [Predefined Events](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/android-predefined-events-0000001051997159-V5) first. | 
 | params | Information carried in the event. The number of built-in key-value pairs in the Bundle cannot exceed 2048 and the size cannot exceed 200 KB. The key value in the Bundle can consist of digits, letters, and underscores (_) but cannot start with a digit. | 
 
 **Example**:
@@ -164,6 +164,8 @@ huawei.hms.analytics.analyticsService.setUserId("a123456");
 `setUserProfile(name: string, value: string): void`
 
 Sets user attributes. The values of user attributes remain unchanged throughout the app lifecycle and during each session. A maximum of 25 user attributes are supported. If the name of an attribute set later is the same as that of an existing attribute, the value of the existing attribute is updated.
+
+Analytics Kit automatically collects some [user attributes](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/android-user-attribute-0000001050705118-V5). You can use these attributes without extra coding.
 
 **Parameter Description**:
 
