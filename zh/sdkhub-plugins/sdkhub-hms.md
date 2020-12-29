@@ -6,28 +6,37 @@
 
 Cocos SDKHub 框架和插件基本不涉及当前状态处理和服务端接口，例如当前用户是否登录等情况，需要游戏端进行判断，避免在用户未登录下，调用账号和游戏服务其他接口导致崩溃。华为 HMS Core 插件在支付成功情况下也做了本地验证。但如果用户需要登录或支付服务端验证（可选），请使用回调中的信息，自行到服务端进行验证。
 
-- [校验登录签名接口](https://developer.huawei.com/consumer/cn/doc/development/HMS-References/verify-login-signature)
-- [Order 服务购买 Token 校验](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/iap-order-service-purchase-token-verification-v4)
+- [校验登录签名接口](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References-V5/verify-login-signature-0000001050123503-V5)
+- [Order 服务购买 Token 校验](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/order-verify-purchase-token-0000001050033078)
 
 ## 版本更新汇总
 
-**当前版本：1.2.2_5.0.1**
+**当前版本：1.2.4_5.0.5**
 
 | HMS Core SDK 名称 | 当前版本号 | 说明 |
 | :--- | :--- | :--- |
-| com.huawei.hms:hwid | 5.0.1.301 | 帐号服务 |
-| com.huawei.hms:game | 5.0.1.302 | 游戏服务 |
-| com.huawei.hms:iap | 5.0.2.300 | 应用内支付服务 |
-| com.huawei.hms:ads-lite | 13.4.32.303 | 广告服务 |
-| com.huawei.hms:ads-identifier | 3.4.30.307 | 广告服务 |
-| com.huawei.hms:ads-installreferrer | 3.4.30.307 | 广告服务 |
-| com.huawei.hms:push | 5.0.2.300 | 推送服务 |
+| com.huawei.hms:hwid | 5.0.5.301 | 帐号服务 |
+| com.huawei.hms:game | 5.0.4.302 | 游戏服务 |
+| com.huawei.hms:iap | 5.0.4.301 | 应用内支付服务 |
+| com.huawei.hms:ads-lite | 13.4.36.301 | 广告服务 |
+| com.huawei.hms:ads-consent | 3.4.36.301 | 广告服务 |
+| com.huawei.hms:ads-identifier | 3.4.34.301 | 广告服务 |
+| com.huawei.hms:ads-installreferrer | 3.4.34.301 | 广告服务 |
+| com.huawei.hms:push | 5.0.4.302 | 推送服务 |
 
 关于 HMS Core SDK 最新版本以及详细的更新说明，可参考 [HMS - 版本更新汇总](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/hmssdk-kit-0000001050042513)。
 
 已集成到项目中的 HMS Core SDK，可在 Android Studio 的 `proj.android-studio/app/build.gradle` 文件中查看版本号。当升级插件并重新构建项目后，也请关注该文件中各 SDK 的版本。
 
 ### 版本更新说明
+
+- v1.2.4_5.0.5
+
+    - 更新各组件：hwid:5.0.5.301、game:5.0.4.302、iap:5.0.4.301、ads-lite:13.4.36.301、ads-consent:3.4.36.301、ads-identifier:3.4.34.301、ads-installreferrer:3.4.34.301、push:5.0.4.302。
+
+    - 账号服务中添加 `smsStartConsent` [授权读取短信验证码](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/authotize-to-read-sms-0000001061481826)方法。
+
+    - 推送服务中添加 `getToken`, `deleteToken`, `isSupportProfile`, `addProfile`, `deleteProfile` [帐号校验功能](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/account-profile-0000001057562781) 相关方法。
 
 - v1.2.2_5.0.1
 
@@ -59,7 +68,7 @@ Cocos SDKHub 框架和插件基本不涉及当前状态处理和服务端接口�
 
 ## 准备工作
 
-- 参考 [AppGallery Connect 配置](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/account-preparation#h1-1573697333903) 文档，在 [华为开发者联盟后台](https://developer.huawei.com/consumer/cn/console) 注册开发者账号，创建游戏应用和 **生成/配置签名证书指纹**。在该游戏应用的 **我的项目 -> 项目设置 -> API 管理** 页面中开通 **Account Kit**、**In-App Purchases**、**Game Service**、**Push Kit** 服务。华为文档中的集成 HMS Core SDK 部分，Cocos SDKHub 会在构建时 **自动完成**，无需开发者手动操作。
+- 参考 [AppGallery Connect 配置](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/config-agc-0000001050166285) 文档，在 [华为开发者联盟后台](https://developer.huawei.com/consumer/cn/console) 注册开发者账号，创建游戏应用和 **生成/配置签名证书指纹**。在该游戏应用的 **我的项目 -> 项目设置 -> API 管理** 页面中开通 **Account Kit**、**In-App Purchases**、**Game Service**、**Push Kit** 服务。华为文档中的集成 HMS Core SDK 部分，Cocos SDKHub 会在构建时 **自动完成**，无需开发者手动操作。
 
     ![](sdkhub-hms/hms-config.jpg) 
 
@@ -121,14 +130,14 @@ Cocos SDKHub 框架和插件基本不涉及当前状态处理和服务端接口�
 
   ![](sdkhub-hms/hms-params.jpg)
     
-  - [支付公钥](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/appgallery_querypaymentinfo)，勾选支付服务时需要填写。
+  - [支付公钥](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/query-payment-info-0000001050166299)，勾选支付服务时需要填写。
 
     ![](sdkhub-hms/hms-paykey.jpg)
     
-  - [语言支持](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/game-preparation-v4) 
+  - [语言支持](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides-V5/integrate-as-sdk-0000001050435953-V5#ZH-CN_TOPIC_0000001050435953__section17221016145619) 
     - 此参数为选填项。如果开发者的应用不需要设置只支持某些特定语言，该参数可以设置为空，应用将默认支持所有 HMS Core SDK 支持的语言。
     - 如果开发者的应用需要设置只支持某些特定语言，填写格式为 **"en", "zh-rCN", "需要支持的其他语言"**。
-    - HMS Core SDK 支持的语言列表请参考文档 [HMS SDK 支持的语言](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/hmssdk_supported_language)。
+    - HMS Core SDK 支持的语言列表请参考文档 [HMS SDK 支持的语言](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides-V5/support-language-0000001050040564-V5)。
 
 - 请在工程中的 `config.js` 文件中，替换支付商品 ID `payProductId`、请求商品信息 ID 列表 `obtainProductIdList`、成就 ID `achievementId`、排行榜 ID `rankingId` 和 事件 ID `eventId`。以上参数均可在 AppGallery Connect 后台 配置生成，可参考 [配置商品信息](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/config-product-0000001050033076) 和 [配置成就/事件](https://developer.huawei.com/consumer/cn/doc/HMSCore-Guides-V5/config-agc-0000001050166285-V5#ZH-CN_TOPIC_0000001051142256__section122826183710)。
 
@@ -164,7 +173,7 @@ Cocos SDKHub 的 Log 关键字为 `HUB_LOG`，仅在 **构建发布** 面板中�
 
 #### 登录
 
-华为的登录回调中，可读取 **userID** 参数作为用户唯一 ID。此时也可以根据获取的登录签名信息，调用 [校验登录签名接口](https://developer.huawei.com/consumer/cn/doc/development/HMS-References/verify-login-signature) 对玩家信息进行服务端验签。
+华为的登录回调中，可读取 **userID** 参数作为用户唯一 ID。此时也可以根据获取的登录签名信息，调用 [校验登录签名接口](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References-V5/verify-login-signature-0000001050123503-V5) 对玩家信息进行服务端验签。
 
 #### 浮标
 
@@ -172,7 +181,7 @@ SDKHub 提供的 HMS Core SDK 插件，已在生命周期内调用 SDK 的浮标
 
 #### 成就
 
-成就功能，可参考 [游戏服务 - 成就](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/game-achievement) 文档。
+成就功能，可参考 [游戏服务 - 成就](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/game-achievement-0000001050123477) 文档。
 
 **展示成就**
 
@@ -216,7 +225,7 @@ sdkhub.getUserPlugin().unlockAchievement(params);
 
 #### 排行榜
 
-排行榜功能，可参考 [游戏服务 - 排行榜](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/game-leaderboards-development) 文档。
+排行榜功能，可参考 [游戏服务 - 排行榜](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/game-leaderboards-0000001050123481) 文档。
 
 **显示排行榜**
 
@@ -341,7 +350,7 @@ sdkhub.getUserPlugin().callFuncWithParam("getCurrentPlayer");
 
 #### 帐号取消授权
 
-可参考 [账号服务开发指南 - 华为帐号取消授权](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/account-guide-v4#h1-1573730230709) 文档，为了提升应用隐私安全，应用可以提供入口，供用户取消对应用的授权。
+可参考 [帐号取消授权](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/cancelauthorization-0000001050050857) 文档，为了提升应用隐私安全，应用可以提供入口，供用户取消对应用的授权。
 
 **方法名**：`cancelAuthorization`
 
@@ -360,11 +369,26 @@ sdkhub.getUserPlugin().callFuncWithParam("cancelAuthorization");
 | + 122 | String | 取消登录授权成功描述 |
 | + 123 | String | 取消登录授权失败描述 |
 
-#### 防沉迷
+#### 实名认证与游戏试玩模式
 
-防沉迷功能，可参考 [游戏服务 - 防沉迷](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/game-anti-indulgence-v4) 文档，中国大陆发布的游戏需要开发者按照上述通知结合游戏自身完成游戏防沉迷功能的开发。
+可参考 [游戏服务 - 实名认证](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/game-anti-indulgence-0000001050123479#ZH-CN_TOPIC_0000001050123479__section41938561170)。
+
+本插件接入了相关方法，开发者仅需要处理相关回调。
+
+**回调说明**：
+
+| 扩展回调值 `sdkhub.UserResultCode.kUserExtension` | msg 类型 | msg 说明 |
+| :--- | :--- | :--- |
+| + 130 | String | 试玩时间结束回调 |
+| + 131 | Boolean | 实名认证结果。若为 `true`，可以继续后续的游戏登录处理。若为 `false`，建议提示玩家后退出游戏或引导玩家重新登录并实名认证 |
+
+#### 防沉迷监控
+
+防沉迷监控功能，可参考 [游戏服务 - 防沉迷](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/game-anti-indulgence-0000001050123479) 文档，中国大陆发布的游戏需要开发者按照上述通知结合游戏自身完成游戏防沉迷功能的开发。
 
 - 当玩家登录游戏或从后台切到游戏前台时，调用 `submitPlayerEventStart`。游戏定期调用 `getPlayerExtraInfo` 方法查询玩家附加信息。服务器允许的最高频率为 10 分钟查询一次，一般建议 15 分钟查询一次。当玩家退出游戏、从前台切到后台或游戏异常退出（进程终止、手机重启等）时，会调用 `submitPlayerEventEnd` 上报玩家退出游戏事件。
+
+- 在接入防沉迷方案前，您需要联系华为运营开通强制实名认证功能。
 
 - **注意**：`submitPlayerEventStart` 和 `getPlayerExtraInfo` 如果回调中 `retCode` 返回 7002 或 7006 错误码，需进行如下处理：
 
@@ -400,7 +424,7 @@ sdkhub.getUserPlugin().callFuncWithParam("getPlayerExtraInfo");
 
 #### 事件上报
 
-事件上报功能，可参考 [游戏服务 - 事件上报](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/game-events) 文档。事件上报为开发者提供了收集玩家在游戏过程中产生的特定数据，上报并存储至华为游戏服务器，随后在 AppGallery Connect 上进行归纳分析的能力。
+事件上报功能，可参考 [游戏服务 - 事件上报](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/game-events-0000001050121530) 文档。事件上报为开发者提供了收集玩家在游戏过程中产生的特定数据，上报并存储至华为游戏服务器，随后在 AppGallery Connect 上进行归纳分析的能力。
 
 **上报事件方法**
 
@@ -459,7 +483,7 @@ sdkhub.getUserPlugin().callFuncWithParam("getEvent", params);
 
 #### 玩家信息统计
 
-玩家信息统计方法，可参考 [游戏服务 - 玩家信息统计](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/game-playerinfo-development) 文档。玩家信息统计是指开发者可以从华为游戏服务器获取当前玩家在游戏中的多种统计信息，帮助开发者更深度了解玩家的游戏习惯，以便根据玩家的游戏进度、支付能力等构建更适合该玩家的游戏体验。
+玩家信息统计方法，可参考 [游戏服务 - 玩家信息统计](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/game-playerinfo-0000001050123483) 文档。玩家信息统计是指开发者可以从华为游戏服务器获取当前玩家在游戏中的多种统计信息，帮助开发者更深度了解玩家的游戏习惯，以便根据玩家的游戏进度、支付能力等构建更适合该玩家的游戏体验。
 
 **方法名**：`getGamePlayerStats`
 
@@ -485,7 +509,7 @@ sdkhub.getUserPlugin().callFuncWithParam("getGamePlayerStats", params);
 
 #### 游戏基本信息
 
-获取游戏基本信息方法，可参考 [游戏服务 - 游戏基本信息](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/game-baseinfo-development) 文档。游戏基本信息是指游戏应用的相关信息，例如游戏的应用ID、游戏名称、游戏描述、游戏分类等。当开发者需要在游戏中使用游戏应用的信息时，可以从华为游戏服务器获取游戏基本信息。
+获取游戏基本信息方法，可参考 [游戏服务 - 游戏基本信息](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/game-baseinfo-0000001050121534) 文档。游戏基本信息是指游戏应用的相关信息，例如游戏的应用ID、游戏名称、游戏描述、游戏分类等。当开发者需要在游戏中使用游戏应用的信息时，可以从华为游戏服务器获取游戏基本信息。
 
 **方法名**：`getGameSummary`
 
@@ -579,7 +603,7 @@ sdkhub.getUserPlugin().callFuncWithParam("getAppId");
 
 #### 存档
 
-开发者可以将玩家的游戏进度存储到华为云空间，或从华为云空间中获得之前的游戏进度以便继续游戏。因此，只要用户使用相同的华为帐号登录，则可以在任意设备上按照之前的游戏进度继续游戏，即使用户之前的设备丢失、损毁或换了新设备也能继续之前的游戏进度。可参考 [游戏服务 - 业务介绍](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/game-archive-0000001050121532) 和 [API 参考 - ArchivesClient](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References-V5/archivesclient-0000001050123603-V5)。
+开发者可以将玩家的游戏进度存储到华为云空间，或从华为云空间中获得之前的游戏进度以便继续游戏。因此，只要用户使用相同的华为帐号登录，则可以在任意设备上按照之前的游戏进度继续游戏，即使用户之前的设备丢失、损毁或换了新设备也能继续之前的游戏进度。可参考 [游戏服务 - 业务介绍](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/introduction-0000001050121216) 和 [API 参考 - ArchivesClient](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-References-V5/archivesclient-0000001050123603-V5)。
 
 **方法名**：`archive`
 
@@ -799,14 +823,43 @@ sdkhub.getUserPlugin().callFuncWithParam("archive", params);
 
 #### 自动读取短信验证码
 
-自动读取短信验证码方法，可选，可参考 [账号服务 - 自动读取短信验证码](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/account-guide-v4#h1-1573730317319) 文档。本插件在 User 系统初始化时调用了请求开启短信读取服务，用户无需调用代码，**仅需处理回调**。
+可选，可参考 [账号服务 - 自动读取短信验证码](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/readsmsmanager-0000001050050861) 文档。本插件在 User 系统初始化时调用了请求开启短信读取服务，用户无需调用代码，**仅需处理回调**。
 
 **回调说明**：
 
 | 扩展回调值 `sdkhub.UserResultCode.kUserExtension` | msg 类型 | msg 说明 |
 | :--- | :--- | :--- |
-| + 102 | String | 自动读取短信验证码初始化回调 |
-| + 103 | String | 自动读取短信验证码超时回调 |
+| + 102 | String | 读取短信验证码初始化回调 |
+| + 103 | String | 读取短信验证码失败或超时回调 |
+| + 104 | String | 返回读取的短信验证码信息 |
+
+#### 授权读取短信验证码
+
+可选，可参考 [账号服务 - 授权读取短信验证码](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/authotize-to-read-sms-0000001061481826) 文档。
+
+**方法名**：`smsStartConsent`
+
+**参数说明**：
+
+| 参数名 | 填写格式 | 说明 |
+| :--- | :--- | :--- |
+| phoneNumber | 136xxxxxxxx | 可选参数，发送短信的号码，长度小于等于 128 位。<br>如果传该参数，HMS Core SDK 会根据该号码精确匹配符合短信规则的第一条短信。<br>如果不传该参数，HMS Core SDK 会读取调用该接口后用户手机中的未读消息，并展示第一条匹配短信规则的短信。 |
+
+**示例**：
+
+```js
+sdkhub.getUserPlugin().callFuncWithParam("smsStartConsent");
+
+var phoneNumber = "136xxxxxxxx";
+sdkhub.getUserPlugin().callFuncWithParam("smsStartConsent", phoneNumber);
+```
+
+**回调说明**：
+
+| 扩展回调值 `sdkhub.UserResultCode.kUserExtension` | msg 类型 | msg 说明 |
+| :--- | :--- | :--- |
+| + 102 | String | 读取短信验证码初始化回调 |
+| + 103 | String | 读取短信验证码失败或超时回调 |
 | + 104 | String | 返回读取的短信验证码信息 |
 
 ### 支付插件
@@ -817,13 +870,13 @@ HMS Core SDK 在 V3.0 后便不再支持支付服务端通知模式。目前支�
 
 #### 支付商品
 
-`feeForProduct` 支付方法，可参考 [应用内支付服务 - 发起购买](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/iap-development-guide-v4#h1-1576554485195) 文档。
+`feeForProduct` 支付方法，可参考 [应用内支付服务 - 发起购买](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/dev-guide-0000001050130254#ZH-CN_TOPIC_0000001050130254__section183174113342) 文档。
 
 用户支付商品成功后，若为 **消耗型商品**，需要通过 [消耗型商品的补单机制](#%E6%B6%88%E8%80%97%E5%9E%8B%E5%95%86%E5%93%81%E7%9A%84%E8%A1%A5%E5%8D%95%E6%9C%BA%E5%88%B6--%E6%8F%90%E4%BE%9B%E9%9D%9E%E6%B6%88%E8%80%97%E5%9E%8B%E5%95%86%E5%93%81%E5%AF%B9%E5%BA%94%E7%9A%84%E6%9C%8D%E5%8A%A1) 进行核销。否则该商品不能再次调用支付商品方法并返回错误。
 
 支付服务支持 [沙盒测试](https://developer.huawei.com/consumer/cn/doc/HMSCore-Guides-V5/sandbox-testing-0000001050035039-V5)。
 
-HMS Core SDK 目前支付流程中，支付后的回执直接返回客户端。Cocos SDKHub 插件也封装了客户端层的 [对返回结果验签](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides-V5/verifying-signature-returned-result-0000001050033088-V5)。若用户还需要再做服务端验证，请参考 [Order 服务购买 Token 校验](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/iap-order-service-purchase-token-verification-v4)。
+HMS Core SDK 目前支付流程中，支付后的回执直接返回客户端。Cocos SDKHub 插件也封装了客户端层的 [对返回结果验签](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides-V5/verifying-signature-returned-result-0000001050033088-V5)。若用户还需要再做服务端验证，请参考 [Order 服务购买 Token 校验](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/order-verify-purchase-token-0000001050033078)。
 
 由于 HMS Core SDK 现在要求商品都在后台配置，通过商品 ID 调用支付方法，仅需要传以下参数。
 
@@ -841,7 +894,7 @@ HMS Core SDK 目前支付流程中，支付后的回执直接返回客户端。C
 
 #### 判断是否支持应用内支付
 
-判断是否支持应用内支付方法，在使用应用内支付之前，开发者的应用需要向华为 IAP 发送 isEnvReady 请求，以此判断用户当前登录的华为帐号所在的服务地，是否在华为 IAP 支持结算的国家或地区中。可参考 [应用内支付服务 - 判断是否支持应用内支付](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/iap-development-guide-v4#h1-1576554507764) 文档。
+判断是否支持应用内支付方法，在使用应用内支付之前，开发者的应用需要向华为 IAP 发送 isEnvReady 请求，以此判断用户当前登录的华为帐号所在的服务地，是否在华为 IAP 支持结算的国家或地区中。可参考 [应用内支付服务 - 判断是否支持应用内支付](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/dev-guide-0000001050130254#ZH-CN_TOPIC_0000001050130254__section3316321112913) 文档。
 
 **方法名**：`isEnvReady`
 
@@ -862,7 +915,7 @@ sdkhub.getFeePlugin().callFuncWithParam("isEnvReady");
 
 #### 展示商品信息 
 
-展示商品信息方法，若开发者使用在华为 AppGallery Connect 网站上配置的商品，则需要在开发者的应用中使用 `obtainProductInfo` 接口来获取此类商品的详细信息。可参考 [应用内支付服务 - 展示商品信息方法](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/iap-development-guide-v4#h1-1576554496306) 文档。
+展示商品信息方法，若开发者使用在华为 AppGallery Connect 网站上配置的商品，则需要在开发者的应用中使用 `obtainProductInfo` 接口来获取此类商品的详细信息。可参考 [应用内支付服务 - 展示商品信息方法](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/dev-guide-0000001050130254#ZH-CN_TOPIC_0000001050130254__section926924512298) 文档。
 
 **方法名**：`obtainProductInfo`
 
@@ -893,7 +946,7 @@ sdkhub.getFeePlugin().callFuncWithParam("obtainProductInfo", params);
 
 #### 消耗型商品的补单机制 & 提供非消耗型商品对应的服务
 
-可参考 [应用内支付服务 - 消耗型商品的补单机制](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/iap-development-guide-v4#h1-1576554449972) 文档。
+可参考 [应用内支付服务 - 消耗型商品的补单机制](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/redelivering-consumables-0000001051356573) 文档。
 
 - 若用户购买的是 **消耗型商品**，则需要在获得支付商品回调信息，或者 `obtainOwnedPurchases` 返回的未发货回调信息后，调用 `consumeOwnedPurchase`，对已发货商品进行消耗。
 - 若用户购买的是 **非消耗型商品**，则需要在获得支付商品回调信息后发货，但无需进行消耗。其他时段需要调用 `obtainOwnedPurchases` 同步下已购买的非消耗品商品是否已在发货状态。
@@ -907,7 +960,7 @@ sdkhub.getFeePlugin().callFuncWithParam("obtainProductInfo", params);
 
 `obtainOwnedPurchases` 获取的回调 Array 里的信息，与支付商品成功回调信息格式一致，包含用商品购买信息及其签名数据。可使用公钥进行签名验证并做补发。
 
-`consumeOwnedPurchase` 消耗商品接口也可以通过服务端调用，可参考 [Order 服务确认购买](https://developer.huawei.com/consumer/cn/doc/development/HMS-References/iap-api-confirm-purchase-for-order-service-v4) 文档。
+`consumeOwnedPurchase` 消耗商品接口也可以通过服务端调用，可参考 [Order 服务确认购买](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/purchase-confirm-for-order-service-0000001050035031) 文档。
 
 [Sample 工程](#sample-%E5%B7%A5%E7%A8%8B) 中提供了一个简单的消耗型商品消耗流程，可供参考。
 
@@ -959,7 +1012,7 @@ sdkhub.getFeePlugin().callFuncWithParam("consumeOwnedPurchase", params);
 
 #### 查看用户购买历史
 
-查看用户购买历史方法，可参考 [应用内支付服务 - 查看用户购买历史](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/iap-development-guide-v4#h1-1576554422714) 文档。对于消耗型商品，可使用该接口获取用户所有已消耗即已发货的商品信息。
+查看用户购买历史方法，可参考 [应用内支付服务 - 查看用户购买历史](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/dev-guide-0000001050130254#ZH-CN_TOPIC_0000001050130254__section1877319452446) 文档。对于消耗型商品，可使用该接口获取用户所有已消耗即已发货的商品信息。
 
 **方法名**：`obtainOwnedPurchaseRecord`
 
@@ -985,7 +1038,7 @@ sdkhub.getFeePlugin().callFuncWithParam("obtainOwnedPurchaseRecord", params);
 
 #### 提供订阅管理的页面跳转 
 
-提供订阅管理的页面跳转方法，可参考 [订阅专用功能说明 - 提供订阅管理的页面跳转](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/iap-subscription-functions-v4#h1-1576566818427) 文档。开发者的应用可以通过该接口跳转到华为 IAP 的管理订阅页面和编辑订阅页面。
+提供订阅管理的页面跳转方法，可参考 [订阅专用功能说明 - 提供订阅管理的页面跳转](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/subscription-functions-0000001050130264#ZH-CN_TOPIC_0000001050130264__section142151720185114) 文档。开发者的应用可以通过该接口跳转到华为 IAP 的管理订阅页面和编辑订阅页面。
 
 **方法名**：`startIapActivity`
 
@@ -1013,7 +1066,7 @@ sdkhub.getFeePlugin().callFuncWithParam("startIapActivity", params);
 
 开发时请先参考 [Cocos SDKHub - 广告插件](../sdkhub.md/#广告插件)，本章节作为 HMS Core SDK 插件特性的补充说明部分。
 
-目前广告系统接入的是 [流量变现服务](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/ads-sdk-introduction) 部分。接入广告形式为 [Banner](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/ads-sdk-guide-banner)，[原生广告](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/ads-sdk-guide-native)，[激励广告](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/ads-sdk-guide-reward) 和 [插屏广告](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/ads-sdk-guide-interstitial)。开屏和极速开屏广告若有需要用户可自己直接在工程中接入。
+目前广告系统接入的是 [流量变现服务](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/publisher-service-dev-process-0000001050064964) 部分。接入广告形式为 [Banner](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/publisher-service-banner-0000001050066915)，[原生广告](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/publisher-service-native-0000001050064968)，[激励广告](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/publisher-service-reward-0000001050066917) 和 [插屏广告](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/publisher-service-interstitial-0000001050064970)。开屏和极速开屏广告若有需要用户可自己直接在工程中接入。
 
 Reward 激励广告和 Interstitial 插屏广告均需要先调用 `preloadAds` 预加载方法，收到成功回调后，再调用 `showAds` 显示广告。Banner 条幅广告和 Native 原生广告，可直接调用 `showAds` 显示广告。
 
@@ -1042,7 +1095,7 @@ sdkhub.getAdsPlugin().preloadAds(params);
 | adType | "Interstitial"<br>"Native"<br>"Reward"<br>"Banner"  | 广告类型 |
 | adId | "testx9dtjwj8hp" | 广告 ID，Native 原生广告中，广告 ID 对应不同展示形式的原生广告 |
 | pos | "0" | 广告位置，Banner 情况下可选，默认为 "0"。<br>"0"：正下方<br>"1"：正中<br>"2"：正上方 |
-| adSize | "BANNER_SIZE_360_144" | 广告尺寸，Banner 情况下可选，默认为 "BANNER_SIZE_360_57"，传入值可参考 [广告尺寸](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/ads-sdk-guide-banner#h1-1576047688608) 文档。 |
+| adSize | "BANNER_SIZE_360_144" | 广告尺寸，Banner 情况下可选，默认为 "BANNER_SIZE_360_57"，传入值可参考 [广告尺寸](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/publisher-service-banner-0000001050066915#ZH-CN_TOPIC_0000001057202899__section1395312137311) 文档。 |
 | nativeLayout | "native_small"<br>"native_full" | Native 情况下可选，对应插件自带的两种 [原生广告模板文件](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/publisher-service-native-0000001050064968#ZH-CN_TOPIC_0000001057043311__section424619410104)，用户也可直接在对应 `.xml` 文件中修改布局，默认为 "native_full" |
 | requestCustomDislikeThisAd | "1" | Native 情况下可选，[不再显示该广告](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/publisher-service-native-0000001050064968#ZH-CN_TOPIC_0000001057043311__section8833172411816) 开关，用户可以自行隐藏或关闭不感兴趣的广告，默认值为 "0"，该功能大陆地区不可用，若需调试需要在 Log 中查看输出信息。 |
 | choicesPosition | "TOP_LEFT"<br>"TOP_RIGHT"<br>"BOTTOM_RIGHT"<br>"BOTTOM_LEFT"<br>"INVISIBLE" | Native 广告且 `requestCustomDislikeThisAd` = "1" 情况下可选，[设置广告选项的展示位置](https://developer.huawei.com/consumer/cn/doc/HMSCore-References/nativeadconfiguration-builder-0000001050064912-V5#ZH-CN_TOPIC_0000001055645257__section8995193618112)，默认为 "TOP_RIGHT" |
@@ -1090,7 +1143,7 @@ HMS Core SDK 的 [设置标签](../sdkhub.md/#设置标签) 和 [删除标签](.
 
 #### 设置是否显示通知栏消息
 
-可参考 [推送服务 - 设置是否显示通知栏消息](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/push-basic-capability#h2-1576658726104)。通知消息是由系统直接在通知中心下拉列表呈现的即时消息。开发者如果想控制应用是否允许显示通知栏消息，可以调用以下接口。如果开发者不调用此接口，系统默认是允许显示通知栏消息。
+可参考 [推送服务 - 设置是否显示通知栏消息](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/android-client-dev-0000001050042041#ZH-CN_TOPIC_0000001070189891__section1897912161216)。通知消息是由系统直接在通知中心下拉列表呈现的即时消息。开发者如果想控制应用是否允许显示通知栏消息，可以调用以下接口。如果开发者不调用此接口，系统默认是允许显示通知栏消息。
 
 该功能无法获取当前状态，用户需要在需要的情况下主动调用。
 
@@ -1134,7 +1187,7 @@ sdkhub.getPushPlugin().callFuncWithParam("turnOffPush");
 
 #### 发送上行消息
 
-发送上行消息功能，可参考 [推送服务 - 发送上行消息](https://developer.huawei.com/consumer/cn/doc/development/HMS-Guides/push-upstreammessagesending) 文档。该方法仅提供客户端接口，若用户需要接入，需要参考文档完成服务端部分。
+发送上行消息功能，可参考 [推送服务 - 发送上行消息](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/android-upstream-message-sending-0000001050040118) 文档。该方法仅提供客户端接口，若用户需要接入，需要参考文档完成服务端部分。
 
 **方法名**：`sendMessage`
 
@@ -1247,7 +1300,7 @@ var isAuto = sdkhub.getPushPlugin().callBoolFuncWithParam("isAutoInitEnabled");
 console.log("isAutoInitEnabled", isAuto);
 ```
 
-### 设置自动初始化
+#### 设置自动初始化
 
 设置是否自动初始化。如果设置为 true，SDK 会自动生成 AAID，自动申请令牌 Token，申请的令牌通过 `sdkhub.PushResultCode.kPushExtension + 100` 回调方法返回。可参考 [setAutoInitEnabled](https://developer.huawei.com/consumer/cn/doc/HMSCore-References-V5/hmsmessaging-0000001050255650-V5#ZH-CN_TOPIC_0000001050255650__section19198183125511)。
 
@@ -1260,4 +1313,111 @@ var params = 1 - sdkhub.getPushPlugin().callBoolFuncWithParam("isAutoInitEnabled
 sdkhub.getPushPlugin().callFuncWithParam("setAutoInitEnabled", params);
 ```
 
+#### 在多发送者场景下，目标应用给发送者申请 token
 
+在多发送者场景下，目标应用给发送者注销 token 方法，`subjectId` 需要传入 AGC 后台的项目ID。
+
+使用方式和回调与 `startPush` 方法相同。
+
+**方法名**：`getToken`
+
+**参数说明**：
+
+| 参数名 | 填写格式 | 说明 |
+| :--- | :--- | :--- |
+| subjectId | "7364300792444xxxxx" | 发送者的项目 ID，登录 AGC 后台，选择 **我的项目**，左侧导航栏选择 **项目设置**，在该页面获取发送者的项目 ID。 |
+
+**示例**：
+
+```js
+var subjectId = "7364300792444xxxxx";
+sdkhub.getPushPlugin().callFuncWithParam("getToken", subjectId);
+```
+
+#### 在多发送者场景下，目标应用给发送者注销 token
+
+在多发送者场景下，目标应用给发送者注销 token 方法，`subjectId` 需要传入 AGC 后台的项目ID。
+
+使用方式和回调与 `closePush` 方法相同。
+
+**方法名**：`deleteToken`
+
+**参数说明**：
+
+| 参数名 | 填写格式 | 说明 |
+| :--- | :--- | :--- |
+| subjectId | "7364300792444xxxxx" | 发送者的项目 ID，登录 AGC 后台，选择 **我的项目**，左侧导航栏选择 **项目设置**，在该页面获取发送者的项目 ID。 |
+
+**示例**：
+
+```js
+var subjectId = "7364300792444xxxxx";
+sdkhub.getPushPlugin().callFuncWithParam("deleteToken", subjectId);
+```
+
+#### 判断当前设备是否支持帐号校验能力
+
+对应 [帐号校验功能](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/account-profile-0000001057562781)。从 Push SDK 5.0.4 版本开始，华为推送服务提供了帐号校验功能，该功能支持您根据终端设备上不同账户属性来推送消息。举例来说：某华为手机上，有用户 A 和用户 B，用户 A 和 B 名下都有华为钱包应用，华为钱包给用户 A 推送消息时，只有用户 A 登录时才展示，其他用户登录消息不展示，这就使用了帐号校验功能。
+
+**方法名**：`isSupportProfile`
+
+**示例**：
+
+```js
+console.log("isSupportProfile, ret = ", sdkhub.getPushPlugin().callBoolFuncWithParam("isSupportProfile"));
+```
+
+#### 添加当前设备上的用户与应用的关系
+
+**方法名**：`addProfile`
+
+**参数说明**：
+
+| 参数名 | 填写格式 | 说明 |
+| :--- | :--- | :--- |
+| subjectId | "7364300792444xxxxx" | 可选，发送者的项目 ID，登录 AGC 后台，选择 **我的项目**，左侧导航栏选择 **项目设置**，在该页面获取发送者的项目 ID。 |
+| type | "HUAWEI_PROFILE" | 帐号校验功能的类型，"HUAWEI_PROFILE" 表示关联华为帐号，"CUSTOM_PROFILE" 表示不关联华为帐号。 |
+| profileId | "A123456" | 若当前设备支持帐号校验能力，应用发送的消息需要校验帐号，profileId 是您给帐号自定义生成的帐号的唯一标识。 |
+
+**示例**：
+
+```js
+var params1 = {
+    "type": "CUSTOM_PROFILE",
+    "profileId": "PROFILE_ID_001"
+};
+sdkhub.getPushPlugin().callFuncWithParam("addProfile", params1);
+
+var params2 = {
+    "subjectId": "7364300792444xxxxx",
+    "type": "CUSTOM_PROFILE",
+    "profileId": "PROFILE_ID_001"    
+}
+sdkhub.getPushPlugin().callFuncWithParam("addProfile", params2);
+```
+
+#### 删除当前设备上的用户与应用的关系
+
+**方法名**：`deleteProfile`
+
+**参数说明**：
+
+| 参数名 | 填写格式 | 说明 |
+| :--- | :--- | :--- |
+| subjectId | "7364300792444xxxxx" | 可选，发送者的项目 ID，登录 AGC 后台，选择 **我的项目**，左侧导航栏选择 **项目设置**，在该页面获取发送者的项目 ID。 |
+| profileId | "A123456" | 若当前设备支持帐号校验能力，应用发送的消息需要校验帐号，profileId 是您给帐号自定义生成的帐号的唯一标识。 |
+
+**示例**：
+
+```js
+var params1 = {
+    "profileId": "PROFILE_ID_001"
+};
+sdkhub.getPushPlugin().callFuncWithParam("deleteProfile", params1);
+
+var params2 = {
+    "subjectId": "7364300792444xxxxx",
+    "profileId": "PROFILE_ID_001"    
+}
+sdkhub.getPushPlugin().callFuncWithParam("deleteProfile", params2);
+```
