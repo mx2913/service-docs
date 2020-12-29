@@ -86,7 +86,7 @@
 
 分析服务预设了一些 [自动采集事件](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides-V5/android-automatic-event-collection-0000001051757143-V5)，无需开发者埋点或主动调用，即可实现此类事件的自动采集。
 
-分析服务插件启动时，已调用 SDK 的初始化，开发者无需再做调用。
+分析服务插件启动时，已调用 SDK 的初始化，开发者无需再做调用。。
 
 ### 自定义事件（埋点）
 
@@ -379,6 +379,10 @@ huawei.hms.analytics.AnalyticsTools.enableLog();
 
 huawei.hms.analytics.AnalyticsTools.enableLog(huawei.hms.LOG_LEVEL.debug);
 ```
+
+## 个人数据处理说明
+
+如何实现对最终用户数据的处理，请参考 [个人数据处理说明](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/android-personal-data-0000001050705120)。
 
 ## API 文档
 
