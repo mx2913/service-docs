@@ -6,28 +6,37 @@ Currently, the Huawei HMS Core plug-in provided by Cocos SDKHub includes [Game S
 
 The Cocos SDKHub framework and plug-ins basically do not involve current state processing and server-side interfaces, such as whether the current user is logged in, etc., the game side needs to judge to avoid calling accounts and other game service interfaces when the user is not logged in. In the case of payment, the HUAWEI HMS Core plug-in does local verification, but when the user needs to log in or pay server verification (optional), please use the information in the callback to verify by yourself on the server.
 
-- [Verifying the Sign-in Signature](https://developer.huawei.com/consumer/en/doc/development/HMS-References/verify-login-signature)
-- [Verifying the Purchase Token for the Order Service](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/iap-order-service-purchase-token-verification-v4)
+- [Verifying the Sign-in Signature](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References-V5/verify-login-signature-0000001050123503-V5)
+- [Verifying the Purchase Token for the Order Service](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/order-verify-purchase-token-0000001050033078)
 
 ## Version Update History
 
-**Latest Version: 1.2.2_5.0.1**
+**Latest Version: 1.2.4_5.0.5**
 
 | HMS Core SDK | Current Version | Description |
 | :--- | :--- | :--- |
-| com.huawei.hms:hwid | 5.0.1.301 | Account Kit |
-| com.huawei.hms:game | 5.0.1.302 | Game Service |
-| com.huawei.hms:iap | 5.0.2.300 | IAP Kit |
-| com.huawei.hms:ads-lite | 13.4.32.303 | Ads Kit |
-| com.huawei.hms:ads-identifier | 3.4.30.307 | Ads Kit |
-| com.huawei.hms:ads-installreferrer | 3.4.30.307 | Ads Kit |
-| com.huawei.hms:push | 5.0.2.300 | Push Kit |
+| com.huawei.hms:hwid | 5.0.5.301 | Account Kit |
+| com.huawei.hms:game | 5.0.4.302 | Game Service |
+| com.huawei.hms:iap | 5.0.4.301 | IAP Kit |
+| com.huawei.hms:ads-lite | 13.4.36.301 | Ads Kit |
+| com.huawei.hms:ads-consent | 3.4.36.301 | Ads Kit |
+| com.huawei.hms:ads-identifier | 3.4.34.301 | Ads Kit |
+| com.huawei.hms:ads-installreferrer | 3.4.34.301 | Ads Kit |
+| com.huawei.hms:push | 5.0.4.302 | Push Kit |
 
 For details of HMS Core SDKs latest versions and change historys, please refer to [HMS - Version Update History](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/hmssdk-kit-0000001050042513).
 
 The version numbers of the HMS Core SDKs that have been integrated into the project can be found in the `proj.android-stuio/app/build.gradle` file in Android Studio. After upgrading the plug-in and rebuilding the project, please also focus on the version number of each SDK in that file.
 
 ### Version Update Description
+
+- v1.2.4_5.0.5
+
+    - Update HMS Core SDKs: hwid:5.0.5.30, game:5.0.4.30, iap:5.0.4.301, ads-lite:13.4.36.301, ads-consent:3.4.36.301, ads-identifier:3.4.34.301, ads-installreferrer:3.4.34.301, push:5.0.4.302.
+
+    - Add `smsStartConsent` method in Account Kit.
+
+    - Add `getToken`, `deleteToken`, `isSupportProfile`, `addProfile`, `deleteProfile` methods in Push Kit.
 
 - v1.2.2_5.0.1
 
@@ -51,7 +60,7 @@ The version numbers of the HMS Core SDKs that have been integrated into the proj
 
     - Add Push Kit 5.0.0.301 of HMS Core.
 
-    - Update to HMS Core SDKs: base:5.0.0.300, hwid:5.0.1.301, game:5.0.0.300, iap:4.0.4.300, ads-lite:13.4.31.300.
+    - Update HMS Core SDKs: base:5.0.0.300, hwid:5.0.1.301, game:5.0.0.300, iap:4.0.4.300, ads-lite:13.4.31.300.
 
 - v1.1.4_5.0.0
 
@@ -59,7 +68,7 @@ The version numbers of the HMS Core SDKs that have been integrated into the proj
 
 ## Preparation Work
 
-- Refer to [AppGallery Connect Configuration](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/account-preparation#h1-1-configuring-appgallery-connect) document to complete developer registration, app creation, **generation and configuring the Signing Certificate Fingerprint** and enabling required services.
+- Refer to [AppGallery Connect Configuration](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/config-agc-0000001050166285) document to complete developer registration, app creation, **generation and configuring the Signing Certificate Fingerprint** and enabling required services.
 - Integrate the work of HMS Core SDK, Cocos SDKHub will **automatically complete** when building, no need to pay attention.
 - If you need to use the IAP function, please prepare the bank card of the registered developer in advance, and fill in the relevant payment information. It may take 1-2 business days for review after submission.
 - Need to test on Huawei or Honor brand phones with HMS Core service installed.
@@ -114,15 +123,15 @@ Most of HUAWEI Services need the `agconnect-services.json` configuration file. I
 
   ![](sdkhub-hms/hms-params.jpg)
     
-  - [Payment public key](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/appgallery_querypaymentinfo), which is required when checking IAP service.
+  - [Payment public key](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/query-payment-info-0000001050166299), which is required when checking IAP service.
 
     ![](sdkhub-hms/hms-paykey.jpg)
     
-  - [Support Languages](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/game-preparation-v4)
+  - [Support Languages](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/integrate-as-sdk-0000001050435953-V5#EN-US_TOPIC_0000001050435953__section17221016145619)
 
     - This parameter is optional. If your application does not need to be set to only support certain specific languages, this parameter can be set to empty, and the application will support all languages ​​supported by HMS Core SDK by default.
       - If your application needs to be set to only support certain specific languages, fill in the format as **"en", "zh-rCN", "other languages ​​to be supported"**.
-      - For the list of languages ​​supported by HMS Core SDK, please refer to the [Language Supported by HMS SDK](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/hmssdk_supported_language).
+      - For the list of languages ​​supported by HMS Core SDK, please refer to the [Language Supported by HMS SDK](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/support-language-0000001050040564-V5).
 
 - After the configuration is completed and the relevant interface is connected, you can use the **Project -> Build...** in the menu bar of the Creator editor to open the **Build** panel to build the project. For Creator 2.4.1 and above, please refer to the [Publish to HUAWEI AppGallery Connect](https://docs.cocos.com/creator/manual/en/publish/publish-huawei-agc.html) document. Users of older versions can build and publish to the Android platform.
 
@@ -142,13 +151,13 @@ There are many methods in the Huawei system, and some interfaces need to be call
 
 #### login
 
-Login method, please refer to the [Game Service - Game Signing In](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/game-login-v4) document.
+Login method, please refer to the [Game Service - Game Signing In](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References-V5/verify-login-signature-0000001050123503-V5) document.
 
-After successfully logging in to HUAWEI HMS Core SDK, the plug-in will call the [getCurrentPlayer](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/game-login-0000001050121526-V5#EN-US_TOPIC_0000001051062343__section774619121231) method of HUAWEI HMS Core SDK to obtain the current player information, and return it to the user through a callback. The user can also actively call the `getUserInfo` method to obtain the login information. The **userID** parameter can be read as the user's unique ID. At this time, you can also call [Verifying the Sign-in Signature](https://developer.huawei.com/consumer/en/doc/development/HMS-References/verify-login-signature)  to verify the obtained sign-in signature of a player.
+After successfully logging in to HUAWEI HMS Core SDK, the plug-in will call the [getCurrentPlayer](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/game-login-0000001050121526-V5#EN-US_TOPIC_0000001051062343__section774619121231) method of HUAWEI HMS Core SDK to obtain the current player information, and return it to the user through a callback. The user can also actively call the `getUserInfo` method to obtain the login information. The **userID** parameter can be read as the user's unique ID. At this time, you can also call [Verifying the Sign-in Signature](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References-V5/verify-login-signature-0000001050123503-V5)  to verify the obtained sign-in signature of a player.
 
 #### logout
 
-How ​​to logout, please refer to the [Account Kit - Signing Out from HUAWEI ID](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/account-guide-v4#h1-3-signing-out-from-huawei-id) document. The HMS SDK will clean up the login information of the Huawei account, and the game client needs to judge the login status by itself.
+How ​​to logout, please refer to the [Account Kit - Signing Out from an ID](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/logout-0000001050050849-V5) document. The HMS SDK will clean up the login information of the Huawei account, and the game client needs to judge the login status by itself.
 
 #### getUserInfo
 
@@ -156,11 +165,11 @@ Get user information method, the HMS plug-in will return the callback informatio
 
 #### showToolBar / hideToolBar
 
-Float method, please refer to the [Game Service - Floating Window](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/game-buoy-v4#h1-1589542791824) document. Since the plug-in has already called these two methods in the life cycle of `onResume` and `onPause`, **users no longer need to make active calls**.
+Float method, please refer to the [Game Service - Floating Window](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/game-buoy-0000001050121528-V5) document. Since the plug-in has already called these two methods in the life cycle of `onResume` and `onPause`, **users no longer need to make active calls**.
 
 #### showAchievement
 
-How ​​to display achievements, please refer to the [Game Services - Achievements](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/game-achievement) document.
+How ​​to display achievements, please refer to the [Game Services - Achievements](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/game-achievement-0000001050123477-V5) document.
 
 **Parameter Description**:
 
@@ -171,7 +180,7 @@ How ​​to display achievements, please refer to the [Game Services - Achievem
 
 #### unlockAchievement
 
-How ​​to unlock achievements, please refer to the [Game Services - Achievements](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/game-achievement) document.
+How ​​to unlock achievements, please refer to the [Game Services - Achievements](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/game-achievement-0000001050123477-V5) document.
 
 **Parameter Description**:
 
@@ -183,7 +192,7 @@ How ​​to unlock achievements, please refer to the [Game Services - Achieveme
 
 #### showLeaderBoard
 
-How ​​to display leaderboards, please refer to the [Game Service - Leaderboards](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/game-leaderboards-development) document.
+How ​​to display leaderboards, please refer to the [Game Service - Leaderboards](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/game-leaderboards-0000001050123481-V5) document.
 
 **Parameter Description**:
 
@@ -199,7 +208,7 @@ How ​​to display leaderboards, please refer to the [Game Service - Leaderboa
 
 #### submitScore
 
-How ​​to submit scores, please refer to the [Game Service - Leaderboards](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/game-leaderboards-development) document.
+How ​​to submit scores, please refer to the [Game Service - Leaderboards](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/game-leaderboards-0000001050123481-V5) document.
 
 **Parameter Description**:
 
@@ -253,9 +262,9 @@ sdkhub.getUserPlugin().callFuncWithParam("checkAppUpdate");
 
 **Note**: For games, please call the [Login](#login) method without accessing this method.
 
-This method is used by third-party applications to obtain the user authentication information (ID Token) or the user's temporary authorization ticket (Authorization Code) of Huawei account, so that the user can use the Huawei account to securely log in to third-party applications. For details, please refer to [Signing In with a HUAWEI ID](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/dev-guide-account-0000001050048888#ZH-CN_TOPIC_0000001050048888__section15992612272) and [Silently Signing In with a HUAWEI ID](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/login-silentsignin-0000001050050853) documents.
+This method is used by third-party applications to obtain the user authentication information (ID Token) or the user's temporary authorization ticket (Authorization Code) of Huawei account, so that the user can use the Huawei account to securely log in to third-party applications. For details, please refer to [Signing In with an ID](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/dev-guide-account-0000001050048888) and [Silently Signing In with a HUAWEI ID](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/login-silentsignin-0000001050050853) documents.
 
-After the developer obtains the ID Token or Authorization Code via the `sdkhub.UserResultCode.kLoginSucceed` login callback, please refer to the server-side authentication section of the corresponding login method in the [Signing In with a HUAWEI ID](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/dev-guide-account-0000001050048888#ZH-CN_TOPIC_0000001050048888__section15992612272) documentation, to complete server-side access.
+After the developer obtains the ID Token or Authorization Code via the `sdkhub.UserResultCode.kLoginSucceed` login callback, please refer to the server-side authentication section of the corresponding login method in the [Signing In with a HUAWEI ID](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/dev-guide-account-0000001050048888) documentation, to complete server-side access.
 
 **Parameter Description**:
 
@@ -282,7 +291,7 @@ sdkhub.getUserPlugin().callFuncWithParam("getCurrentPlayer");
 
 #### `cancelAuthorization`
 
-Huawei account revoking authorization, please refer to the [Account Kit - Revoking HUAWEI ID Authorization](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/account-guide-v4#h1-5-canceling-huawei-id-authorization) document, in order to improve the privacy and security of the application, the application can provide an entry for the user to cancel the authorization of the application.
+Huawei account revoking authorization, please refer to the [Account Kit - Revoking HUAWEI ID Authorization](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/cancelauthorization-0000001050050857) document, in order to improve the privacy and security of the application, the application can provide an entry for the user to cancel the authorization of the application.
 
 **Callback Description**:
 
@@ -291,9 +300,22 @@ Huawei account revoking authorization, please refer to the [Account Kit - Revoki
 | + 122 | String | Description of successful cancellation of login authorization |
 | + 123 | String | Description of failed login authorization cancellation |
 
+#### Identity Verification and Trial Mode
+
+Please refer to the [Identity Verification](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/game-anti-indulgence-0000001050123479#EN-US_TOPIC_0000001050123479__section41938561170) documentation.
+
+This plug-in accesses related methods, and developers only need to handle related callbacks.
+
+**Callback Description**:
+
+| Extension callback value sdkhub.UserResultCode.kUserExtension | msg type | msg description |
+| :--- | :--- | :--- |
+| + 130 | String | callback of the trial ends. |
+| + 131 | Boolean | The result of identity verification. If it is `true`, proceed with sign-in processing. If it is `false`, you are advised to display a message to the player and make the player exit the game, or instruct the player to sign in again and perform identity verification. |
+
 #### `submitPlayerEventStart`/`submitPlayerEventEnd`/`getPlayerExtraInfo`
 
-For game addiction prevention methods, please refer to the [Game Service - Game addiction prevention](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/game-anti-indulgence-v4) document. Games released in Mainland China require developers to complete the development of the anti-addiction function of the game in accordance with the above notice and the game itself.
+For game addiction prevention methods, please refer to the [Game Service - Game addiction prevention](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/game-anti-indulgence-0000001050123479#EN-US_TOPIC_0000001050123479__section42302913810) document. Games released in Mainland China require developers to complete the development of the anti-addiction function of the game in accordance with the above notice and the game itself.
 
 - When the player logs in to the game or switches from the background to the foreground of the game, call `submitPlayerEventStart`. The game periodically calls the `getPlayerExtraInfo` method to query additional player information. The highest frequency allowed by the server is a query every 10 minutes, and it is generally recommended to query every 15 minutes. When the player exits the game, switches from the foreground to the background, or the game exits abnormally (process termination, phone restart, etc.), the application calls `submitPlayerEventEnd` to report the player's exit event.
 
@@ -316,7 +338,7 @@ For game addiction prevention methods, please refer to the [Game Service - Game 
 
 #### `submitEvent`
 
-Event reporting method, please refer to the [Game Service - Game Events](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/game-events) document. Incident reporting provides developers with the ability to collect specific data generated by players during the game, report and store it to Huawei game servers, and then perform inductive analysis on AppGallery Connect.
+Event reporting method, please refer to the [Game Service - Game Events](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/game-events-0000001050121530) document. Incident reporting provides developers with the ability to collect specific data generated by players during the game, report and store it to Huawei game servers, and then perform inductive analysis on AppGallery Connect.
 
 **Parameter Description**:
 
@@ -333,7 +355,7 @@ Event reporting method, please refer to the [Game Service - Game Events](https:/
 
 #### `getEvent`
 
-To obtain player event data, please refer to the [Game Service - Game Events](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/game-events) document.
+To obtain player event data, please refer to the [Game Service - Game Events](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/game-events-0000001050121530) document.
 
 **Parameter Description**:
 
@@ -351,7 +373,7 @@ To obtain player event data, please refer to the [Game Service - Game Events](ht
 
 #### `getGamePlayerStats`
 
-For player information statistics method, please refer to the [Game Service - Player Statistics](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/game-playerinfo-development) document. Player information statistics means that developers can obtain various statistical information of current players in the game from Huawei game servers, helping developers to have a deeper understanding of the player’s game habits, so as to build a more suitable game experience based on the player's game progress, payment ability and so on.
+For player information statistics method, please refer to the [Game Service - Player Statistics](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/game-playerinfo-0000001050123483) document. Player information statistics means that developers can obtain various statistical information of current players in the game from Huawei game servers, helping developers to have a deeper understanding of the player’s game habits, so as to build a more suitable game experience based on the player's game progress, payment ability and so on.
 
 **Parameter Description**:
 
@@ -368,7 +390,7 @@ For player information statistics method, please refer to the [Game Service - Pl
 
 #### `getGameSummary`
 
-How ​​to get basic game information, please refer to the [Game Service - Basic Game Information](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/game-baseinfo-development) document. The basic game information refers to the related information of the game application, such as the game application ID, game name, game description, game category, etc. When developers need to use game application information in a game, they can obtain basic game information from Huawei game servers.
+How ​​to get basic game information, please refer to the [Game Service - Basic Game Information](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/game-baseinfo-0000001050121534) document. The basic game information refers to the related information of the game application, such as the game application ID, game name, game description, game category, etc. When developers need to use game application information in a game, they can obtain basic game information from Huawei game servers.
 
 **Parameter Description**:
 
@@ -443,7 +465,7 @@ sdkhub.getUserPlugin().callFuncWithParam("getAppId");
 
 #### `archive`
 
-Developers can store a player's game progress in Huawei Cloud or access previous game progress from Huawei Cloud in order to continue playing. Therefore, as long as the user logs in with the same Huawei account, the user can continue to play the game on any device at the same progress as before, even if the user's previous device is lost, destroyed or replaced with a new one. Please refer to [Archive](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/game-archive-0000001050121532) and [API Referenes](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References-V5/archivesclient-0000001050123603-V5).
+Developers can store a player's game progress in Huawei Cloud or access previous game progress from Huawei Cloud in order to continue playing. Therefore, as long as the user logs in with the same Huawei account, the user can continue to play the game on any device at the same progress as before, even if the user's previous device is lost, destroyed or replaced with a new one. Please refer to [Saved Games](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/game-archive-0000001050121532) and [API Referenes](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References-V5/archivesclient-0000001050123603-V5).
 
 **Callback Description**:
 
@@ -661,14 +683,41 @@ sdkhub.getUserPlugin().callFuncWithParam("archive", params);
 
 #### ReadSmsManager
 
-Automatically read SMS method, optional, please refer to the [Account Kit - Automatically Retrieving SMS Verification Code](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/account-guide-v4#h1-6-automatically-retrieving-sms-verification-code) documentation. This plug-in calls the request to start the SMS reading service when the User system is initialized, the user does not need to call the code, only needs to handle the callback.
+Automatically read SMS method, optional, please refer to the [Account Kit - Automatically Retrieving SMS Verification Code](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/readsmsmanager-0000001050050861) documentation. This plug-in calls the request to start the SMS reading service when the User system is initialized, the user does not need to call the code, only needs to handle the callback.
 
 **Callback Description**:
 
 | Extension callback value `sdkhub.UserResultCode.kUserExtension` | msg type | msg description |
 | :--- | :--- | :--- |
-| + 102 | String | Automatically read SMS verification code initialization callback |
-| + 103 | String | Automatically read SMS verification code timeout callback |
+| + 102 | String | Read SMS verification code initialization callback |
+| + 103 | String | Read SMS verification code failure or timeout callback |
+| + 104 | String | Return the read SMS verification code information |
+
+#### smsStartConsent
+
+Optional, please refer to the [Account Kit - Automatically Reading an SMS Verification Code After User Authorization](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/authotize-to-read-sms-0000001061481826) documentation.
+
+**Parameter Description**:
+
+| Parameter name | Fill format | Description |
+| :--- | :--- | :--- |
+| phoneNumber | 136xxxxxxxx | Optional, phone number for sending SMS messages. This parameter is optional. The value contains a maximum of 128 characters.<br>If this parameter is passed, HMS Core SDK displays the first SMS message that meets the SMS message rule based on the parameter value.<br>If this parameter is not passed, HMS Core SDK reads all unread messages on the user's mobile phone after this API is called and displays the first SMS message that matches the SMS rule. |
+
+**Example**:
+
+```js
+sdkhub.getUserPlugin().callFuncWithParam("smsStartConsent");
+
+var phoneNumber = "136xxxxxxxx";
+sdkhub.getUserPlugin().callFuncWithParam("smsStartConsent", phoneNumber);
+```
+
+**Callback Description**:
+
+| Extension callback value `sdkhub.UserResultCode.kUserExtension` | msg type | msg description |
+| :--- | :--- | :--- |
+| + 102 | String | Read SMS verification code initialization callback |
+| + 103 | String | Read SMS verification code failure or timeout callback |
 | + 104 | String | Return the read SMS verification code information |
 
 ### FeePlugin payment system
@@ -677,7 +726,7 @@ Considering the past experience of Apple’s IAP review and other issues, we set
 
 #### feeForProduct
 
-`feeForProduct` payment method, please refer to the [In-App Purchases - Initiating a Purchase](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/iap-development-guide-v4#h1-1576554870650) document. Since Huawei now requires that the products are configured in the background, only the following parameters need to be passed.
+`feeForProduct` payment method, please refer to the [In-App Purchases - Initiating a Purchase](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/dev-guide-0000001050130254#EN-US_TOPIC_0000001050130254__section183174113342) document. Since Huawei now requires that the products are configured in the background, only the following parameters need to be passed.
 
 **Parameter Description**:
 
@@ -693,7 +742,7 @@ Need to call the interface description through the extension method:
 
 #### `isEnvReady`
 
-Determine whether the in-app payment method is supported, before using in-app payment, your app needs to send an isEnvReady request to HUAWEI IAP to determine whether the service location where the user’s currently logged-in Huawei account is located in HUAWEI IAP supports settlement Countries or regions. You can refer to [In-App Purchases - Checking the Support for HUAWEI IAP](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/iap-development-guide-v4#h1-1576554855637) Document.
+Determine whether the in-app payment method is supported, before using in-app payment, your app needs to send an isEnvReady request to HUAWEI IAP to determine whether the service location where the user’s currently logged-in Huawei account is located in HUAWEI IAP supports settlement Countries or regions. You can refer to [In-App Purchases - Checking the Support for HUAWEI IAP](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/dev-guide-0000001050130254#EN-US_TOPIC_0000001050130254__section3316321112913) Document.
 
 **Callback Description**:
 
@@ -704,7 +753,7 @@ Determine whether the in-app payment method is supported, before using in-app pa
 
 #### `obtainProductInfo`
 
-Method of displaying product information, if you use the product configured on the HUAWEI AppGallery Connect website, you need to use the `obtainProductInfo` interface in your application to obtain the detailed information of such product. You can refer to the [In-App Purchases - Presenting Product Information](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/iap-development-guide-v4#h1-1576554863216) document.
+Method of displaying product information, if you use the product configured on the HUAWEI AppGallery Connect website, you need to use the `obtainProductInfo` interface in your application to obtain the detailed information of such product. You can refer to the [In-App Purchases - Displaying Product Information](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/dev-guide-0000001050130254#EN-US_TOPIC_0000001050130254__section926924512298) document.
 
 **Parameter Description**:
 
@@ -722,7 +771,7 @@ Method of displaying product information, if you use the product configured on t
 
 #### `obtainOwnedPurchases`
 
-To obtain purchase information of consumable products that users have purchased but not shipped, please refer to the [In-App Purchases - Redelivering a Consumable Product](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/iap-development-guide-v4#h1-1576554889527) document. Obtain the purchase information of consumable products that the user has purchased but not shipped. If there are any products that the user has purchased but have not shipped, the callback will include the purchase information and signature data of the product. The public key can be used for signature verification and reissue.
+To obtain purchase information of consumable products that users have purchased but not shipped, please refer to the [In-App Purchases - Redelivering a Consumable Product](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/redelivering-consumables-0000001051356573) document. Obtain the purchase information of consumable products that the user has purchased but not shipped. If there are any products that the user has purchased but have not shipped, the callback will include the purchase information and signature data of the product. The public key can be used for signature verification and reissue.
 
 It is recommended to call it at the beginning of the game to get the user's other purchases that have not been shipped and handle it.
 
@@ -741,9 +790,9 @@ It is recommended to call it at the beginning of the game to get the user's othe
 
 #### `consumeOwnedPurchase`
 
-Consumption of shipped products, please refer to the [In-App Purchases - Redelivering a Consumable Product](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/iap-development-guide-v4#h1-1576554889527) document. After confirming that the product has been shipped, use this interface to consume all the shipped products to notify the Huawei server to update the shipping status of the product. For consumable products, after the application successfully executes the consumption, the Huawei server will reset the corresponding product to the purchaseable state, and the user can purchase the product again.
+Consumption of shipped products, please refer to the [In-App Purchases - Redelivering a Consumable Product](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/redelivering-consumables-0000001051356573) document. After confirming that the product has been shipped, use this interface to consume all the shipped products to notify the Huawei server to update the shipping status of the product. For consumable products, after the application successfully executes the consumption, the Huawei server will reset the corresponding product to the purchaseable state, and the user can purchase the product again.
 
-This interface can also be called through the server, please refer to the [Purchase Confirmation for the Order Service](https://developer.huawei.com/consumer/en/doc/development/HMS-References/iap-api-confirm-purchase-for-order-service-v4) document.
+This interface can also be called through the server, please refer to the [Confirming the Purchase for the Order Service](hhttps://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/purchase-confirm-for-order-service-0000001050035031-V5) document.
 
 **Callback Description**:
 
@@ -754,7 +803,7 @@ This interface can also be called through the server, please refer to the [Purch
 
 #### `obtainOwnedPurchaseRecord`
 
-View user purchase history, please refer to the [In-App Purchases - Viewing the Purchase History](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/iap-development-guide-v4#h1-1576554905268) document. For consumable goods, this interface can be used to obtain the user's all consumed or shipped product information.
+View user purchase history, please refer to the [In-App Purchases - Viewing the Purchase History](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/dev-guide-0000001050130254#EN-US_TOPIC_0000001050130254__section1877319452446) document. For consumable goods, this interface can be used to obtain the user's all consumed or shipped product information.
 
 **Parameter Description**:
 
@@ -771,7 +820,7 @@ View user purchase history, please refer to the [In-App Purchases - Viewing the 
 
 #### `startIapActivity`
 
-Provide subscription management page redirection, please refer to the [Subscription - Redirecting to the Subscription Management or Editing Page](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/iap-subscription-functions-v4#h1-1590474395823) document. Developer applications can jump to the management subscription page and edit subscription page of HUAWEI IAP through this interface.
+Provide subscription management page redirection, please refer to the [Subscription - Redirecting to the Subscription Management or Editing Page](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/subscription-functions-0000001050130264#EN-US_TOPIC_0000001050130264__section142151720185114) document. Developer applications can jump to the management subscription page and edit subscription page of HUAWEI IAP through this interface.
 
 **Parameter Description**:
 
@@ -788,7 +837,7 @@ Provide subscription management page redirection, please refer to the [Subscript
 
 ### AdsPlugin Advertising System
 
-Currently, the advertising system is connected to the [HUAWEI Ads Publisher Service](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/ads-sdk-introduction) part. The form of access advertising is [Banner Ads](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/ads-sdk-guide-banner), [Rewarded Ads](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/ads-sdk-guide-reward) and [Interstitial Ads](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/ads-sdk-guide-interstitial). If necessary, users can directly access the open-screen advertisement in the project.
+Currently, the advertising system is connected to the [HUAWEI Ads Publisher Service](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/publisher-service-dev-process-0000001050064964) part. The form of access advertising is [Banner Ads](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/publisher-service-banner-0000001050066915), [Native Ads](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/publisher-service-native-0000001050064968), [Rewarded Ads](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/publisher-service-reward-0000001050066917) and [Interstitial Ads](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/publisher-service-interstitial-0000001050064970). If necessary, users can directly access the open-screen advertisement in the project.
 
 Both rewarded ads and interstitial ads need to call `preloadAds` first, and then call `showAds` after receiving a successful callback. Banner ads can directly call `showAds`.
 
@@ -811,10 +860,10 @@ Display advertising method.
 
 | Parameter name | Fill format | Description |
 | :--- | :--- | :--- |
-| adType | "Interstitial"<br>"Reward"<br>"Banner" | Ad Type |
+| adType | "Interstitial"<br>"Native"<br>"Reward"<br>"Banner" | Ad Type |
 | adId | "testx9dtjwj8hp" | Ad ID |
 | pos | "0" | Ad position, optional in the case of Banner, default is "0".<br>"0": directly below.<br>"1": center.<br>"2": directly above. |
-| adSize | "BANNER_SIZE_360_144" | Ad size, optional in the case of Banner, the default is "BANNER_SIZE_360_57", the input value can refer to [Ad Sizes](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/ads-sdk-guide-banner#h1-1576067654264) document. |
+| adSize | "BANNER_SIZE_360_144" | Ad size, optional in the case of Banner, the default is "BANNER_SIZE_360_57", the input value can refer to [Ad Sizes](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/publisher-service-banner-0000001050066915#EN-US_TOPIC_0000001057202899__section1395312137311) document. |
 | nativeLayout | "native_small"<br>"native_full" | Optional in the case of Native, Corresponding to the two [Native Ad Templates](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/publisher-service-native-0000001050064968#EN-US_TOPIC_0000001057043311__section424619410104) that come with the plug-in, developers can modify the layout in the `.xml` file. The default is "native_full" |
 | requestCustomDislikeThisAd | "1" | Optional in the case of Native, switch of [Dislike This Ad](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/publisher-service-native-0000001050064968#EN-US_TOPIC_0000001057043311__section8833172411816) feature, allows users to hide or block the ads that they are not interested in. This feature is not available in mainland China. |
 | choicesPosition | "TOP_LEFT"<br>"TOP_RIGHT"<br>"BOTTOM_RIGHT"<br>"BOTTOM_LEFT"<br>"INVISIBLE" | Optional in the case of Native and `requestCustomDislikeThisAd` = "1", [sets the AdChoices icon position](https://developer.huawei.com/consumer/en/doc/HMSCore-References/nativeadconfiguration-builder-0000001050064912-V5#EN-US_TOPIC_0000001055645257__section8995193618112), the default is "TOP_RIGHT". |
@@ -837,60 +886,4 @@ Hide advertising method.
 ```js
 var params = { "adType": "Native" };
 sdkhub.getAdsPlugin().hideAds(params);
-```
-
-#### getOdid
-
-Obtains an ODID in asynchronous mode, please refer to the [getOdid](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References-V5/opendeviceclient-0000001050831617-V5#EN-US_TOPIC_0000001050831617__section1788692510237) document.
-
-**Callback Description**:
-
-| Extension callback value `sdkhub.PushResultCode.kPushExtension`` | msg type | msg description |
-| :--- | :--- | :--- |
-| + 108 | String | The ODID |
-| + 109 | String | Description of failed get ODID |
-
-#### getAAID
-
-Obtains an AAID in asynchronous mode, please refer to the [getAAID](https://developer.huawei.com/consumer/en/doc/HMSCore-References-V5/hms-instanceid-0000001050255634-V5#EN-US_TOPIC_0000001050255634__section8856440133116 document.
-
-
-**Callback Description**:
-
-| Extension callback value `sdkhub.PushResultCode.kPushExtension`` | msg type | msg description |
-| :--- | :--- | :--- |
-| + 110 | String | The AAID |
-| + 111 | String | Description of failed get AAID |
-
-####  deleteAAID
-
-Deletes a local AAID, please refer to the [deleteAAID](https://developer.huawei.com/consumer/en/doc/HMSCore-References-V5/hms-instanceid-0000001050255634-V5#EN-US_TOPIC_0000001050255634__section8856440133116) document.
-
-**Callback Description**:
-
-| Extension callback value `sdkhub.PushResultCode.kPushExtension`` | msg type | msg description |
-| :--- | :--- | :--- |
-| + 110 | String | Description of deletes AAID success |
-| + 111 | String | Description of deletes AAID failure |
-
-#### isAutoInitEnabled
-
-Checks whether automatic initialization is enabled, please refer to the [isAutoInitEnabled](https://developer.huawei.com/consumer/en/doc/HMSCore-References-V5/hmsmessaging-0000001050255650-V5#EN-US_TOPIC_0000001050255650__section768215326488) document.
-
-**Example**:
-
-```js
-var isAuto = sdkhub.getPushPlugin().callBoolFuncWithParam("isAutoInitEnabled");
-console.log("isAutoInitEnabled", isAuto);
-```
-
-#### setAutoInitEnabled
-
-Sets whether to enable automatic initialization. If this parameter is set to **true**, the SDK automatically generates an AAID and applies for a token. The token is returned through the `sdkhub.PushResultCode.kPushExtension + 100` callback method. please refer to the [setAutoInitEnabled](https://developer.huawei.com/consumer/en/doc/HMSCore-References-V5/hmsmessaging-0000001050255650-V5#EN-US_TOPIC_0000001050255650__section19198183125511) document.
-
-**Example**:
-
-```js
-var params = 1 - sdkhub.getPushPlugin().callBoolFuncWithParam("isAutoInitEnabled");
-sdkhub.getPushPlugin().callFuncWithParam("setAutoInitEnabled", params);
 ```
