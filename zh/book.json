@@ -7,7 +7,7 @@
     "variables": {
         "themeFexa":{
             "lang": "zh",
-            "showHome": false,
+            "showHome": true,
             "showNavigator": true,
             "nav":[
                 {
