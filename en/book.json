@@ -11,7 +11,7 @@
             "nav":[
                 {
                     "url":"https://service.cocos.com/document/zh/",
-                    "target":"_blank",
+                    "target":"_self",
                     "name": "中文"
                 }
             ]
