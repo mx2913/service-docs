@@ -7,14 +7,22 @@
     "variables": {
         "themeFexa":{
             "lang": "zh",
-            "showHome": true,
+            "showHome": false,
             "showNavigator": true,
             "nav":[
                 {
                     "url":"https://service.cocos.com/document/en/",
-                    "target":"_blank",
+                    "target":"_self",
                     "name": "English"
                 }
+                // ,
+                // {
+                //     "url":"http://test-service.cocos.com/console",
+                //     "target":"_blank",
+                //     "name": "管理控制台",
+                //     "border": "nav-border",
+                //     "type": "console"
+                // }
             ]
         }
     },
