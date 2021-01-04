@@ -14,14 +14,6 @@
                     "target":"_self",
                     "name": "中文"
                 }
-                // ,
-                // {
-                //     "url":"http://test-service.cocos.com/console",
-                //     "target":"_blank",
-                //     "name": "Console",
-                //     "border": "nav-border",
-                //     "type": "console" 
-                // }
             ]
         }
     },

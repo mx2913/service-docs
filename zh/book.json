@@ -15,14 +15,6 @@
                     "target":"_self",
                     "name": "English"
                 }
-                // ,
-                // {
-                //     "url":"http://test-service.cocos.com/console",
-                //     "target":"_blank",
-                //     "name": "管理控制台",
-                //     "border": "nav-border",
-                //     "type": "console"
-                // }
             ]
         }
     },
