@@ -22,6 +22,10 @@
             "search-placeholder":"Type to search",
             "logo":"./_assets/logo.png",
             "favicon": "./_assets/favicon.ico"
-        }
+        },
+        "valine":{
+	    "placeholder": "How can we do better?",
+            "lang": "en"
+	}
     }
 }

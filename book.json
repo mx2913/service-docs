@@ -1,6 +1,6 @@
 {
     "plugins": [
-        "theme-customize@git+https://github.com/CocosService/gitbook-plugin-theme-customize.git"
+        "theme-customize@git+https://github.com/CocosService/gitbook-plugin-theme-customize.git", "valine"
     ],
     "variables": {
         "themeFexa": {
@@ -37,6 +37,11 @@
             "search-placeholder":"输入关键字搜索",
             "logo":"./assets/logo.png",
             "favicon": "./assets/favicon.ico"
+        },
+        "valine": {
+            "appId": "zOMoW18cW7t5AdSGtMI4jpnd-gzGzoHsz",
+            "appKey": "XxXV55kjvIH4K3OC8kA7s33M",
+            "recordIP": true
         }
     }
 }
