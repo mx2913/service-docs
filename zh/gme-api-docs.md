@@ -1208,7 +1208,7 @@ TencentGME.fn.setLogLevel = function(logLevelWrite: number, logLevelPrint: numbe
 tencentGME.tencentGMEInst.setLogLevel(4, 4);
 ```
 
-### setLogLevel
+### setLogPath
 
 此接口用于设置打印日志路径。各平台的默认路径为：
 
@@ -1222,7 +1222,7 @@ tencentGME.tencentGMEInst.setLogLevel(4, 4);
 #### 函数原型
 
 ```js
-TencentGME.fn.setLogLevel = function(logPath: string) {...}
+TencentGME.fn.setLogPath = function(logPath: string) {...}
 ```
 
 | 参数    |  类型   |  含义 |  
@@ -1232,8 +1232,8 @@ TencentGME.fn.setLogLevel = function(logPath: string) {...}
 #### 示例代码
 
 ```js
-var logPath = '****';
-tencentGME.tencentGMEInst.setLogLevel(logPath);
+var logDir = '****';
+tencentGME.tencentGMEInst.setLogPath(logDir);
 ```
 
 ### addAudioBlackList
