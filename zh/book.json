@@ -25,7 +25,7 @@
             "favicon": "./_assets/favicon.ico"
         },
 	"valine":{
-	    "placeholder": "您对本页面的评论和反馈"
+	    "placeholder": "请留下您对本页面的评论和反馈，将在人工审核后显示"
 	}
     }
 }
