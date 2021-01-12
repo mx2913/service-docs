@@ -17,9 +17,9 @@
 
 ### 计费
 
-- 云开发服务使用 **预付费** 模式，当你的服务使用超过服务商的免费部分，且账户余额不足时，会停止服务。这时候你需要在 Cocos 开发者账户中心进行 **预充值**。具体内容可参考 [计费说明](./billing-and-charge.md)。
+- 云开发服务使用 **预付费** 模式，当你的服务使用超过服务商的免费部分，且账户余额不足时，会停止服务。这时候你需要在 Cocos 开发者账户中心进行 **预充值**。具体内容可参考 [计费说明](./about-billing.md)。
 
-- 若需购买资源包套餐，请参考 [腾讯云套餐购买方式](billing-and-charge.md#%E8%85%BE%E8%AE%AF%E4%BA%91%E5%A5%97%E9%A4%90%E8%B4%AD%E4%B9%B0%E6%96%B9%E5%BC%8F)。
+- 若需购买资源包套餐，请参考 [腾讯云套餐购买方式](about-billing.md#%E8%85%BE%E8%AE%AF%E4%BA%91%E5%A5%97%E9%A4%90%E8%B4%AD%E4%B9%B0%E6%96%B9%E5%BC%8F)。
 
 - Cocos 用户开通服务，并通过 Cocos 账户预付充值，即可享受优惠政策。可联系客服询问获取 **折扣券**，折扣券与官方优惠叠加，优惠相当于折上折。详情可扫描下方二维码，添加客服微信咨询。
 
@@ -144,7 +144,7 @@ https://www.bilibili.com/video/BV1CC4y1p7r7
 
 ## 文档链接
 
-- [腾讯云套餐购买方式](billing-and-charge.md#%E8%85%BE%E8%AE%AF%E4%BA%91%E5%A5%97%E9%A4%90%E8%B4%AD%E4%B9%B0%E6%96%B9%E5%BC%8F)
+- [腾讯云套餐购买方式](about-billing.md#%E8%85%BE%E8%AE%AF%E4%BA%91%E5%A5%97%E9%A4%90%E8%B4%AD%E4%B9%B0%E6%96%B9%E5%BC%8F)
 - [云开发简介](https://cloud.tencent.com/document/product/876/18431)
 - [云开发计费模式](https://cloud.tencent.com/document/product/876/18864)
 - [云开发常见问题](https://cloud.tencent.com/product/tcb/faqs)
