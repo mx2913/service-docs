@@ -41,9 +41,7 @@
         "valine": {
             "appId": "zOMoW18cW7t5AdSGtMI4jpnd-gzGzoHsz",
             "appKey": "XxXV55kjvIH4K3OC8kA7s33M",
-            "recordIP": true,
-            "meta": ["nick","mail"],
-            "requiredFields": ["nick","mail"]
+            "recordIP": true
         }
     }
 }
