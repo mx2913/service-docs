@@ -23,6 +23,9 @@
             "search-placeholder":"输入关键字搜索",
             "logo":"./_assets/logo.png",
             "favicon": "./_assets/favicon.ico"
-        }
+        },
+	"valine":{
+	    "placeholder": "请留下您对本页面的评论和反馈，将在人工审核后显示"
+	}
     }
 }

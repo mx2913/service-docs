@@ -2,7 +2,7 @@
 
 - [使用说明]()
     - [服务面板操作指南](user-guide.md)
-    - [计费和充值](billing-and-charge.md)
+    - [计费说明](about-billing.md)
 - [服务列表]()
     - [Cocos Analytics](cocos-analytics.md)
     - [声网（Agora RTC）](agora.md)
