@@ -97,6 +97,20 @@
 
   ![](gme/gme-sample.jpg)
 
+## 腾讯云技术支持
+
+使用腾讯云时，遇到 Cocos 接入部分外的问题，可以通过腾讯云控制台的 [在线支持](https://cloud.tencent.com/online-service?from=ticket-icon) 或工单系统来解决问题。
+
+- 打开腾讯云 [工单系统](https://console.cloud.tencent.com/workorder/category)。
+
+- 在右上角搜索框中输入 **GME**，点击出现的 **游戏多媒体引擎 GME**，然后选择问题类型。
+  
+    ![](./image/tencloud-workorder.jpg)
+
+- 输入问题相关信息，提交工单。
+
+    ![](./image/tencloud-ordersubmit.jpg)
+
 ## FAQ
 
 - [什么是腾讯云子账号？我可以绑定自己腾讯云账号吗？](https://forum.cocos.org/t/topic/102363)
