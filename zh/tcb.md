@@ -29,7 +29,7 @@
 
 Cocos Service 对接的 SDK 为 **Web** 版本，与微信开发者工具提供的版本不相通。主要区别为 Web 版需要实现登录鉴权，和无法调用类似 [wx.getWXContext()](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/functions/userinfo.html) 的微信定制方法。
 
-在 Cocos Service 中开通的腾讯云账号，为 Cocos 主账号下的子账号，后台操作时可能会看到个别页面提示：*您暂无当前操作权限，请添加下述权限后继续操作*，但一般不影响使用。可参考 [为什么我登录腾讯云控制台想查看一下费用中心时，会提示没有权限？](https://forum.cocos.org/t/topic/102365)。
+在 Cocos Service 中开通的腾讯云账号，为 Cocos 主账号下的子账号，后台操作时可能会看到个别页面提示：*您暂无当前操作权限，请添加下述权限后继续操作*，但一般不影响使用，请尽量在 [小游戏云服务 - 控制台](https://console.cloud.tencent.com/minigamecloud) 页面进行后台操作。可参考 [为什么我登录腾讯云控制台想查看一下费用中心时，会提示没有权限？](https://forum.cocos.org/t/topic/102365)。
 
 ## 一键接入云开发服务
 
