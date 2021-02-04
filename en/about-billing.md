@@ -20,6 +20,6 @@ Cocos users can get discounts by enabling paid services and paying through their
 
 ## View bill
 
-- Each user's fee can be viewed in **Financial -> Account Balance -> Payments Record** in [Cocos Account](https://account.cocos.com/):
+- Each user's fee can be viewed in **Financial -> Account Balance -> Payments Record** in [Cocos Account](https://account.cocos.com/) console.
 
 - The service provider usually uses **day** as the settlement unit, and settles the service provider's side expenses on **T+1** day. Cocos usually pulls this data on **T+2** and generates bills for Cocos users. Therefore, the daily expenses deducted in the income and expenditure details are usually reflected **two days ago**.

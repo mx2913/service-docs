@@ -132,6 +132,22 @@
 - 修改主文件后，可以在云函数任意层级点击右键，选择 **立即发布**，即可上传代码进行调试。
 
   ![](mgobe/mgobe-realtime-upload.jpg)
+
+- 调试与服务端日志获取可参考：[实时服务器日志](https://cloud.tencent.com/document/product/1038/44530)。
+
+## 腾讯云技术支持
+
+使用腾讯云时，遇到 Cocos 接入部分外的问题，可以通过腾讯云控制台的 [在线支持](https://cloud.tencent.com/online-service?from=ticket-icon) 或工单系统来解决问题。
+
+- 打开腾讯云 [工单系统](https://console.cloud.tencent.com/workorder/category)。
+
+- 在右上角搜索框中输入 **MGOBE**，点击出现的 **游戏联机对战引擎 MGOBE**，然后选择问题类型。
+  
+    ![](./image/tencloud-workorder.jpg)
+
+- 输入问题相关信息，提交工单。
+
+    ![](./image/tencloud-ordersubmit.jpg)
     
 ## 视频教程
 
@@ -152,6 +168,15 @@ https://www.bilibili.com/video/BV1WT4y1M7gH?p=1
 
 **02 服务开通与使用**
 https://www.bilibili.com/video/BV1WT4y1M7gH?p=2
+
+{% raw %}
+
+<iframe src="//player.bilibili.com/player.html?aid=928270192&bvid=BV1hT4y1K7xu&cid=272361441&page=1" scrolling="no" border="0" frameborder="no" width="100%" height="480" framespacing="0" allowfullscreen="true"> </iframe>
+
+{% endraw %}
+
+**03 联机游戏的相关机制**
+https://www.bilibili.com/video/BV1hT4y1K7xu
 
 ## FAQ
 

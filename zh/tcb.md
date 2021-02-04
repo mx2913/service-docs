@@ -25,6 +25,12 @@
 
     ![](./image/bd-code.jpg)
 
+### 说明
+
+Cocos Service 对接的 SDK 为 **Web** 版本，与微信开发者工具提供的版本不相通。主要区别为 Web 版需要实现登录鉴权，和无法调用类似 [wx.getWXContext()](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/functions/userinfo.html) 的微信定制方法。
+
+在 Cocos Service 中开通的腾讯云账号，为 Cocos 主账号下的子账号，后台操作时可能会看到个别页面提示：*您暂无当前操作权限，请添加下述权限后继续操作*，但一般不影响使用。可参考 [为什么我登录腾讯云控制台想查看一下费用中心时，会提示没有权限？](https://forum.cocos.org/t/topic/102365)。
+
 ## 一键接入云开发服务
 
 ### 开通服务
@@ -73,11 +79,11 @@
 	// 初始化方法，从配置中读取参数
 	this.app = cc.cloud && cc.cloud.initialize();
 	let auth = this.app.auth();
-	auth.signInAnonymously().then(res => {
+	auth.anonymousAuthProvider().signIn().then(res => {
 	   // 需要先做授权才能正常调用。使用匿名登陆方式访问云开发资源
 	   // 请到腾讯云后台 -> 云开发 -> 选择当前环境 -> 环境设置/登录授权中，确认已经启用匿名登录
 	   // 匿名登录有一定限制，后期请更换为自定义登录等其他方式。
-	   console.log('TCB auth succeed');
+	   console.log('TCB inited');
 	   this.app.callFunction({
 	       // 云函数名称，要与上传的函数名一致
 	       name: "function",
@@ -122,6 +128,20 @@
 - 脚本修改完成并保存后，回到编辑器。点击编辑器窗口正上方的 ![](./image/preview-button.jpg) [预览](https://docs.cocos.com/creator/manual/zh/getting-started/basics/preview-build.html) 按钮，即可在浏览器中调试该项目工程。
 
   ![](tcb/tcb-sample.jpg)
+
+## 腾讯云技术支持
+
+使用腾讯云时，遇到 Cocos 接入部分外的问题，可以通过腾讯云控制台的 [在线支持](https://cloud.tencent.com/online-service?from=ticket-icon) 或工单系统来解决问题。
+
+- 打开腾讯云 [工单系统](https://console.cloud.tencent.com/workorder/category)。
+
+- 点击 **云开发 CloudBase**，选择问题类型。
+  
+    ![](./image/tencloud-workorder.jpg)
+
+- 输入问题相关信息，提交工单。
+
+    ![](./image/tencloud-ordersubmit.jpg)
   
 ## 视频教程
 
@@ -149,4 +169,4 @@ https://www.bilibili.com/video/BV1CC4y1p7r7
 - [云开发计费模式](https://cloud.tencent.com/document/product/876/18864)
 - [云开发常见问题](https://cloud.tencent.com/product/tcb/faqs)
 
-更多文档可在 [腾讯云文档中心 - 云开发](https://cloud.tencent.com/document/product/876) 中查阅。Cocos Service 对接的 SDK 为 **Web** 版本，与微信开发者工具提供的版本不相通。目前 Cocos Service 提供的云开发版本正在更新中，文档请以 [Web SDK API 参考](https://docs.cloudbase.net/api-reference/web/initialization.html) 这篇为准。
+更多文档可在 [腾讯云文档中心 - 云开发](https://cloud.tencent.com/document/product/876) 中查阅。
