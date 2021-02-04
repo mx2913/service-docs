@@ -79,11 +79,11 @@ Cocos Service 对接的 SDK 为 **Web** 版本，与微信开发者工具提供�
 	// 初始化方法，从配置中读取参数
 	this.app = cc.cloud && cc.cloud.initialize();
 	let auth = this.app.auth();
-	auth.signInAnonymously().then(res => {
+	auth.anonymousAuthProvider().signIn().then(res => {
 	   // 需要先做授权才能正常调用。使用匿名登陆方式访问云开发资源
 	   // 请到腾讯云后台 -> 云开发 -> 选择当前环境 -> 环境设置/登录授权中，确认已经启用匿名登录
 	   // 匿名登录有一定限制，后期请更换为自定义登录等其他方式。
-	   console.log('TCB auth succeed');
+	   console.log('TCB inited');
 	   this.app.callFunction({
 	       // 云函数名称，要与上传的函数名一致
 	       name: "function",
