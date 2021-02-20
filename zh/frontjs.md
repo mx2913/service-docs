@@ -4,7 +4,7 @@
 
 通过 FrontJS 的集成，可以监控应用 Cocos Creator 引擎层面上的脚本异常、网络请求、页面停留、以及 UI 卡顿等指标，提供异常报告、警告通知及可视化等功能。
 
-可参考 [Demo](https://www.frontjs.com/demo/) 了解 FrontJS 产品功能和后台使用。Creator 的监控后台以及提供的功能，和**小程序** 版基本一致，多了卡顿监测的功能。
+可参考 [Demo](https://www.frontjs.com/demo/) 了解 FrontJS 产品功能和后台使用。Creator 的监控后台以及提供的功能，和 **小程序** 版基本一致，多了卡顿监测的功能。
 
 ### 产品特性
 
