@@ -45,9 +45,13 @@
 
     ![](frontjs/frontjs-setting.jpg)
 
+- 设置完成后，将游戏发布到各对应平台后即可使用。如果要发布到小游戏平台，需要将 `https://collecter.frontjs.com` 设置为合法域名。
+
 ### 验证服务是否接入成功
 
 FrontJS 服务接入完成后，无需代码接入，当接入游戏运行后 3 分钟左右，即可在后台看到数据。
+
+FrontJS 也提供了一个 [简单 Demo](https://static.frontjs.com/dist/sdk/cocos-20200226.zip)，可接入服务后，点击首页上方的各种事件按钮进行测试。
 
 ## 相关参考链接
 
