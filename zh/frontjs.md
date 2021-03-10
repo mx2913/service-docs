@@ -53,6 +53,16 @@ FrontJS 服务接入完成后，无需代码接入，当接入游戏运行后 3 
 
 FrontJS 也提供了一个 [简单 Demo](https://static.frontjs.com/dist/sdk/cocos-20200226.zip)，可接入服务后，点击首页上方的各种事件按钮进行测试。
 
+## 技术支持
+
+使用 FrontJS 过程中若遇到问题，可以通过 [工单系统](https://kf.pgyer.com/app) 咨询，可在 FrontJS 后台的右上角点击按钮进入。
+
+![](frontjs/frontjs-workorder.jpg)
+
+或者通过二维码加入微信群获得技术帮助。
+
+![](frontjs/frontjs-barcode.jpg)
+
 ## 相关参考链接
 
 - [FrontJS 游戏监控分析平台](https://www.frontjs.com/game)
