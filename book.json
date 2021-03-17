@@ -1,6 +1,6 @@
 {
     "plugins": [
-        "theme-customize@git+https://github.com/CocosService/gitbook-plugin-theme-customize.git"
+        "theme-customize@git+https://oauth2:e9Msh_bxzps6-YdJnVQH@gitlab.cocos.net/backups/gitbook-plugin-theme-customize.git", "valine"
     ],
     "variables": {
         "themeFexa": {
