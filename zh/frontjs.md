@@ -65,14 +65,14 @@ FrontJS 也提供了一个 [简单 Demo](https://static.frontjs.com/dist/sdk/coc
 
 ## 视频教程
 
-**FrontJS 接入详解**
-https://www.bilibili.com/video/BV12b4y1Q7k3
-
 {% raw %}
 
 <iframe src="//player.bilibili.com/player.html?aid=629819714&bvid=BV12b4y1Q7k3&cid=317203193&page=1" scrolling="no" border="0" frameborder="no" width="100%" height="480" framespacing="0" allowfullscreen="true"> </iframe>
 
 {% endraw %}
+
+**FrontJS 接入详解**
+https://www.bilibili.com/video/BV12b4y1Q7k3
 
 ## 相关参考链接
 
