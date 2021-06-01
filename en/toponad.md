@@ -1,18 +1,18 @@
-# TonOn（Aggregate Ads）Quick Start
+# TopOn（Aggregate Ads）Quick Start
 
-[TonOn Aggregate Ads](https://www.toponad.com), TopOn is an ad mediation platform that helps global app developers to move to the next ad monetization stage. Based on the intelligent algorithm, you will find a perfect fit for your monetization strategy through marvelous advanced features like Real-time Header Bidding, A/B Test, Segment Management and Cross Promotion. At the same time, it is equipped with multi-dimensional data reports, accurately compares the advertising platform API data and displays in detailed key data such as user duration, advertising display frequency, DEU, LTV, retention, etc., to help developers maximize their advertising revenue.
+[TopOn Aggregate Ads](https://www.toponad.com), TopOn is an ad mediation platform that helps global app developers to move to the next ad monetization stage. Based on the intelligent algorithm, you will find a perfect fit for your monetization strategy through marvelous advanced features like Real-time Header Bidding, A/B Test, Segment Management and Cross Promotion. At the same time, it is equipped with multi-dimensional data reports, accurately compares the advertising platform API data and displays in detailed key data such as user duration, advertising display frequency, DEU, LTV, retention, etc., to help developers maximize their advertising revenue.
 
 ### Version Update Description
 
 - Current Version：2.0.3_5.7.27 
 
-    - Add TonOn Aggregate Ads service。
+    - Add TopOn Aggregate Ads service。
 
-### Enable APM Service
+### Enable TopOn Service
 
-- Use Cocos Creator to open the project that needs to be connected to TonOn service.
+- Use Cocos Creator to open the project that needs to be connected to TopOn service.
 
-- Click on **Panel -> Service** in the menu bar to open the Service panel, select TonOn service to go to the service detail page, and then click on the **Enable** button in the top right to enable the service. For details, please refer to the Cocos Service [Operation Guide](./index.md#usage) documentation.
+- Click on **Panel -> Service** in the menu bar to open the Service panel, select TopOn service to go to the service detail page, and then click on the **Enable** button in the top right to enable the service. For details, please refer to the Cocos Service [Operation Guide](./index.md#usage) documentation.
 
   ![](toponad/toponad-panel.png)
 
@@ -35,7 +35,7 @@ topon.toponService.integrationChecking();
 
 - After the project is run on the phone, you can see the integration status of the ad in the Android Studio run log or Logcat and Xcode run log.
 
-* <font color="red">Note: On the iOS platform, if TopOn has recently selected Admob or StartApp ads, the above test results will prompt the ad verification failure, but in fact, the integration is successful, just ignore it.</font>
+* <font color="red">Note: On the iOS platform of TopOn, if you select Admob or StartApp ads, the above test results will prompt the ad verification failure, but in fact, the integration is successful, just ignore it.</font>
 
 ## Sample Project
 
