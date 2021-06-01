@@ -1,18 +1,18 @@
-# TonOn（聚合广告）快速入门
+# TopOn（聚合广告）快速入门
 
-[TonOn 聚合广告](https://www.toponad.com)服务，基于大数据打造的智能化聚合管理工具，为开发者提供广告分层、头部竞价、流量分组、A/B测试、交叉推广、API管理等便捷变现管理功能，快速实施精细化运营策略，同时配备多维度数据报表，精准比对广告平台API数据，详细展示用户时长、广告展示频次、DEU、LTV、留存等关键数据，助力开发者实现广告收益最大化。
+[TopOn 聚合广告](https://www.toponad.com)服务，基于大数据打造的智能化聚合管理工具，为开发者提供广告分层、头部竞价、流量分组、A/B测试、交叉推广、API管理等便捷变现管理功能，快速实施精细化运营策略，同时配备多维度数据报表，精准比对广告平台API数据，详细展示用户时长、广告展示频次、DEU、LTV、留存等关键数据，助力开发者实现广告收益最大化。
 
 ### 版本更新说明
 
 - 当前版本：2.0.3_5.7.27 
 
-    - 集成 TonOn 聚合广告服务。
+    - 集成 TopOn 聚合广告服务。
 
-## 一键接入 TonOn 服务
+## 一键接入 TopOn 服务
 
 ### 开通服务
 
-- 使用 Cocos Creator 打开需要接入 TonOn 服务的项目工程。
+- 使用 Cocos Creator 打开需要接入 TopOn 服务的项目工程。
 
 - 点击菜单栏的 **面板 -> 服务**，打开 **服务** 面板，选择 **TopOn**，进入服务详情页。然后点击右上方的 **启用** 按钮即可开通服务。详情可参考 [服务面板操作指南](./user-guide.md)。
 
@@ -37,13 +37,13 @@ topon.toponService.integrationChecking();
 
 - 工程运行到手机后，在 Android Studio 的运行日志或者 Logcat 中以及 Xcode 运行日志中均能看到广告的集成状态
 
-* <font color="red">注：TopOn 在 iOS 平台上，如果近选择了 Admob 或者 StartApp 广告，以上的检测结果会提示广告验证失败，但实际上集成成功的，无视即可。</font>
+* <font color="red">注：TopOn 在 iOS 平台上，如果您选择了 Admob 或者 StartApp 广告，以上的检测结果会提示广告验证失败，但实际上集成成功的，无视即可。</font>
 
 ## Sample 工程
 
 开发者可以通过 Sample 工程快速体验性能管理服务。
 
-- 点击性能管理服务面板中的 **Sample 工程** 按钮，Clone 或下载 TonOn Sample 工程，并在 Cocos Creator 中打开。
+- 点击性能管理服务面板中的 **Sample 工程** 按钮，Clone 或下载 TopOn Sample 工程，并在 Cocos Creator 中打开。
 
 - 参照上文开通 TopOn 并配置相应参数后，可通过 Creator 编辑器菜单栏的 **项目 -> 构建发布** 打开 **构建发布** 面板来构建编译工程。
 
