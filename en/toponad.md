@@ -51,7 +51,7 @@ Developer can get a quick taste of the APM service with the sample project.
 
 ## Developer Guide
 
-### 1、Create a banner ad
+### 1. Create a banner ad
 
 ```ts
 getBanner(placementId: string, listener?: BannerListener): Banner;
@@ -67,14 +67,14 @@ getBanner(placementId: string, listener?: BannerListener): Banner;
 **Example**：
 
 ```js
-// 详见 TopOn API 文档中的 BannerListener 接口
+// See the BannerListener interface in the TopOn API Reference for details
 let listener = {
     ...
 }
 let banner = topon.toponService.getBanner("placementId", listener);
 ```
 
-### 2、加载广告
+### 2. Load the ad
 ```ts
 loadBanner(settings?: {
             banner_ad_size_struct?: {
