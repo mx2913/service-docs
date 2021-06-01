@@ -6,6 +6,8 @@ Cocos Creator provides a **Service** panel in the **Menu bar -> Panel**, and dev
 
 The **Service** Panel currently supports the integration of third-party services including the following:
 
+  - [TopOn (Aggregate Ads) ](toponad.md)
+
   - [Cocos SDKHub](sdkhub.md)
 
   - [Location Kit (HMS Core)](hms-location.md)
