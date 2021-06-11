@@ -183,14 +183,6 @@ sdkhub.getUserPlugin().callFuncWithParam("revoke");
 sdkhub.getFeePlugin().callFuncWithParam("isEnvReady");
 ```
 
-**回调说明**：
-
-| 扩展回调值 `sdkhub.FeeResultCode.kFeeExtension` | msg 类型 | msg 说明 |
-| :--- | :--- | :--- |
-| + 100 | JSON | 支持应用内支付情况描述 |
-| + 101 | JSON / String | 不支持应用内支付情况描述 |
-
-
 **对商品进行消耗**
 
 **方法名**：`consume`
