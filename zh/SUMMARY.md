@@ -26,3 +26,4 @@
         - [HUAWEI HMS Core](sdkhub-plugins/sdkhub-hms.md)
         - [Google Play](sdkhub-plugins/google-play.md)
     - [TopOn (聚合广告)](toponad.md)
+    - [TradPlus (聚合广告)](tradplusad.md)
