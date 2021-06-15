@@ -16,7 +16,7 @@
 
 - Click on **Panel -> Service** in the menu bar to open the Service panel, select TradPlus service to go to the service detail page, and then click on the Enable button in the top right to enable the service. For details, please refer to the Cocos Service [Operation Guide](./index.md#usage) documentation.
 
-  ![](tradplus/tradplus-panel.png)
+  ![](tradplusad/tradplusad-panel.png)
 
 - If you don't have an account of TradPlus Ads Mediation Platform, please go to [TradPlus](https://developer.tradplusad.com/) to register. Then, following the [Guide](https://docs.tradplusad.com/en/docs/Guide/) for the corresponding configuration and get the `App ID` and other parameters that are needed by Cocos Service.
 
@@ -47,7 +47,7 @@ Developers can get a quick experience of the TradPlus service with the sample pr
 
 - Once the Sample project is running on the phone, click the various buttons to test the functionality.
 
-  ![](tradplus/tradplus-sample.png)
+  ![](tradplusad/tradplusad-sample.png)
 
 ## Developer Guide
 

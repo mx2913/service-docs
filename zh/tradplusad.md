@@ -18,7 +18,7 @@
 
 - 点击菜单栏的 **面板 -> 服务**，打开 **服务** 面板，选择 **TradPlus**，进入服务详情页。然后点击右上方的 **启用** 按钮即可开通服务。详情可参考 [服务面板操作指南](./user-guide.md)。
 
-  ![](tradplus/tradplus-panel.png)
+  ![](tradplusad/tradplusad-panel.png)
 
 - 如果您还没有 TradPlus 聚合广告平台的账号，请前往 [TradPlus](https://developer.tradplusad.com/) 进行注册，并根据[指引文档](https://docs.tradplusad.com/docs/Guide)进行相应的配置，获取服务面板所需要的 `App ID` 等参数。
 
@@ -49,7 +49,7 @@ tradplus.tradPlusService.setNeedTestDevice(true);
 
 - Sample 工程运行到手机后，即可进入功能界面进行测试。
 
-  ![](tradplus/tradplus-sample.png)
+  ![](tradplusad/tradplusad-sample.png)
 
 ## 开发指南
 
