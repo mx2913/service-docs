@@ -20,7 +20,7 @@
 
 - 如果您还没有 TopOn 聚合广告平台的账号，请前往 [TopOn](https://app.toponad.com/#/register) 进行注册，并根据[指引文档](https://docs.toponad.com/#/zh-cn/android/GetStarted/TopOn_Get_Started)进行相应的配置，或者服务面板所需要的 `AppKey` 以及 `AppID` 等参数。
 
-* <font color="red">注：TopOn 聚合广告在 iOS 和 Android 平台上需要创建不同的 AppID，两者不能公用同一个 AppID</font>
+* <font color="red">注：TopOn 聚合广告在 iOS 和 Android 平台上需要创建不同的 AppID，两者不能公用同一个 AppID。</font>
 
 
 ### 验证服务是否接入成功

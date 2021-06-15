@@ -6,7 +6,7 @@
 
 ### 版本更新说明
 
-- 当前版本：2.0.0_6.4.4.1_5.7.1
+- 当前版本：2.0.1_6.4.4.1_5.7.1
 
     -  新增 TradPlus 广告聚合平台。
 
@@ -37,15 +37,15 @@ tradplus.tradPlusService.initSdk();
 tradplus.tradPlusService.setNeedTestDevice(true);
 ```
 
-- 工程运行到手机后，Android平台在 Android Studio 中查看日志，过滤日志关键字【TradPlusLog】，iOS平台请在 Xcode 中查看日志，过滤日志关键字【TradPlus】。
+- 工程运行到手机后，Android平台请在 Android Studio 中查看日志，过滤日志关键字 "TradPlusLog" ，iOS平台请在 Xcode 中查看日志，过滤日志关键字 "TradPlus" 。
 
 ## Sample 工程
 
-开发者可以通过 Sample 工程快速体验性能管理服务。
+开发者可以通过 Sample 工程快速体验 TradPlus 服务。
 
-- 点击性能管理服务面板中的 **Sample 工程** 按钮，Clone 或下载 TopOn Sample 工程，并在 Cocos Creator 中打开。
+- 点击 TradPlus 服务面板中的 **Sample 工程** 按钮，克隆或下载 TradPlus Sample 工程，并在 Cocos Creator 中打开。
 
-- 参照上文开通 TopOn 并配置相应参数后，可通过 Creator 编辑器菜单栏的 **项目 -> 构建发布** 打开 **构建发布** 面板来构建编译工程。
+- 参照上文开通 TradPlus 并配置相应参数后，可通过 Creator 编辑器菜单栏的 **项目 -> 构建发布**， 打开 **构建发布** 面板来构建编译工程。
 
 - Sample 工程运行到手机后，即可进入功能界面进行测试。
 
@@ -62,7 +62,7 @@ tradplus.tradPlusService.setNeedTestDevice(true);
 初始化SDK代码如下：
 
 ```ts
-// 初始化SDK，不需要参数App ID，我们会自动使用服务面板填写的App ID
+// 初始化SDK，我们不需要传递App ID作为参数，它会自动使用服务面板填写的App ID
 tradplus.tradPlusService.initSdk();
 ```
 
@@ -79,7 +79,7 @@ tradplus.tradPlusService.initSdk();
 tradplus.tradPlusService.setNeedTestDevice(true);
 ```
 
-**需要特别注意的是， `setEnableLog` 和 `setNeedTestDevice` 仅测试时使用，上线前请记得注释掉**
+**需要特别注意的是， `setEnableLog` 和 `setNeedTestDevice` 仅测试时使用，上线前请记得注释掉。**
 
 ### 横幅广告
 
@@ -87,7 +87,7 @@ tradplus.tradPlusService.setNeedTestDevice(true);
 
 1. 传入广告位ID给 `getBanner` 以获取该广告位ID对应的横幅广告对象。
 
-2. 调用 `banner.setAdListener` 设置横幅广告的事件监听器，以在该横幅广告相关事件发生时采取相应的动作。
+2. 调用 `banner.setAdListener` 设置该横幅广告对象的事件监听器，以在该横幅广告相关事件发生时采取相应的动作。
 
 3. 调用 `banner.loadAd` 加载并显示横幅广告。
 
@@ -145,7 +145,7 @@ this.banner.loadAd('top');
 
 #### GDPR
 
-如果应用需要发到欧盟区域，那需要特别注意下 GDPR 。
+如果您的应用需要发到欧盟区域，那需要特别注意下 GDPR 。
 
 为了设置GDPR，我们需要如下步骤：
 
@@ -209,4 +209,18 @@ tradplus.privacy.setCOPPAIsAgeRestrictedUser(true /* 或者 false */);
 
 ## API 文档
 
-详细的功能接口和 API 说明，请参考 [TradPlus - API 文档](https://service.cocos.com/document/api/modules/tradplus.html)。
+详细 API 的说明，请参考 [TradPlus - API 文档](https://service.cocos.com/document/api/modules/tradplus.html)。
+
+## 注意事项
+
+### iOS构建
+
+当前，由于我们使用 Cocoapods 来管理 iOS 依赖，如果您构建的目标平台是 iOS ，则在构建完成后，不要直接点击编译，您需要用Xcode打开生成的Xcode工作空间（以.xcworkspace结尾，不要打开.xcodeproj结尾的项目），在Xcode中继续编译本项目，否则编译会失败。
+
+针对Cocos Creator 3.x，生成的 Xcode 工作空间的路径一般是 {您的项目所在目录}/build/{构建任务名}/proj/{游戏名称}.xcworkspace。
+
+### iOS 14+
+
+Apple将在2021年实施一个新的规则，在iOS 14+上通过弹窗来获取IDFA，使用IDFA需要征得用户的同意。
+
+如果您需要适配iOS 14+，请在面板中勾选 “适配iOS 14+” ，然后填写相应的参数，注意：这需要您把Xcode版本升级到一个>=12的版本。
