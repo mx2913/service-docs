@@ -163,18 +163,18 @@ tradplus.privacy.setGDPRListener({
     // Known country.
     if (tradplus.privacy.isGDPRApplicable()) {
       // GDPR is applicable, show the GDPR dialog for the user to choose a GDPR level.
-      this.console.log('GDPR is applicable');
-      this.showGDPR();
+      cc.log('GDPR is applicable');
+      tradplus.privacy.showUploadDataNotifyDialog();
     } else {
-      this.console.log('GDPR is not applicable');
+      cc.log('GDPR is not applicable');
     }
   },
   onFailed: () => {
     // Unknown country, let the user choose the GDPR level.
-    this.console.log(
+    cc.log(
       'Unknown country, let the user choose the GDPR level'
     );
-    this.showGDPR();
+    tradplus.privacy.showUploadDataNotifyDialog();
   },
 });
 
