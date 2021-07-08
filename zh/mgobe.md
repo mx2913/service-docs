@@ -121,6 +121,8 @@
 
 游戏联机对战引擎还提供了 TypeScript 版本的 Demo，展示了更多功能，具体请参考腾讯云官方文档 [Cocos 引擎案例](https://cloud.tencent.com/document/product/1038/40875)。
 
+另外，我们还开发了一个斗兽棋对战游戏 [开心鼠吃象](http://store.cocos.com/app/detail/2342)，后端使用腾讯云的 **MGOBE 游戏联机对战引擎** 和 **TCB 云开发** 两个游戏云服务，实现了 **Serverless** 架构，使小游戏能够轻后端、免运维、代码自动部署，可点击链接在 Cocos Store 中购买下载。
+
 ## 实时服务器面板使用说明
 
 - 若需要使用实时服务器，创建服务后，请在游戏联机对战引擎服务面板下方，点击 **初始化框架** 按钮，选择 JavaScript 或者 TypeScript 语言版本，进行本地框架代码初始化操作。
