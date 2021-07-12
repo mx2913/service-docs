@@ -1,12 +1,16 @@
 # TradPlus（聚合广告）快速入门
 
-**（注意：更新标语，以及各个截图等）**
+[TradPlus 聚合广告平台](https://www.tradplusad.com)，为开发者提供专业、便捷和高效的广告变现解决方案。集成了40+ 国内外主流广告平台，支持自动优化、Bidding、用户级数据报表、交叉推广等功能。TradPlus 提供完善的广告漏斗模型，帮助开发者透视广告变现全过程，精准优化广告变现每个环节，实现广告收益最大化。
 
-[TradPlus 聚合广告](https://www.tradplusad.com)，具有100%数据透明、全球广告资源、广告漏斗模型、智能优化算法、30 min快捷接入的产品优势，同时提供变现方案、数据分析、技术支持、托管服务、平台开户等服务。多达38种数据埋点，为您提供完整的变现“体检报告”，透视广告变现各个环节的流失率，实现精细化运营。协助开发者构建BI系统，形成数据运营闭环。为开发者提供收益最大化的广告变现解决方案，做开发者最专业的广告变现合作伙伴。
+### 版本更新说明（Cocos Creator 2.x）
 
-### 版本更新说明
+- 当前版本：0.5.3_6.4.4.1_5.7.1
 
-- 当前版本：2.0.1_6.4.4.1_5.7.1
+    -  新增 TradPlus 广告聚合平台。
+
+### 版本更新说明（Cocos Creator 3.x）
+
+- 当前版本：2.0.5_6.4.4.1_5.7.1
 
     -  新增 TradPlus 广告聚合平台。
 
@@ -165,18 +169,18 @@ tradplus.privacy.setGDPRListener({
     // 已知国家
     if (tradplus.privacy.isGDPRApplicable()) {
       // GDPR适用，此时调用showGDPR显示GDPR对话框，让用户自己选择GDPR等级
-      this.console.log('GDPR is applicable');
-      this.showGDPR();
+      cc.log('GDPR is applicable');
+      tradplus.privacy.showUploadDataNotifyDialog();
     } else {
-      this.console.log('GDPR is not applicable');
+      cc.log('GDPR is not applicable');
     }
   },
   onFailed: () => {
     // 未知国家，让用户自己选择GDPR等级
-    this.console.log(
+    cc.log(
       'Unknown country, let the user choose the GDPR level'
     );
-    this.showGDPR();
+    tradplus.privacy.showUploadDataNotifyDialog();
   },
 });
 
@@ -216,6 +220,8 @@ tradplus.privacy.setCOPPAIsAgeRestrictedUser(true /* 或者 false */);
 ### iOS构建
 
 当前，由于我们使用 Cocoapods 来管理 iOS 依赖，如果您构建的目标平台是 iOS ，则在构建完成后，不要直接点击编译，您需要用Xcode打开生成的Xcode工作空间（以.xcworkspace结尾，不要打开.xcodeproj结尾的项目），在Xcode中继续编译本项目，否则编译会失败。
+
+针对Cocos Creator 2.x，生成的 Xcode 工作空间的路径一般是 {您的项目所在目录}/build/jsb-link/frameworks/runtime-src/proj.ios_mac/{游戏名称}.xcworkspace。
 
 针对Cocos Creator 3.x，生成的 Xcode 工作空间的路径一般是 {您的项目所在目录}/build/{构建任务名}/proj/{游戏名称}.xcworkspace。
 
