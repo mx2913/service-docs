@@ -1,12 +1,16 @@
 # TradPlus(Ads Mediation) Quick Start
 
-**（注意：更新标语，以及各个截图等）**
+[TradPlus Ads Mediation Platform](https://www.tradplusad.com/?lan=en), provide developers with professional, convenient and efficient advertising monetization solutions. Integrate 40+ domestic and foreign mainstream advertising platforms, and supports functions such as automatic optimization, bidding, user-level data reports, and cross-promotion. TradPlus provides a complete advertising funnel model to help developers see the entire process of advertising monetization, accurately optimize each link of advertising monetization, and maximize advertising revenue.
 
-[TradPlus Ads Mediation](https://www.tradplusad.com/?lan=en)，具有100%数据透明、全球广告资源、广告漏斗模型、智能优化算法、30 min快捷接入的产品优势，同时提供变现方案、数据分析、技术支持、托管服务、平台开户等服务。多达38种数据埋点，为您提供完整的变现“体检报告”，透视广告变现各个环节的流失率，实现精细化运营。协助开发者构建BI系统，形成数据运营闭环。为开发者提供收益最大化的广告变现解决方案，做开发者最专业的广告变现合作伙伴。
+### Version Update Description (Cocos Creator 2.x)
 
-### Version Update Description
+- Current Version: 0.5.3_6.4.4.1_5.7.1
 
-- Current Version: 2.0.1_6.4.4.1_5.7.1
+    -  Add TradPlus Ads Mediation Platform.
+
+### Version Update Description (Cocos Creator 3.x)
+
+- Current Version: 2.0.5_6.4.4.1_5.7.1
 
     -  Add TradPlus Ads Mediation Platform.
 
@@ -214,6 +218,8 @@ For detail explanation of API, please refer to [TradPlus - API Documentation](ht
 ### Build for iOS platform
 
 Currently, because we use Cocoapods to manage the iOS dependencies, if the target platform is iOS, after build is done, don't click the make directly, otherwise, the make will fail. Instead, after the build, you need to open the generated Xcode workspace (ends with .xcworkspace) inside Xcode and compile the project inside Xcode.
+
+For Cocos Creator 3.x, the path of the generated Xcode workspace typically will be {your-project-directory}/build/jsb-link/frameworks/runtime-src/proj.ios_mac/{game-name}.xcworkspace.
 
 For Cocos Creator 3.x, the path of the generated Xcode workspace typically will be {your-project-directory}/build/{build-task-name}/proj/{game-name}.xcworkspace.
 
