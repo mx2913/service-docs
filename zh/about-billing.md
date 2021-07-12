@@ -7,9 +7,7 @@ Cocos Service 当前提供以下付费服务。可点击下方链接，查看各
 - [腾讯云 MGOBE 游戏联机对战引擎](https://cloud.tencent.com/document/product/1038/33293)
 - [腾讯云 GME 游戏多媒体引擎](https://cloud.tencent.com/document/product/607/38500)
 
-Cocos 用户开通付费服务，并通过 Cocos 账户充值或购买套餐，即可享受优惠政策。可联系客服询问获取 **折扣券**，折扣券与官方优惠叠加，优惠相当于折上折。详情可扫描下方二维码，添加客服微信咨询。
-
-![](image/bd-code.jpg)
+Cocos 用户开通付费服务，并通过 Cocos 账户充值或购买套餐，即可享受优惠政策。
 
 ## 计费方式
 

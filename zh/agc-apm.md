@@ -10,15 +10,33 @@
 | 支持查看和分析应用性能数据，精准发现应用性能在哪些方面有改进空间 | 性能管理 APM 通过多个维度（版本号、国家/地区、手机类型、一级区域、系统版本、运营商、网络）向开发者展示应用的性能指标，帮助开发者快速了解应用在哪些方面可优化改进。 |
 | 支持创建自定义跟踪记录，监控应用在特定场景下的性能 |  借助性能管理 APM SDK，开发者可以：<br>1. 创建自定义跟踪记录来监控应用在特定场景，如用户登录或者屏幕加载场景下的性能。<br>2. 为自定义跟踪记录添加指标（如登录次数）和属性（如登录是否成功）。|
 
-### 版本更新说明
+### 版本更新说明（Cocos Creator 2.x）
 
-- 当前版本：0.5.2_1.3.1.300
+- 当前版本：v0.5.3_1.5.2.300
+
+    - 升级APMS SDK至版本1.5.2.300。
+    - 支持自动监控应用ANR的能力，新增enableAnrMonitor方法用来启用和停用该能力。
+    - 新增setUserIdentifier方法，用于设置用户标识，方便定位单用户问题。
+
+- v0.5.2_1.3.1.300
 
     - 修复部分 bug。
 
 - v0.5.1_1.3.1
 
     - 集成华为 AGC APM 服务。
+
+### 版本更新说明（Cocos Creator 3.x）
+
+- 当前版本：v2.0.1_1.5.2.300
+
+    - 升级APMS SDK至版本1.5.2.300。
+    - 支持自动监控应用ANR的能力，新增enableAnrMonitor方法用来启用和停用该能力。
+    - 新增setUserIdentifier方法，用于设置用户标识，方便定位单用户问题。
+
+- v2.0.0_1.3.1.300
+
+    - 适配 华为性能管理 到 Cocos Creator 3.0。
 
 ## 一键接入性能管理服务
 
@@ -74,7 +92,7 @@
 
 `enableCollection(enable: boolean): void`
 
-可参考 [在应用客户端停用](https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides/agc-apms-stopapms#h1-1584589061111) 文档。开关的默认值为打开（true），如果需要停用应用性能数据采集，可将开关设为关闭（false）。
+可参考 [在应用客户端停用](https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides/agc-apm-android-stopapm-0000001052807287#section38651053241) 文档。开关的默认值为打开（true），如果需要停用应用性能数据采集，可将开关设为关闭（false）。
 
 应用客户端停用的级别 **高于** AGC 远程配置停用。如用户在应用客户端停用性能监控，即使通过 AGC 远程配置打开性能监控开关，性能管理服务也不会进行性能数据采集。
 
@@ -82,12 +100,50 @@
 
 | 参数 | 说明 |  
 | :---------- | :------------- |  
-|  enable | APM 服务开关。<br>`true`：打开，性能管理服务会采集性能监控数据。<br>`false`：关闭，性能管理服务不会采集性能监控数据。| 
+| enable | APM 服务开关。<br>`true`：打开，性能管理服务会采集性能监控数据。<br>`false`：关闭，性能管理服务不会采集性能监控数据。| 
 
 **示例**：
 
 ```js
 huawei.agc.apms.apmsService.enableCollection(true);
+```
+
+### 设置ANR监控开关
+
+`enableAnrMonitor(enable: boolean): void`
+
+可参考 [停用ANR监控](https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides/agc-apm-stopanr-0000001058202370) 文档。开关的默认值为打开（true），如果需要停用ANR监控，可将开关设为关闭（false）。
+
+APM性能监控开关优先级高于ANR监控开关，仅在APM性能监控开关打开情况下，ANR监控开关才会生效。
+
+**参数说明**：
+
+| 参数 | 说明 |  
+| :---------- | :------------- |  
+| enable | ANR 监控开关。<br>`true`：打开，性能管理服务会启用ANR监控并上报数据。<br>`false`：关闭，性能管理服务停用ANR监控。| 
+
+**示例**：
+
+```js
+huawei.agc.apms.apmsService.enableAnrMonitor(true);
+```
+
+### 为上报数据绑定用户标识（可选）
+
+`setUserIdentifier(userIdentifier: string): void`
+
+可参考 [为上报数据绑定用户标识](https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-References/apms-0000001052488219#section99791215181716) 文档。为上报数据绑定用户标识，性能数据上报时会一并上报该用户标识，方便单用户问题定位。
+
+**参数说明**：
+
+| 参数 | 说明 |  
+| :---------- | :------------- |  
+| userIdentifier | 用户标识。| 
+
+**示例**：
+
+```js
+huawei.agc.apms.apmsService.setUserIdentifier('475f5afaxxxxx');
 ```
 
 ### 添加自定义跟踪记录（可选）

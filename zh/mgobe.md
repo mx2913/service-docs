@@ -35,9 +35,7 @@
 
 - 若需购买资源包套餐，请参考 [腾讯云套餐购买方式](about-billing.md#%E8%85%BE%E8%AE%AF%E4%BA%91%E5%A5%97%E9%A4%90%E8%B4%AD%E4%B9%B0%E6%96%B9%E5%BC%8F)。
 
-- Cocos 用户开通服务，并通过 Cocos 账户预付充值，即可享受优惠政策。可联系客服询问获取 **折扣券**，折扣券与官方优惠叠加，优惠相当于折上折。详情可扫描下方二维码，添加客服微信咨询。
-
-    ![](./image/bd-code.jpg)
+- Cocos 用户开通服务，并通过 Cocos 账户预付充值，即可享受优惠政策。
 
 ### 说明
 
@@ -120,6 +118,8 @@
   ![](mgobe/mgobe-sample.jpg)
 
 游戏联机对战引擎还提供了 TypeScript 版本的 Demo，展示了更多功能，具体请参考腾讯云官方文档 [Cocos 引擎案例](https://cloud.tencent.com/document/product/1038/40875)。
+
+另外，我们还开发了一个斗兽棋对战游戏 [开心鼠吃象](http://store.cocos.com/app/detail/2342)，后端使用腾讯云的 **MGOBE 游戏联机对战引擎** 和 **TCB 云开发** 两个游戏云服务，实现了 **Serverless** 架构，使小游戏能够轻后端、免运维、代码自动部署，可点击链接在 Cocos Store 中购买下载。
 
 ## 实时服务器面板使用说明
 

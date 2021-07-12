@@ -10,15 +10,33 @@
 | Allows you to view and analyze app performance data to accurately identify the aspects that can be improved. | APM displays app performance indicators from multiple dimensions (such as the version number, country/region, device model, level-1 region, system version, carrier, and network), helping you quickly understand the aspects that can be improved. |
 | Allows you to create custom traces to monitor app performance data in specific scenarios. |  With the APM SDK, you can:<br>1. Create custom traces to monitor your app's performance in scenarios such as sign-in and scene loading.<br>2. Add indicators (such as the number of sign-in times) and properties (such as whether the sign-in is successful) for a custom trace. |
 
-### Version Update Description
+### Version Update Description (Cocos Creator 2.x)
 
-- Latest Version: 0.5.2_1.3.1.300
+- Latest Version: v0.5.3_1.5.2.300
+
+    - Upgrade the SDK to version 1.5.2.300.
+    - Supported automatic ANR monitoring, the enableAnrMonitor method is added to enable or disable this capability.
+    - Added the setUserIdentifier method to the APMS class to set user IDs, which facilitates fault locating by user ID.
+
+- v0.5.2_1.3.1.300
 
     - Fix some bugs.
 
 - v0.5.1_1.3.1
 
     - Integrated Huawei AGC APM service.
+
+### Version Update Description (Cocos Creator 3.x)
+
+- Latest Version: v2.0.1_1.5.2.300
+
+    - Upgrade the SDK to version 1.5.2.300.
+    - Supported automatic ANR monitoring, the enableAnrMonitor method is added to enable or disable this capability.
+    - Added the setUserIdentifier method to the APMS class to set user IDs, which facilitates fault locating by user ID.
+
+- v2.0.0_1.3.1.300
+
+    - Adapt HUAWEI AGC APM to Cocos Creator 3.0.
 
 ## Enable APM Service
 
@@ -72,7 +90,7 @@ Developer can get a quick taste of the APM service with the sample project.
 
 `enableCollection(enable: boolean): void`
 
- The default value is true, indicating that APM app performance data collection is enabled. To disable app performance data collection of APM, set this parameter to false. You can refer to [Disabling APM Performance Monitoring in Apps](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-apms-stopapms#h1-1584589061111) documentation for details.
+ The default value is true, indicating that APM app performance data collection is enabled. To disable app performance data collection of APM, set this parameter to false. You can refer to [Disabling APM Performance Monitoring in Apps](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-apm-android-stopapm-0000001052807287#section38651053241) documentation for details.
 
 The priority of the disabling configuration in apps is **higher** than that through Remote Configuration in AppGallery Connect. If users disable performance monitoring in apps, the APM does not collect performance data even if the performance monitoring function is enabled through Remote Configuration in AppGallery Connect.
 
@@ -80,12 +98,50 @@ The priority of the disabling configuration in apps is **higher** than that thro
 
 | Parameter | Description | 
 | :---------- | :------------- |  
-|  enable | Indicates whether to enable APM to collect performance monitoring data.<br>**true**: performance data collection is enabled.<br>**false**: performance data collection is disable. | 
+| enable | Indicates whether to enable APM to collect performance monitoring data.<br>**true**: performance data collection is enabled.<br>**false**: performance data collection is disable. | 
 
 **Example**:
 
 ```js
 huawei.agc.apms.apmsService.enableCollection(true);
+```
+
+### Enables or disables ANR Monitoring
+
+`enableAnrMonitor(enable: boolean): void`
+
+ The default value is true, indicating that APM ANR monitoring is enabled. To disable ANR monitoring of APM, set this parameter to false. You can refer to [Stopping ANR Monitoring](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-apm-stopanr-0000001058202370) documentation for details.
+
+The priority of the APM performance monitoring switch is higher than that of the ANR monitoring switch. ANR monitoring takes effect only when the APM performance monitoring is enabled.
+
+**Parameter Description**:
+
+| Parameter | Description | 
+| :---------- | :------------- |  
+| enable | Indicates whether to enable  ANR monitoring.<br>**true**: enable ANR monitoring.<br>**false**: disable ANR monitoring. | 
+
+**Example**:
+
+```js
+huawei.agc.apms.apmsService.enableAnrMonitor(true);
+```
+
+### Binds a user ID to the reported data (Optional)
+
+`setUserIdentifier(userIdentifier: string): void`
+
+ Binds a user ID to the reported data. When the performance data is reported, the user ID is also reported to facilitate fault locating. You can refer to [Binds a user ID to the reported data](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-References/apms-0000001052488219#section99791215181716) documentation for details.
+
+**Parameter Description**:
+
+| Parameter | Description | 
+| :---------- | :------------- |  
+| userIdentifier | The identifier of user. | 
+
+**Example**:
+
+```js
+huawei.agc.apms.apmsService.setUserIdentifier('475f5afaxxxxx');
 ```
 
 ### Creating a Custom Trace (Optional)
