@@ -12,7 +12,11 @@
 
 ### Version Update Description (Cocos Creator 2.x)
 
-- Latest Version: v0.5.3_1.5.2.300
+- Latest Version: v0.5.4_1.5.2.300
+
+    - Add support for Game SDK.
+
+- v0.5.3_1.5.2.300
 
     - Upgrade the SDK to version 1.5.2.300.
     - Supported automatic ANR monitoring, the enableAnrMonitor method is added to enable or disable this capability.
@@ -28,7 +32,11 @@
 
 ### Version Update Description (Cocos Creator 3.x)
 
-- Latest Version: v2.0.1_1.5.2.300
+- Latest Version: v2.0.2_1.5.2.300
+
+    - Add support for Game SDK.
+
+- v2.0.1_1.5.2.300
 
     - Upgrade the SDK to version 1.5.2.300.
     - Supported automatic ANR monitoring, the enableAnrMonitor method is added to enable or disable this capability.
@@ -559,6 +567,124 @@ Obtains a custom attribute value. You can refer to [getProperty](https://develop
 let pName = "propName";
 let nMeasure = huawei.agc.apms.apmsService.getNetworkMeasureProperty(id, pName);
 console.log("nMeasure = ", JSON.stringify(nMeasure));
+```
+
+### Game SDK (Optional)
+
+#### Start APM Game Plugin service
+
+`start(): void`
+
+Start APM Game Plugin service, generally be called in initialization code of the Game, you can only use other APIs of Game SDK after call this method.
+
+**Example**：
+
+```js
+huawei.agc.apms.game.apmsGameService.start();
+```
+
+#### Stop APM Game Plugin service
+
+`stop(): void`
+
+Stop APM Game Plugin service.
+
+**Example**：
+
+```js
+huawei.agc.apms.game.apmsGameService.stop();
+```
+
+#### Start recording scene loading time
+
+`startLoadingScene(gameAttribute: GameAttribute): string`
+
+Start recording scene loading time, the return value is the name of the scene.
+
+**Parameter Description**:
+
+| Parameter | Description | 
+| :---------- | :------------- |  
+| gameAttribute | The attribute of the game. | 
+
+**Example**：
+
+```js
+const gameAttribute = new huawei.agc.apms.game.GameAttribute('Game', huawei.agc.apms.game.LoadingState.LOADING);
+huawei.agc.apms.game.apmsGameService.startLoadingScene(gameAttribute);
+```
+
+#### Stop recording scene loading time
+
+`stopLoadingScene(scene: string): void`
+
+Stop recording scene loading time.
+
+**Parameter Description**:
+
+| Parameter | Description | 
+| :---------- | :------------- |  
+| scene | The name of the scene. | 
+
+**Example**：
+
+```js
+huawei.agc.apms.game.apmsGameService.stopLoadingScene('Game');
+```
+
+#### Save current game attribute
+
+`setCurrentGameAttribute(scene: string): void`
+
+Save current game attribute.
+
+**Parameter Description**:
+
+| Parameter | Description | 
+| :---------- | :------------- |  
+| gameAttribute | The attribute of the game. | 
+
+**Example**：
+
+```js
+const gameAttribute = new huawei.agc.apms.game.GameAttribute('Game', huawei.agc.apms.game.LoadingState.LOADING);
+huawei.agc.apms.game.apmsGameService.setCurrentGameAttribute(gameAttribute);
+```
+
+#### Set the reporting frequency of game performance data
+
+`setReportMinRate(intervalMin: number): void`
+
+Set the reporting frequency of game performance data, unit: minutes.
+
+**Parameter Description**:
+
+| Parameter | Description | 
+| :---------- | :------------- |  
+| intervalMin | Reporting frequency, unit: minutes. | 
+
+**Example**：
+
+```js
+huawei.agc.apms.game.apmsGameService.setReportMinRate(5);
+```
+
+#### Enable or disable APM Game Plugin service
+
+`enableGamePlugin(enabled: boolean): void`
+
+Enable or disable APM Game Plugin service. The default value is true (enabled), which means that the APM Game Plugin application performance data collection is enabled. If you need to disable the APM Game Plugin application performance data collection, you can set the value to false.
+
+**Parameter Description**:
+
+| Parameter | Description | 
+| :---------- | :------------- |  
+| enabled | Enable or disable APM Game Plugin service, true (default) is enable, false is disable. | 
+
+**Example**：
+
+```js
+huawei.agc.apms.game.apmsGameService.enableGamePlugin(true);
 ```
 
 ## API Reference
