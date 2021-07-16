@@ -12,7 +12,11 @@
 
 ### 版本更新说明（Cocos Creator 2.x）
 
-- 当前版本：v0.5.3_1.5.2.300
+- 当前版本：v0.5.4_1.5.2.300
+
+    - 新增对Game SDK的支持。
+
+- v0.5.3_1.5.2.300
 
     - 升级APMS SDK至版本1.5.2.300。
     - 支持自动监控应用ANR的能力，新增enableAnrMonitor方法用来启用和停用该能力。
@@ -28,7 +32,11 @@
 
 ### 版本更新说明（Cocos Creator 3.x）
 
-- 当前版本：v2.0.1_1.5.2.300
+- 当前版本：v2.0.2_1.5.2.300
+
+    - 新增对Game SDK的支持。
+
+- v2.0.1_1.5.2.300
 
     - 升级APMS SDK至版本1.5.2.300。
     - 支持自动监控应用ANR的能力，新增enableAnrMonitor方法用来启用和停用该能力。
@@ -561,6 +569,124 @@ console.log("mProp = ", JSON.stringify(mProp));
 let pName = "propName";
 let nMeasure = huawei.agc.apms.apmsService.getNetworkMeasureProperty(id, pName);
 console.log("nMeasure = ", nMeasure);
+```
+
+### Game SDK（可选）
+
+#### 开始APM Game Plugin服务
+
+`start(): void`
+
+开始APM Game Plugin服务，一般在游戏开始时的初始化代码中调用，调用后才能使用Game SDK的其他API。
+
+**示例**：
+
+```js
+huawei.agc.apms.game.apmsGameService.start();
+```
+
+#### 停止APM Game Plugin服务
+
+`stop(): void`
+
+停止APM Game Plugin服务。
+
+**示例**：
+
+```js
+huawei.agc.apms.game.apmsGameService.stop();
+```
+
+#### 开始记录场景加载时间
+
+`startLoadingScene(gameAttribute: GameAttribute): string`
+
+开始记录场景加载时间，返回值为场景名称。
+
+**参数说明**：
+
+| 参数 | 说明 |  
+| :---------- | :------------- |  
+| gameAttribute | 游戏属性。 | 
+
+**示例**：
+
+```js
+const gameAttribute = new huawei.agc.apms.game.GameAttribute('Game', huawei.agc.apms.game.LoadingState.LOADING);
+huawei.agc.apms.game.apmsGameService.startLoadingScene(gameAttribute);
+```
+
+#### 停止记录场景加载时间
+
+`stopLoadingScene(scene: string): void`
+
+停止记录场景加载时间。
+
+**参数说明**：
+
+| 参数 | 说明 |  
+| :---------- | :------------- |  
+| scene | 场景名称。 | 
+
+**示例**：
+
+```js
+huawei.agc.apms.game.apmsGameService.stopLoadingScene('Game');
+```
+
+#### 保存当前游戏属性
+
+`setCurrentGameAttribute(gameAttribute: GameAttribute): void`
+
+保存当前游戏属性。
+
+**参数说明**：
+
+| 参数 | 说明 |  
+| :---------- | :------------- |  
+| gameAttribute | 游戏属性。 | 
+
+**示例**：
+
+```js
+const gameAttribute = new huawei.agc.apms.game.GameAttribute('Game', huawei.agc.apms.game.LoadingState.LOADING);
+huawei.agc.apms.game.apmsGameService.setCurrentGameAttribute(gameAttribute);
+```
+
+#### 设置游戏性能数据上报频率
+
+`setReportMinRate(intervalMin: number): void`
+
+设置游戏性能数据上报频率，单位：分钟。
+
+**参数说明**：
+
+| 参数 | 说明 |  
+| :---------- | :------------- |  
+| intervalMin | 上报频率，单位：分钟。 | 
+
+**示例**：
+
+```js
+huawei.agc.apms.game.apmsGameService.setReportMinRate(5);
+```
+
+#### 设置APM Game Plugin服务开关
+
+`enableGamePlugin(enabled: boolean): void`
+
+设置APM Game Plugin服务开关。开关的默认值为true（打开），表示启用APM Game Plugin应用性能数据采集。如果需要停用APM Game Plugin应用性能数据采集，可将开关值设为false（关闭）。
+
+**参数说明**：
+
+| 参数 | 说明 |  
+| :---------- | :------------- |  
+| enabled | 服务开关，true为开，false为关，默认为开。 | 
+
+**示例**：
+
+```js
+huawei.agc.apms.game.apmsGameService.enableGamePlugin(true);
 ```
 
 ## API 文档
