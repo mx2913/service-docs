@@ -4,13 +4,21 @@
 
 ### Version Update Description (Cocos Creator 2.x)
 
-- Current Version: 0.5.3_6.4.4.1_5.7.1
+- Current Version: 0.5.5_6.4.4.1_5.7.1
+
+    -  Fix: when building an iOS project, cause an error when the service is disabled.
+
+- 0.5.3_6.4.4.1_5.7.1
 
     -  Add TradPlus Ads Mediation Platform.
 
 ### Version Update Description (Cocos Creator 3.x)
 
-- Current Version: 2.0.5_6.4.4.1_5.7.1
+- Current Version: 2.0.6_6.4.4.1_5.7.1
+
+    -  Fix: when building an iOS project, cause an error when the service is disabled.
+
+- 2.0.5_6.4.4.1_5.7.1
 
     -  Add TradPlus Ads Mediation Platform.
 
