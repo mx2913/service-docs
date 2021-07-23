@@ -32,7 +32,9 @@
 
 - If you don't have an account of TradPlus Ads Mediation Platform, please go to [TradPlus](https://developer.tradplusad.com/) to register. Then, following the [Guide](https://docs.tradplusad.com/en/docs/Guide/) for the corresponding configuration and get the `App ID` and other parameters that are needed by Cocos Service.
 
-* <font color="red">NOTE: TradPlus Ads Mediation need you to create different App IDs on iOS and Android, they can't share the same App ID.</font>
+* <font color="red">NOTE 1: When building the project, make sure the package name/bundle ID is the same as the Application you created in the TradPlus console.</font>
+
+* <font color="red">NOTE 2: TradPlus Ads Mediation need you to create different App IDs on iOS and Android, they can't share the same App ID.</font>
 
 ### Verify whether the service is integrated successfully
 

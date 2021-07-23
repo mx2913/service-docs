@@ -34,7 +34,9 @@
 
 - 如果您还没有 TradPlus 聚合广告平台的账号，请前往 [TradPlus](https://developer.tradplusad.com/) 进行注册，并根据[指引文档](https://docs.tradplusad.com/docs/Guide)进行相应的配置，获取服务面板所需要的 `App ID` 等参数。
 
-* <font color="red">注：TradPlus 聚合广告在 iOS 和 Android 平台上需要创建不同的 App ID，两者不能公用同一个 App ID</font>
+* <font color="red">注1：构建时，切记填写的包名/bundle ID要和TradPlus后台创建的应用一致。</font>
+
+* <font color="red">注2：TradPlus 聚合广告在 iOS 和 Android 平台上需要创建不同的 App ID，两者不能公用同一个 App ID。</font>
 
 ### 验证服务是否接入成功
 
