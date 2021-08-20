@@ -23,7 +23,11 @@ Agora Live Interactive Audio Streaming boasts a flexible combination of function
 
 ### Version Update Description
 
-- Latest Version: 1.3.1_3.1
+- Latest Version: 1.3.2_3.4.6_3.6.2
+    
+    - Add video module to optimize performance.
+
+- 1.3.1_3.1
 
     - Modify the service name from Agora Voice to Agora RTC
     - Added video module and optimize performance.
