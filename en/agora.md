@@ -25,7 +25,7 @@ Agora Live Interactive Audio Streaming boasts a flexible combination of function
 
 - Latest Version: 1.3.2_3.4.6_3.6.2
     
-    - Add video module to optimize performance.
+    - Fix iOS 15 incompatibility issue.
 
 - 1.3.1_3.1
 
