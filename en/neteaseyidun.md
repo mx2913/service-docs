@@ -180,12 +180,12 @@ netease.yidun.yidunService.setRoleInfo(
   JSON.stringify(gameJson)
 );
 cc.log('setRoleInfo');
-cc.log('roleId:', roleId);
-cc.log('roleName:', roleName);
-cc.log('roleAccount:', roleAccount);
-cc.log('roleServer:', roleServer);
-cc.log('serverId:', serverId);
-cc.log('gameJson:', gameJson);
+cc.log('roleId:' + roleId);
+cc.log('roleName:' + roleName);
+cc.log('roleAccount:' + roleAccount);
+cc.log('roleServer:' + roleServer);
+cc.log('serverId:' + serverId);
+cc.log('gameJson:' + JSON.stringify(gameJson));
 ```
 
 ### General query
@@ -196,44 +196,26 @@ The sample code of `ioctlAndroid` is as follows:
 
 ```ts
 let requestCmdId = netease.yidun.RequestCmdIdAndroid.GetEmulatorName;
-cc.log(
-  'The name of the emulator:',
-  netease.yidun.yidunService.ioctlAndroid(requestCmdId, '')
-);
+cc.log('The name of the emulator:', netease.yidun.yidunService.ioctlAndroid(requestCmdId, ''));
 
 requestCmdId = netease.yidun.RequestCmdIdAndroid.IsRootDevice;
-cc.log(
-  'Is root device:',
-  netease.yidun.yidunService.ioctlAndroid(requestCmdId, '')
-);
+cc.log('Is root device:' + netease.yidun.yidunService.ioctlAndroid(requestCmdId, ''));
 
 requestCmdId = netease.yidun.RequestCmdIdIos.QuerySDKVersion;
-cc.log(
-  'SDK Version:',
-  netease.yidun.yidunService.ioctlIos(requestCmdId, '')
-);
+cc.log('SDK Version:' + netease.yidun.yidunService.ioctlIos(requestCmdId, ''));
 ```
 
 The sample code of `ioctlIos` is as follows:
 
 ```ts
 let requestCmdId = netease.yidun.RequestCmdIdIos.QueryRootStatus;
-cc.log(
-  'Root status:',
-  netease.yidun.yidunService.ioctlIos(requestCmdId, '')
-);
+cc.log('Root status:' + netease.yidun.yidunService.ioctlIos(requestCmdId, ''));
 
 requestCmdId = netease.yidun.RequestCmdIdIos.QuerySDKVersion;
-cc.log(
-  'SDK Version:',
-  netease.yidun.yidunService.ioctlIos(requestCmdId, '')
-);
+cc.log('SDK Version:' + netease.yidun.yidunService.ioctlIos(requestCmdId, ''));
 
 requestCmdId = netease.yidun.RequestCmdIdIos.QueryYiDunCode;
-cc.log(
-  'Yidun Code:',
-  netease.yidun.yidunService.ioctlIos(requestCmdId, '')
-);
+cc.log('Yidun Code:' + netease.yidun.yidunService.ioctlIos(requestCmdId, ''));
 ```
 
 ### Other APIs
