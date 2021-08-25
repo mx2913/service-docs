@@ -8,6 +8,8 @@ The **Service** Panel currently supports the integration of third-party services
 
   - [TopOn (Aggregate Ads) ](toponad.md)
 
+  - [TradPlus (Ads Mediation) ](tradplusad.md)
+
   - [Cocos SDKHub](sdkhub.md)
 
   - [Location Kit (HMS Core)](hms-location.md)
