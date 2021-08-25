@@ -10,6 +10,8 @@ The **Service** Panel currently supports the integration of third-party services
 
   - [TradPlus (Ads Mediation) ](tradplusad.md)
 
+  - [Yidun (NetEase)](neteaseyidun.md)
+
   - [Cocos SDKHub](sdkhub.md)
 
   - [Location Kit (HMS Core)](hms-location.md)

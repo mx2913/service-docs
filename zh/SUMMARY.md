@@ -11,6 +11,7 @@
     - [游戏多媒体引擎（腾讯云）](gme.md)
         - [接口文档](gme-api-docs.md)
     - [FrontJS](frontjs.md)
+    - [易盾（网易）](neteaseyidun.md)
     - [定位服务（HMS Core）](hms-location.md)
     - [分析服务（HMS Core）](hms-analytics.md)
     - [性能管理（AGC）](agc-apm.md)
@@ -27,4 +28,3 @@
         - [Google Play](sdkhub-plugins/google-play.md)
     - [TopOn (聚合广告)](toponad.md)
     - [TradPlus (聚合广告)](tradplusad.md)
-    - [易盾（网易）](neteaseyidun.md)

@@ -53,6 +53,7 @@ Cocos Service 目前支持集成以下服务：
 - [游戏联机对战引擎（腾讯云）](mgobe.md)：实时、弹性扩容的高性能联机对战服务，快速构建游戏多人一起玩的能力。
 - [游戏多媒体引擎（腾讯云）](gme.md)：一站式语音解决方案，助力开发者快速实现各类语音功能。
 - [FrontJS](frontjs.md)：帮助游戏开发者快速定位和分析问题所在，改善用户体验，提升业务转化，减少用户流失。
+- [易盾（网易）](neteaseyidun.md)：提供游戏包体加固、反外挂一站式服务。
 - [定位服务（HMS Core）](hms-location.md)：采用 GPS、Wi-Fi、基站等多种混合定位模式进行定位，赋予您的应用程序快速、精准地获取用户位置信息的能力。
 - [分析服务（HMS Core）](hms-analytics.md)：基于开发者上报的用户行为和属性数据，提供多种分析能力。
 - [性能管理（AppGallery Connect）](agc-apm.md)：提供分钟级应用性能监控能力，收集应用性能数据。
@@ -65,5 +66,5 @@ Cocos Service 目前支持集成以下服务：
 - [云存储（AppGallery Connect）](agc-cloudstorage.md)：跨平台提供高效经济的文件上传下载服务。
 - [云函数（AppGallery Connect）](agc-cloudfunc.md)：事件驱动的函数计算平台，保证高可用与伸缩，让开发者便捷运行代码而无需管理服务器。
 - [Cocos SDKHub](sdkhub.md)：快速接入原生平台 SDK。
-- [TopOn（聚合广告）](toponad.md)：移动 APP 广告变现收益与运营效率提升工具
-- [TradPlus（聚合广告）](tradplusad.md)：聚合广告平台，一站聚合，高效变现
+- [TopOn（聚合广告）](toponad.md)：移动 APP 广告变现收益与运营效率提升工具。
+- [TradPlus（聚合广告）](tradplusad.md)：聚合广告平台，一站聚合，高效变现。
