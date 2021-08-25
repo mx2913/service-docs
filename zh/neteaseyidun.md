@@ -96,6 +96,10 @@
 
   ![](neteaseyidun/neteaseyidun-check-sdk-integration.png)
 
+- 接着，点击“保存”按钮，如下：
+
+  ![](neteaseyidun/neteaseyidun-save.png)
+
 - 注意，勾选“SDK 集成”后，仅会在构建时自动集成 SDK ，您还需要手动调用 SDK 的接口以使用反外挂相关的功能（比如： SDK 的初始化）， SDK 集成说明，请参考：[SDK 集成](https://support.dun.163.com/documents/413846598587424768?docId=418198765332385792)，API文档请参考：[易盾 - Cocos Service API 文档](https://service.cocos.com/document/api/modules/netease.html)。
 
 * <font color="red">注：勾选“SDK 集成”， SDK 仅会在当前平台被集成，如果您需要在其他平台集成 SDK ，请切换到其他平台，然后勾选“SDK 集成”。</font>
@@ -237,7 +241,7 @@ cc.log(
 
 ## API 文档
 
-详细 API 的说明，请参考 [SDK 集成](https://support.dun.163.com/documents/413846598587424768?docId=418198765332385792) 以及 [易盾 - Cocos Service API 文档](https://service.cocos.com/document/api/modules/netease.html)。
+其他 API 的使用例子及详细说明，请参考 [SDK 集成](https://support.dun.163.com/documents/413846598587424768?docId=418198765332385792) 以及 [易盾 - Cocos Service API 文档](https://service.cocos.com/document/api/modules/netease.html)。
 
 ## iOS 平台注意事项
 
