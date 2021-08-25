@@ -239,9 +239,13 @@ cc.log(
 );
 ```
 
+### 其他 API
+
+关于其他API的使用，请参考文档和 Sample 工程。
+
 ## API 文档
 
-其他 API 的使用例子及详细说明，请参考 [SDK 集成](https://support.dun.163.com/documents/413846598587424768?docId=418198765332385792) 以及 [易盾 - Cocos Service API 文档](https://service.cocos.com/document/api/modules/netease.html)。
+详细的 API 说明，请参考 [SDK 集成](https://support.dun.163.com/documents/413846598587424768?docId=418198765332385792) 以及 [易盾 - Cocos Service API 文档](https://service.cocos.com/document/api/modules/netease.html)。
 
 ## iOS 平台注意事项
 

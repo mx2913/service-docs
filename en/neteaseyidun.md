@@ -93,6 +93,10 @@ If you need the Anti-Cheat function, please integrate the SDK before reinforcing
 - First, you need to check the "SDK integration" as follows:
 
   ![](neteaseyidun/neteaseyidun-check-sdk-integration.png)
+
+- Next, Click the "Save" button as follows：
+
+  ![](neteaseyidun/neteaseyidun-save.png)
   
 - Note that after checking "SDK Integration", the SDK will only be automatically integrated during the build, you also need to manually call the SDK APIs to use Anti-Cheat functions (e.g. Initialize the SDK), for more details, please refer to [SDK Integration](https://support.dun.163.com/documents/413846598587424768?docId=418198765332385792) and [Yidun - Cocos Service API documentation](https://service.cocos.com/document/api/modules/netease.html).
 
@@ -231,6 +235,10 @@ cc.log(
   netease.yidun.yidunService.ioctlIos(requestCmdId, '')
 );
 ```
+
+### Other APIs
+
+For the use of other APIs, please refer to the documentation and the sample project.
 
 ## API Documentation
 
