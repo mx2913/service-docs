@@ -4,13 +4,13 @@
 
 ### Version Update Description (Cocos Creator 2.x)
 
-- Current Version: 0.5.2_6.4.4.1_5.7.1
+- Current Version: 0.5.2_5.0.4_1.7.1.3
 
     -  Add NetEase Yidun service.
 
 ### Version Update Description (Cocos Creator 3.x)
 
-- Current Version: 2.0.0_6.4.4.1_5.7.1
+- Current Version: 2.0.0_5.0.4_1.7.1.3
 
     -  Add NetEase Yidun service.
 
