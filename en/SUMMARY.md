@@ -3,6 +3,7 @@
     - [About Billing](about-billing.md)
 - [List of Services]()
     - [Agora RTC](agora.md)
+    - [Yidun (NetEase)](neteaseyidun.md)
     - [Location Kit (HMS Core)](hms-location.md)
     - [Analytics Kit (HMS Core)](hms-analytics.md)
     - [APM (AGC)](agc-apm.md)
